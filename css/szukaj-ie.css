@@ -1,0 +1,28 @@
+div#header {
+    /* The Holly Hack fixes positioning
+       of the cart links */
+    height: 1%;
+}
+div#content {
+    margin-top: -20px;
+}
+div#innerbody input.i {
+    background: url('../images/input.png') no-repeat fixed;
+}
+div#innerbody input.a {
+    background: url('../images/input-a.png') no-repeat fixed;
+}
+div#innerbody textarea {
+    background: url('../images/textarea.png') no-repeat fixed;
+    padding-right: 20px;
+}
+fieldset {
+    position: relative;
+    margin-bottom: 10px;
+}
+legend {
+    /* This seems the only way to get Explorer
+       to position the <legend> correctly */
+    position: absolute;
+    top: -10px;
+}

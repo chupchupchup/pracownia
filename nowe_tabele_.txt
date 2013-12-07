@@ -1,0 +1,254 @@
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_wkladykk_cennik`
+-- 
+
+CREATE TABLE `porcelana_wkladykk_cennik` (
+  `chrom kobalt` float default NULL,
+  `chrom nikiel` float default NULL,
+  `z³oto` float default NULL,
+  `cyrkonia` float default NULL,
+  `w³ókno szklane` float default NULL,
+  `wk³ad zwyk³y` float default NULL,
+  `wk³ad dzielony` float default NULL,
+  `wzornik` float default NULL,
+  `zatrzask kulowy` float default NULL,
+  `zeby` float default NULL
+);
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korona_licowana_cennik`
+-- 
+
+CREATE TABLE `porcelana_korona_licowana_cennik` (
+  `chrom kobalt` float default NULL,
+  `chrom nikiel` float default NULL,
+  `z³oto` float default NULL,
+  `cerkon` float default NULL,
+  `³y¿ka` float default NULL,
+  `wzornik` float default NULL,
+  `metal` float default NULL,
+  `surowa` float default NULL,
+  `gotowa` float default NULL,
+  `przymiarka kompozytu` float default NULL,
+  `powtórka metalu` float default NULL,
+  `ponowne napalenie porcelany` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL,
+  `zatrzaski` float default NULL,
+  `liczbazatrzaskow` float default NULL,
+  `zasuwy` float default NULL,
+  `liczbazasow` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korona_pelnoceramiczna_cennik`
+-- 
+
+CREATE TABLE `porcelana_korona_pelnoceramiczna_cennik` (
+  `przymiarka` float default NULL,
+  `przymiarka kompozytu` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL
+ ); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_inlay_onlay_licowka_cennik`
+-- 
+
+CREATE TABLE `porcelana_inlay_onlay_licowka_cennik` (
+  `z³oto` float default NULL,
+  `kompozyt` float default NULL,
+  `porcelana` float default NULL,
+  `chrom nikiel` float default NULL,
+  `cerkon` float default NULL,
+  `licówka porcelanowa` float default NULL,
+  `licówka kompozytowa` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_implanty_cennik`
+-- 
+
+CREATE TABLE `porcelana_implanty_cennik` (
+  `praca na implantach` float default NULL,
+  `³y¿ka` float default NULL,
+  `wzornik` float default NULL,
+  `przymiarka` float default NULL,
+  `surowa` float default NULL,
+  `gotowa` float default NULL,
+  `cerkon` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korony_inne_cennik`
+-- 
+
+CREATE TABLE `porcelana_korony_inne_cennik` (
+  `lana metalowa` float default NULL,
+  `lana z³ota` float default NULL,
+  `korona akrylowa` float default NULL,
+  `korona kompozytowa` float default NULL,
+  `w³ókno szklane` float default NULL,
+  `most maryland` float default NULL,
+  `teleskop metal` float default NULL,
+  `teleskop z³oty` float default NULL,
+  `teleskop cerkon` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_naprawa_cennik`
+-- 
+
+CREATE TABLE `porcelana_naprawa_cennik` (
+  `naprawa` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_szkielet_szynoproteza_cennik`
+-- 
+
+CREATE TABLE `proteza_szkielet_szynoproteza_cennik` (
+  `szkieletowa` float default NULL,
+  `szynoproteza` float default NULL,
+  `wzornik` float default NULL,
+  `³y¿ka indywidualna` float default NULL,
+  `klamra lana` float default NULL,
+  `klamra doginana` float default NULL,
+  `cierñ lany` float default NULL,
+  `pelota` float default NULL,
+  `metal` float default NULL,
+  `przymiarka` float default NULL,
+  `gotowa` float default NULL,
+  `poprawka` float default NULL,
+  `ponowne ustawienie zebów` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_calkowita_cennik`
+-- 
+
+CREATE TABLE `proteza_calkowita_cennik` (
+  `³y¿ka indywidualna` float default NULL,
+  `wzornik` float default NULL,
+  `ustawka` float default NULL,
+  `gotowa` float default NULL,
+  `wzmocnienie siatk±` float default NULL,
+  `wzmocnienie drutem` float default NULL,
+  `ponowne ustawienie zêbów` float default NULL,
+  `poprawka` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_czesciowa_cennik`
+-- 
+
+CREATE TABLE `proteza_czesciowa_cennik` (
+  `³y¿ka indywidualna` float default NULL,
+  `wzornik` float default NULL,
+  `ustawka` float default NULL,
+  `gotowa` float default NULL,
+  `klamra lana` float default NULL,
+  `klamra doginana` float default NULL,
+  `cierñ lany` float default NULL,
+  `pelota` float default NULL,
+  `wzmocnienie siatk±` float default NULL,
+  `wzmocnienie drutem` float default NULL,
+  `ponowne ustawienie zêbów` float default NULL,
+  `poprawka` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_szyny_cennik`
+-- 
+
+CREATE TABLE `proteza_szyny_cennik` (
+  `wybielajaca` float default NULL,
+  `liczbawybielajacych` float default NULL,
+  `relaksacyjna twardo-miêkka` float default NULL,
+  `relaksacyjna twarda-nagryzowa` float default NULL,
+  `relaksacyjna miêkka` float default NULL,
+  `relaksacyjna miêkka press-kolor` float default NULL,
+  `ochronna kolor` float default NULL,
+  `do pozycjonowania implantów` float default NULL,
+  `okluzyjna` float default NULL,
+  `nti` float default NULL,
+  `modele orientacyjne` float default NULL,
+  `inne` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_naprawa_cennik`
+-- 
+
+CREATE TABLE `proteza_naprawa_cennik` (
+  `sklejenie` float default NULL,
+  `naprawa z siatk±` float default NULL,
+  `dostawienie zêba` float default NULL,
+  `liczbadostzeba` float default NULL,
+  `dostawienie klamry` float default NULL,
+  `liczbadostklamry` float default NULL,
+  `element lany` float default NULL,
+  `liczbaelementlany` float default NULL,
+  `podsypanie zêbów` float default NULL,
+  `lutowanie` float default NULL,
+  `wymiana akrylu` float default NULL,
+  `pod¶cielenie protezy` float default NULL,
+  `wymiana matryc` float default NULL
+); 
+

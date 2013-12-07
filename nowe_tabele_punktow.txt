@@ -1,0 +1,324 @@
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_wkladykk_punkty`
+-- 
+
+CREATE TABLE `porcelana_wkladykk_punkty` (
+  `chrom kobalt` float default NULL,
+  `chrom nikiel` float default NULL,
+  `z³oto` float default NULL,
+  `wk³ad zwyk³y` float default NULL,
+  `wk³ad dzielony` float default NULL,
+  `wk³ad z cyrkoni¹` float default NULL,
+  `wk³ad z w³óknem szklanym` float default NULL,
+  `metoda bezpoœrednia` float default NULL,
+  `zatrzask kulowy` float default NULL,
+  `liczba_wkladow` float default NULL,
+  `wzornik` float default NULL,
+  `poprawka` float default NULL
+);
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korona_licowana_punkty`
+-- 
+
+CREATE TABLE `porcelana_korona_licowana_punkty` (
+  `chrom kobalt` float default NULL,
+  `chrom nikiel` float default NULL,
+  `z³oto` float default NULL,
+  `³y¿ka` float default NULL,
+  `wzornik` float default NULL,
+  `metal` float default NULL,
+  `surowa` float default NULL,
+  `przymiarka kompozytu` float default NULL,
+  `gotowa` float default NULL,
+  `liczba_gotowa` float default NULL,
+  `powtórka metalu` float default NULL,
+  `ponowne napalenie porcelany` float default NULL,
+  `liczba_ponowne_nap_porcel` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL,
+  `frezowane podparcie` float default NULL,
+  `zatrzaski` float default NULL,
+  `liczbazatrzaskow` float default NULL,
+  `zasuwy` float default NULL,
+  `liczbazasow` float default NULL,
+  `szklane podparcie` float default NULL,
+  `liczba_szklane_podparcie` float default NULL,
+  `ró¿owe dzi¹s³o` float default NULL,
+  `stopieñ porcelanowy` float default NULL,
+  `poprawka` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korona_pelnoceramiczna_punkty`
+-- 
+
+CREATE TABLE `porcelana_korona_pelnoceramiczna_punkty` (
+  `empress` float default NULL,
+  `cerkon` float default NULL,
+  `czapeczka cerkon` float default NULL,
+  `przymiarka` float default NULL,
+  `przymiarka kompozytu` float default NULL,
+  `gotowa` float default NULL,
+  `liczba_gotowa` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL,
+  `poprawka` float default NULL
+ ); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_inlay_onlay_licowka_punkty`
+-- 
+
+CREATE TABLE `porcelana_inlay_onlay_licowka_punkty` (
+  `z³oto` float default NULL,
+  `kompozyt` float default NULL,
+  `empress` float default NULL,
+  `metal` float default NULL,
+  `cerkon` float default NULL,
+  `licówka` float default NULL,
+  `liczba_licowka` float default NULL,
+  `inlay onlay` float default NULL,
+  `liczba_inlay onlay` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL,
+  `poprawka` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_implanty_punkty`
+-- 
+
+CREATE TABLE `porcelana_implanty_punkty` (
+  `licowane porcelan±` float default NULL,
+  `cerkon` float default NULL,
+  `korona z implantem` float default NULL,
+  `liczba_korona_implant` float default NULL,
+  `przês³o` float default NULL,
+  `liczba_przeslo` float default NULL,
+  `³y¿ka` float default NULL,
+  `wzornik` float default NULL,
+  `przymiarka` float default NULL,
+  `surowa` float default NULL,
+  `gotowa` float default NULL,
+  `malowanie` float default NULL,
+  `dobór koloru` float default NULL,
+  `poprawka` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_korony_inne_punkty`
+-- 
+
+CREATE TABLE `porcelana_korony_inne_punkty` (
+  `lana metalowa` float default NULL,
+  `lana z³ota` float default NULL,
+  `korona akrylowa` float default NULL,
+  `korona kompozytowa` float default NULL,
+  `w³ókno szklane` float default NULL,
+  `most maryland` float default NULL,
+  `poprawka` float default NULL,
+  `teleskop metal` float default NULL,
+  `teleskop z³oty` float default NULL,
+  `teleskop cerkon` float default NULL,
+  `teleskop licowany kompozytem` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `porcelana_naprawa_punkty`
+-- 
+
+CREATE TABLE `porcelana_naprawa_punkty` (
+  `naprawa` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_szkielet_szynoproteza_punkty`
+-- 
+
+CREATE TABLE `proteza_szkielet_szynoproteza_punkty` (
+  `szkieletowa` float default NULL,
+  `szkieletowa na zasuwach` float default NULL,
+  `szkieletowa na zatrzaskach` float default NULL,
+  `szkieletowa na teleskopach` float default NULL,
+  `szynoproteza` float default NULL,
+  `wzornik` float default NULL,
+  `³y¿ka indywidualna` float default NULL,
+  `klamra lana` float default NULL,
+  `klamra doginana` float default NULL,
+  `cierñ lany` float default NULL,
+  `pelota` float default NULL,
+  `metal` float default NULL,
+  `przymiarka` float default NULL,
+  `gotowa` float default NULL,
+  `poprawka` float default NULL,
+  `ponowne ustawienie zebów` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_calkowita_punkty`
+-- 
+
+CREATE TABLE `proteza_calkowita_punkty` (
+  `proteza standardowa` float default NULL,
+  `proteza ca³kowita w artykulatorze` float default NULL,
+  `proteza w systemie iniekcyjnym` float default NULL,
+  `³y¿ka indywidualna` float default NULL,
+  `wzornik` float default NULL,
+  `ustawka` float default NULL,
+  `gotowa` float default NULL,
+  `wzmocnienie siatk¹ / drutem` float default NULL,
+  `nak³ady` float default NULL,
+  `ponowne ustawienie zêbów` float default NULL,
+  `miêkkie podniebienie` float default NULL,
+  `bezbarwne podniebienie` float default NULL,
+  `poprawka` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_czesciowa_punkty`
+-- 
+
+CREATE TABLE `proteza_czesciowa_punkty` (
+  `proteza standardowa` float default NULL,
+  `proteza w artykulatorze` float default NULL,
+  `proteza w systemie iniekcyjnym` float default NULL,
+  `mikroproteza` float default NULL,
+  `³y¿ka indywidualna` float default NULL,
+  `wzornik` float default NULL,
+  `ustawka` float default NULL,
+  `gotowa` float default NULL,
+  `klamra lana` float default NULL,
+  `cierñ lany` float default NULL,
+  `wzmocnienie siatk¹ / drutem` float default NULL,
+  `miêkkie podniebienie` float default NULL,
+  `ponowne ustawienie zêbów` float default NULL,
+  `poprawka` float default NULL,
+  `belka` float default NULL,
+  `zêby ivoclar` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_szyny_punkty`
+-- 
+
+CREATE TABLE `proteza_szyny_punkty` (
+  `wybielajaca` float default NULL,
+  `wybielajacailosc` float default NULL,
+  `relaksacyjnatm` float default NULL,
+  `liczbarelaksacyjnatm` float default NULL,
+  `relaksacyjnatn` float default NULL,
+  `liczbarelaksacyjnatn` float default NULL,
+  `relaksacyjnam` float default NULL,
+  `liczbarelaksacyjnam` float default NULL,
+  `relaksacyjnampk` float default NULL,
+  `liczbarelaksacyjnampk` float default NULL,
+  `ochronna` float default NULL,
+  `liczbaochronna` float default NULL,
+  `pozycjonowanie` float default NULL,
+  `liczbapozycjonowanie` float default NULL,
+  `nagryzowa_w_artykulatorze` float default NULL,
+  `liczbanagryzowa_w_artykulatorze` float default NULL,
+  `nti` float default NULL,
+  `liczbanti` float default NULL,
+  `aparat_ortodontyczny` float default NULL,
+  `liczbaaparat_ortodontyczny` float default NULL,
+  `szyna_korony_tymczasowe` float default NULL,
+  `liczbaszyna_korony_tymczasowe` float default NULL,
+  `szyna_zabiegi_implantologiczne` float default NULL,
+  `liczbaszyna_zabiegi_implantologiczne` float default NULL,
+  `plyta_podjezykowa` float default NULL,
+  `liczbaplyta_podjezykowa` float default NULL,
+  `aparat_przeciw_chrapaniu` float default NULL,
+  `liczbaaparat_przeciw_chrapaniu` float default NULL,
+  `inne` float default NULL,
+  `liczbainne` float default NULL
+); 
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_naprawa_punkty`
+-- 
+
+CREATE TABLE `proteza_naprawa_punkty` (
+  `sklejenie` float default NULL,
+  `naprawa z siatk¹` float default NULL,
+  `dostawienie zêba` float default NULL,
+  `dostawienie klamry` float default NULL,
+  `element lany` float default NULL,
+  `podsypanie zêbów` float default NULL,
+  `lutowanie` float default NULL,
+  `wymiana akrylu` float default NULL,
+  `podœcielenie protezy` float default NULL,
+  `wymiana matryc` float default NULL,
+  `miêkkie podœcielenie` float default NULL,
+  `lutowanie z wymian¹ akrylu` float default NULL,
+  `lutowanie szkieletu` float default NULL
+); 
+
+
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+-- --------------------------------------------------------
+
+-- 
+-- Struktura tabeli dla  `proteza_prace_pomocnicze_punkty`
+-- 
+
+CREATE TABLE `proteza_prace_pomocnicze_punkty` (
+  `model diagnostyczny / orientacyjny` float default NULL,
+  `dodatkowy wzornik` float default NULL,
+  `wax-up` float default NULL,
+  `model dzielony dodatkowy` float default NULL,
+  `³y¿ka indywidualna` float default NULL,
+  `wypo¿yczenie ³uku twarzowego` float default NULL
+); 
+

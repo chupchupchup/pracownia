@@ -1,0 +1,3 @@
+SELECT idzleceniodawcy,SUBSTRING_INDEX(SUBSTRING_INDEX(wz_ost,'/',2),'/',-1),wz_ost 
+FROM `zleceniodawca` 
+WHERE SUBSTRING_INDEX(SUBSTRING_INDEX(wz_ost,'/',2),'/',-1)<>idzleceniodawcy

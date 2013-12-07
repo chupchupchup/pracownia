@@ -1,0 +1,133 @@
+.obsluga {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; line-height : 13px; color: #003366;
+	text-decoration: none; background-color: #ECECEC; border: #B8B8B8; border-width: 2px 2px 2px 1px; font-weight: bold;
+    cursor: default;
+}
+
+.obsluga1 {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; line-height : 13px; color: #003366;
+	text-decoration: none; background-color:  #E6E2EB; border: #B8B8B8; border-width: 2px 2px 2px 1px; font-weight: bold;
+    cursor: default;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+.body  {
+	font-size : 10px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height : 12px;
+	color: #666666;
+}
+
+.norm  {
+	font-size : 13px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height : 12px;
+	color: #666666;
+}
+
+.linknone { font-size : 13px;
+	line-height : 17px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #003366;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.style1 {
+	font-family: "Verdana", Verdana;
+	font-size: 10px;
+	font-weight: 200;
+	background-color: #E6E9FF;
+}
+
+.style2 {
+	font-family: "Verdana", Verdana;
+	font-size: 13px;
+	font-weight: 600;
+	background-color: #EBFFDF;
+}
+
+.logowanie {
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; font-size : 12px; line-height : 13px; color: #003366;
+	text-decoration: none; background-color: #ECECEC; border: #B8B8B8; border-width: 2px 2px 2px 1px; font-weight: bold;
+}
+
+.inputfr {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #686868; text-decoration: none;
+	background-color: #D6D9FE; border: 1px #0066CC outset; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+	margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;
+}
+
+.inputf {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #000000; text-decoration: none;
+	background-color: #FFFFDB; border: 1px #5E788A outset; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+	margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;
+}
+
+.form {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; text-decoration: none;
+	background-color: #F2F4FF; border: 0px #5E788A outset; margin-top: 50px; margin-right: 0px; margin-bottom: 0px;
+	margin-left: 100px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clip:
+	rect(19px 9px 9px 9px)
+}
+
+.form_wyswietl {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; text-decoration: none;
+	background-color: #F2F4FF; border: 0px #5E788A outset; margin-top: 20px; margin-right: 0px; margin-bottom: 0px;
+	margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clip:
+	rect(19px 9px 9px 9px)
+}
+
+.form_text_err {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #C21D5B; text-decoration: none;
+	margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px;
+	padding-bottom: 0px; padding-left: 0px; clip: rect(19px 9px 9px 9px)
+}
+
+.margines {
+	 margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 80px;
+}
+
+.buttonf {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #666688; text-decoration: none;
+	background-color: #EDEDED; border: 1px #5E788A outset; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+	margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; clip:
+	rect(19px 9px 9px 9px);
+}
+
+.tbltext {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #999999; text-decoration: none; margin-top: 0px;
+	margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; 	padding-left: 0px; 			border-style: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px
+}
+
+.klientname {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; color: #666666; font-weight: bold
+}
+
+.menu {
+	font-size : 11px; font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; line-height : 15px; color: #004080;
+	background: #CAD9E7; border: #B8B8B8 outset; margin-top: 0px; margin-right: 0px; margin-bottom: 3px; margin-left: 2px;
+	border-width: 3px 3px 1px 1px; font-weight: bold; cursor: pointer; width:115px; text-align: left; font-style: italic;
+}
+
+.menuroz {
+	font-size : 8px; font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; line-height : 12px; color: #003366;
+	background-color: #ECECEC; border: #B8B8B8 outset; border-width: 2px 1px 1px 1px; cursor: default; width:115px; margin-top: -3px;
+	margin-bottom: 4px; margin-left: 2px; text-decoration: none;
+}
+
+.logout { font-size : 11px;
+	line-height : 17px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #003366;
+	text-decoration: none;
+}
+.login { font-size : 11px;
+	line-height : 17px;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #CDCDE9;
+}

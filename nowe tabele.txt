@@ -1,0 +1,168 @@
+--------------------------------------------------------
+
+--
+-- 
+Struktura tabeli dla  `pracownicy_badania_lek`
+
+--
+
+
+CREATE TABLE IF NOT EXISTS `pracownicy_badania_lek` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`data_badania` date NOT NULL,
+  
+`waznosc_badania` date NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+
+
+
+CREATE TABLE IF NOT EXISTS `pracownicy_bhp` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`data_szkolenia` date NOT NULL,
+  
+`waznosc_szkolenia` date NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `pracownicy_ice` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`imie` varchar(60) NOT NULL,
+  
+`nazwisko` varchar(60) NOT NULL,
+  
+`tel` varchar(100) NOT NULL,
+  
+`pokrewienstwo` varchar(60) NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `pracownicy_urlop` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`dataod` date NOT NULL,
+  
+`datado` date NOT NULL,
+  
+`rok_urlopu` varchar(4) NOT NULL,
+  
+`ilosc_dni_urlopu_akt_rok` int(11) NOT NULL,
+  
+`urlop_pozostalo` int(11) NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `pracownicy_certyfikaty` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`certyfikat` text NOT NULL,
+  
+`data_otrzymania_cert` date NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `pracownicy_uwagi` (
+  
+`pracownikid` varchar(60) NOT NULL,
+  
+`uwaga` text NOT NULL,
+  
+`data_uwagi` date NOT NULL,
+  
+UNIQUE KEY `pracownikid` (`pracownikid`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+
+CREATE TABLE IF NOT EXISTS `zleceniodawca_godz_pracy` (
+  
+`idzleceniodawcy` varchar(100) NOT NULL,
+  
+`dzien_tyg` varchar(20) NOT NULL,
+  
+`otwarte_od` varchar(20) NOT NULL,
+  
+`otwarte_do` varchar(20) NOT NULL,
+  
+UNIQUE KEY `idzleceniodawcy` (`idzleceniodawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `zleceniodawca_wsp_lekarze` (
+  
+`idzleceniodawcy` varchar(100) NOT NULL,
+  
+`nazwa` text NOT NULL,
+  
+UNIQUE KEY `idzleceniodawcy` (`idzleceniodawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `zleceniodawca_uwagi` (
+  
+`idzleceniodawcy` varchar(100) NOT NULL,
+  
+`uwaga` text NOT NULL,
+  
+`data_uwagi` date NOT NULL,
+  
+UNIQUE KEY `idzleceniodawcy` (`idzleceniodawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `dostawcy` (
+  
+`iddostawcy` varchar(100) NOT NULL,
+  
+`nazwa` text NOT NULL,
+  
+`adres` text NOT NULL,
+  
+`tel` varchar(60) NOT NULL,
+  
+`email` text NOT NULL,
+  
+UNIQUE KEY `iddostawcy` (`iddostawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `dostawcy_zakupy` (
+  
+`iddostawcy` varchar(100) NOT NULL,
+  
+`co_kupujemy` text NOT NULL,
+  
+UNIQUE KEY `iddostawcy` (`iddostawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;
+
+CREATE TABLE IF NOT EXISTS `dostawcy_uwagi` (
+  
+`iddostawcy` varchar(100) NOT NULL,
+  
+`uwaga` text NOT NULL,
+  
+`data_uwagi` date NOT NULL,
+  
+UNIQUE KEY `iddostawcy` (`iddostawcy`)
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin2;

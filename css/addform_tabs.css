@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+ul#tabs {
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 0 0;
+    height: 45px;
+    border-bottom: 1px solid black;
+    background: rgb(222, 222, 222);
+}
+ul#tabs li {
+    float: left;
+    margin: 0 5px;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    width: 10%;
+    border: 1px solid black;
+    top: 1px;
+    background: rgb(128, 128, 128);
+}
+ul#tabs li:hover {
+    border-bottom: 1px solid white;
+    /*background: white;*/
+       color: black;
+}
+ul#tabs a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font: 14px Arial, sans-serif;
+}
+body#1 li#tab1,
+body#2 li#tab2,
+body#3 li#tab3,
+body#4 li#tab4,
+body#5 li#tab5,
+body#6 li#tab6,
+body#7 li#tab7,
+body#8 li#tab8,
+body#9 li#tab9 {
+    background: #EBFFDF;
+    border-bottom: 1px solid #EBFFDF;
+}
+ul#tabs a:hover,
+body#1 li#tab1 a,
+body#2 li#tab2 a,
+body#3 li#tab3 a,
+body#4 li#tab4 a,
+body#5 li#tab5 a,
+body#6 li#tab6 a,
+body#7 li#tab7 a,
+body#8 li#tab8 a,
+body#9 li#tab9 a {
+    color: black;
+}
+ul#tabs span {
+    display: block;
+    padding: 4px 10px 0 10px;
+}
+div#iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+    border-top: 1px solid black;
+}
+iframe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>CRM - LOGOWANIE</title>
+<link rel="stylesheet" href="./css/login.css" type="text/css">
+<meta http-equiv="Content-Type" content="text-html; charset=iso-8859-2">
+</head>
+
+<style type="text/css">
+.touch {
+	border:1px solid black;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background-color:#ECECEC;
+	color:#003366;
+	width:45px;
+	height:45px;
+	}
+#touchDiv,fieldset {text-align:center;}
+</style>
+
+</head>
+
+<body bgcolor="#EBFFDF">
+
+<div style="margin-top: 100px;" align="center">
+<form name="logowanie" method="post" action="index.php">
+
+  <table style="width:300px;" border="1" frame="BORDER" rules="NONE" cellpadding="8" cellspacing="0">
+    <tr>
+      <td class="logowanie" align="center">LOGOWANIE DO SYSTEMU ZARZĄDZANIA ZLECENIAMI PRACOWNI</td>
+    </tr>
+  </table>
+
+  <table style="width:300px;" border="0" rules="NONE" cellpadding="6" cellspacing="0">
+    <tr class="inputfr">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="inputfr">
+      <td align="right"><b>PODAJ PIN:</b></td>
+      <td><input class="inputf" type="password" name="pin" maxlength="4" size="8"></td>
+    </tr>
+  </table>
+
+  <table style="width:300px;" border="1" frame="BELOW" rules="NONE" cellpadding="18" cellspacing="0">
+    <tr class="inputfr" align="center">
+      <td>
+      	  <input class="inputf" type="submit" name="ZALOGUJ" value="ZALOGUJ">
+      	  <input class="inputf" type="reset" name="WYCZYSC" value="WYCZYSC">
+      </td>
+    </tr>
+  </table>
+
+</form>
+</div>
+
+<!-- klawiatura numeryczna na ekranie -->
+<script type="text/javascript">
+function addIt(cKey)
+{
+dsel = document.forms["foo"].elements["focusedField"];
+selectedElement = (dsel.value!='')?dsel.value:"bar";
+
+d = document.forms["foo"].elements[selectedElement];
+d.value =  (cKey.value=='backspace') ? d.value.slice(0,-1) : d.value+cKey.value;
+}
+</script>
+
+<div id="touchDiv">
+<input class="touch" type="button" value="7" onclick="addIt(this)">
+<input class="touch" type="button" value="8" onclick="addIt(this)">
+<input class="touch" type="button" value="9" onclick="addIt(this)"><br />
+<input class="touch" type="button" value="4" onclick="addIt(this)">
+<input class="touch" type="button" value="5" onclick="addIt(this)">
+<input class="touch" type="button" value="6" onclick="addIt(this)"><br />
+<input class="touch" type="button" value="1" onclick="addIt(this)">
+<input class="touch" type="button" value="2" onclick="addIt(this)">
+<input class="touch" type="button" value="3" onclick="addIt(this)"><br />
+<input class="touch" type="button" value="0" onclick="addIt(this)">
+<input class="touch" type="button" value="backspace" onclick="addIt(this)" style="width:94px">
+</div>
+
+<div>
+<form name="foo" action>
+<fieldset><legend>The Input</legend>
+<input type="text" name="bar" onfocus="document.forms['foo'].elements['focusedField'].value = this.name"><br>
+<input type="text" name="bar2" onfocus="document.forms['foo'].elements['focusedField'].value = this.name"><br>
+<input type="text" name="focusedField" value="document.forms['foo'].elements['focusedField'].value">
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>
