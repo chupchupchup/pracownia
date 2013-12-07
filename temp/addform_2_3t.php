@@ -46,7 +46,7 @@ else{
  //zmienna do czyszczenia
  $idlok = czysc_zmienne_formularza($_REQUEST['nridlokalnego']);
 
- //id zlecenia wczesniej ju¿ wykonywanego 
+ //id zlecenia wczesniej juï¿½ wykonywanego 
  $idpoz=$_SESSION['form_tab']['idzleceniapoz_tmp'].$_REQUEST['rok'];
 
  $idzewnetrzne= czysc_zmienne_formularza($_REQUEST['idzewnetrzny']);

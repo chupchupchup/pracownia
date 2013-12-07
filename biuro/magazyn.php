@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -73,7 +73,7 @@ elseif($_REQUEST['szukaj']=='zaawansowane'){
  require_once('./inc/filtr_formularzy.inc.php');
 
 // teraz szukamy:
-$szukamy = new Dane; // tworzymy now± tablicê na dane
+$szukamy = new Dane; // tworzymy nowï¿½ tablicï¿½ na dane
 
 if( isset($_POST['nazwa']) || isset($_POST['osoba_dodajaca']) || isset($_POST['czyData']) ){
   //czyszczenie zmiennych formularza !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -91,7 +91,7 @@ if( isset($_POST['nazwa']) || isset($_POST['osoba_dodajaca']) || isset($_POST['c
   $dataDo=$datadoY.'-'.$datadoM.'-'.$datadoD;
   
     //echo $_POST['nazwa'].' - POST nazwa<br>';
-  $szukamy->nazwa = $_POST['nazwa']; // podajemy np. nazwê szukanego materia³u
+  $szukamy->nazwa = $_POST['nazwa']; // podajemy np. nazwï¿½ szukanego materiaï¿½u
   $szukamy->osoba_dodajaca = $_POST['osoba_dodajaca']; // podajemy np. wpisujacego uzytkownika
 
   // zapamientujemy wyszukiwanie w zmiennej sesyjnej zeby mozna bylo skakac po stronach wyszukiwania
@@ -122,7 +122,7 @@ else {
 }
   //echo $str.' - numer strony<br>';
 
-  $material = $mag->pobierz($szukamy,$str,$czyData,$dataOd,$dataDo); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam materia³
+  $material = $mag->pobierz($szukamy,$str,$czyData,$dataOd,$dataDo); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam materiaï¿½
 
 if($material!=false){
 
@@ -136,7 +136,7 @@ if($material!=false){
 //  $smarty->assign('sub', 'tak');
 //  $smarty->assign('plik', 'magazyn_wyswietl.tpl');
 
-  $material->wyswietl(); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+  $material->wyswietl(); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
 }
 else{
   //header("Location: biuro.php?strona=magazyn&wpis=wyszukaj");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
@@ -149,7 +149,7 @@ elseif($_REQUEST['wpis']=='dodaj'){
 
   $smarty->assign('ID', 'dodaj');
 
-//pobrac z bazy nazwy dostawców i przeslac do szablonu
+//pobrac z bazy nazwy dostawcï¿½w i przeslac do szablonu
   $sql="SELECT nazwa FROM material_dostawcy";
   $wyn=myquery($sql);
 
@@ -167,7 +167,7 @@ elseif($_REQUEST['dodaj']=='dodaj_form'){
  require_once('./inc/filtr_formularzy.inc.php');
 
 // teraz szukamy:
-$dodaj = new Dane; // tworzymy now± jakby tablicê na dane
+$dodaj = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 
 if( isset($_POST['nazwa']) || isset($_POST['ilosc_calkowita']) || isset($_POST['cena_zakupu']) ){
   //czyszczenie zmiennych formularza !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -196,11 +196,11 @@ if( isset($_POST['nazwa']) || isset($_POST['ilosc_calkowita']) || isset($_POST['
   $dodaj->nr_seryjny = $nr_seryjny;
   $dodaj->dostawca = $dostawca;
 
-  $dodany_material = $mag->dodaj($dodaj); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam Material
+  $dodany_material = $mag->dodaj($dodaj); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Material
 
   if($dodany_material==true){
-    $dodany_material = $mag->pobierz($dodaj,0,'nie',0,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $dodany_material->wyswietl(); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $dodany_material = $mag->pobierz($dodaj,0,'nie',0,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $dodany_material->wyswietl(); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
     echo 'dane nie zostaly dodane<br>';
@@ -214,12 +214,12 @@ if( isset($_POST['nazwa']) || isset($_POST['ilosc_calkowita']) || isset($_POST['
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='edycja'){
 
-$edycja = new Dane; // tworzymy now± jakby tablicê na dane
+$edycja = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $edycja->id_material = $_REQUEST['indeks']; // podajemy indeks edytowanego materialu
 
-$edytowany_material = $mag->pobierz_edit($edycja); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam Material
+$edytowany_material = $mag->pobierz_edit($edycja); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Material
 
-//pobrac z bazy nazwy dostawców i przeslac do szablonu
+//pobrac z bazy nazwy dostawcï¿½w i przeslac do szablonu
   $sql="SELECT nazwa FROM material_dostawcy";
   $wyn=myquery($sql);
     $dostawca[]='';
@@ -230,7 +230,7 @@ $edytowany_material = $mag->pobierz_edit($edycja); // wyszukujemy w bazie przeka
 
   if($edytowany_material!=false){
     $info='';
-    $edytowany_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $edytowany_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   elseif($edytowany_material==false){
     echo '<br>nie zostaly pobrane dane do edycji <br>';
@@ -242,7 +242,7 @@ $edytowany_material = $mag->pobierz_edit($edycja); // wyszukujemy w bazie przeka
 
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='update'){
-//pobrac z bazy nazwy dostawców i przeslac do szablonu
+//pobrac z bazy nazwy dostawcï¿½w i przeslac do szablonu
   $sql="SELECT nazwa FROM material_dostawcy";
   $wyn=myquery($sql);
     $dostawca[]='';
@@ -251,7 +251,7 @@ elseif($_REQUEST['wpis']=='update'){
     }
     $smarty->assign('dostawca', $dostawca);
 
-$zmien = new Dane; // tworzymy now± jakby tablicê na dane
+$zmien = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 //$zmien->id_material = $_POST['indeks'];
 $zmien->nazwa = $_POST['nazwa'];
 $zmien->ilosc_calkowita = $_POST['ilosc_calkowita'];
@@ -262,14 +262,14 @@ $zmien->producent = $_POST['producent'];
 $zmien->nr_seryjny = $_POST['nr_seryjny'];
 $zmien->dostawca = $_POST['dostawca'];
 
-$zmien1 = new Dane; // tworzymy now± jakby tablicê na dane
+$zmien1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $zmien1->id_material = $_POST['indeks']; // podajemy indeks rekordu ktory bedziemy aktualizowac
 
 $zmien_material = $mag->aktualizuj($zmien,$zmien1); // aktualizujemy dane w bazie
 
   if($zmien_material==true){
     
-    $zmien_podmagazyn = new Dane; // tworzymy now± jakby tablicê na dane
+    $zmien_podmagazyn = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 	$zmien_podmagazyn->nazwa = $_POST['nazwa'];
 	$zmien_podmagazyn->jednostka_miary = $_POST['jednostka_miary'];
 	$zmien_podmagazyn->producent = $_POST['producent'];
@@ -279,24 +279,24 @@ $zmien_material = $mag->aktualizuj($zmien,$zmien1); // aktualizujemy dane w bazi
 	$zmien_podmagazyn->ilosc_calkowita = $_POST['ilosc_calkowita'];
     $zmien_material_podmagazyn = $mag->aktualizuj_podmagazyn_update($zmien_podmagazyn,$zmien1); // aktualizujemy dane w bazie
 
-    $zmien_material = $mag->pobierz_edit($zmien1,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $info='dane zosta³y zaktualizowane';
-    $zmien_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $zmien_material = $mag->pobierz_edit($zmien1,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $info='dane zostaï¿½y zaktualizowane';
+    $zmien_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    $zmien_material = $mag->pobierz_edit($zmien1,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+    $zmien_material = $mag->pobierz_edit($zmien1,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
     $info='dane nie zostaly zmienione';
-    $zmien_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $zmien_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
     //header("Location: ");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }
 
 elseif( $_REQUEST['usun']=='wyk' ){
 
-$usun1 = new Dane; // tworzymy now± jakby tablicê na dane
+$usun1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun1->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 
-$usun = new Dane; // tworzymy now± jakby tablicê na dane
+$usun = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 $usun->nazwa = $_REQUEST['nazwa'];
 $usun->ilosc_calkowita = $_REQUEST['ilosc_calkowita'];
@@ -305,28 +305,28 @@ $usun->cena_zakupu = $_REQUEST['cena_zakupu'];
 $usun->jednostka_miary = $_REQUEST['jednostka_miary'];
 $usun->data_dodania = $_REQUEST['data_dodania'];
 
-$usuwany_material = $mag->wyk_usun($usun1); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+$usuwany_material = $mag->wyk_usun($usun1); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
 
   if($usuwany_material!=false){
 
     $usun_material_podmagazyn = $mag->usun_podmagazyn($usun1,'wyk'); // aktualizujemy dane w bazie
 
-    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $info='materia³ zosta³ wykorzystany';
-    $usuwany_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $info='materiaï¿½ zostaï¿½ wykorzystany';
+    $usuwany_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    echo 'materia³ nie zosta³ ustawiony jako wykorzystany';
+    echo 'materiaï¿½ nie zostaï¿½ ustawiony jako wykorzystany';
     //header("Location: wyszukaj.php");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }
 
 elseif( $_REQUEST['usun']=='tak' ){
 
-$usun1 = new Dane; // tworzymy now± jakby tablicê na dane
+$usun1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun1->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 
-$usun = new Dane; // tworzymy now± jakby tablicê na dane
+$usun = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 $usun->nazwa = $_REQUEST['nazwa'];
 $usun->ilosc_calkowita = $_REQUEST['ilosc_calkowita'];
@@ -335,28 +335,28 @@ $usun->cena_zakupu = $_REQUEST['cena_zakupu'];
 $usun->jednostka_miary = $_REQUEST['jednostka_miary'];
 $usun->data_dodania = $_REQUEST['data_dodania'];
 
-$usuwany_material = $mag->usun($usun1); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+$usuwany_material = $mag->usun($usun1); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
 
   if($usuwany_material!=false){
 
     $usun_material_podmagazyn = $mag->usun_podmagazyn($usun1,'del'); // aktualizujemy dane w bazie
 
-    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $info='materia³ zosta³ usuniêty';
-    $usuwany_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $info='materiaï¿½ zostaï¿½ usuniï¿½ty';
+    $usuwany_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    echo 'dane nie zostaly usuniête';
+    echo 'dane nie zostaly usuniï¿½te';
     //header("Location: wyszukaj.php");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }
 
 elseif( $_REQUEST['usun']=='nie' ){
 
-$usun1 = new Dane; // tworzymy now± jakby tablicê na dane
+$usun1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun1->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 
-$usun = new Dane; // tworzymy now± jakby tablicê na dane
+$usun = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun->id_material = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 $usun->nazwa = $_REQUEST['nazwa'];
 $usun->ilosc_calkowita = $_REQUEST['ilosc_calkowita'];
@@ -366,18 +366,18 @@ $usun->jednostka_miary = $_REQUEST['jednostka_miary'];
 $usun->data_dodania = $_REQUEST['data_dodania'];
 //echo $_REQUEST['data_dodania'].'<br>';
 
-$usuwany_material = $mag->nie_usun($usun1); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+$usuwany_material = $mag->nie_usun($usun1); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
 
   if($usuwany_material!=false){
 
     $usun_material_podmagazyn = $mag->usun_podmagazyn($usun1,'act'); // aktualizujemy dane w bazie
 
-    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $info='materia³ zosta³y przywrócony';
-    $usuwany_material->wyswietl_edycja($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $usuwany_material = $mag->pobierz_edit($usun,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $info='materiaï¿½ zostaï¿½y przywrï¿½cony';
+    $usuwany_material->wyswietl_edycja($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    echo '<br>dane nie zostaly przywrócone<br>';
+    echo '<br>dane nie zostaly przywrï¿½cone<br>';
     //header("Location: wyszukaj.php");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }
@@ -385,7 +385,7 @@ $usuwany_material = $mag->nie_usun($usun1); // wyszukujemy w bazie przekazuj±c j
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='pobierz'){
 
-$pobierz = new Dane; // tworzymy now± jakby tablicê na dane
+$pobierz = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $pobierz->id_material = $_POST['indeks']; // podajemy indeks edytowanego materialu
 
 $pobierz->nazwa = $_POST['nazwa'];
@@ -407,22 +407,22 @@ if( ($_POST['ilosc_pozostala']-$_POST['ilosc_do_pobrania']) >=0 ){
   $pobierz->ilosc = $_POST['ilosc_do_pobrania'];
 
 //aktualizujemy tabele material i odejmujemy ilosc pobrana materialu
-  $zmien = new Dane; // tworzymy now± jakby tablicê na dane
+  $zmien = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
   $zmien->ilosc_pozostala = $_POST['ilosc_pozostala']-$_POST['ilosc_do_pobrania'];
-  $zmien1 = new Dane; // tworzymy now± jakby tablicê na dane
+  $zmien1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
   $zmien1->id_material = $_POST['indeks']; // podajemy indeks rekordu ktory bedziemy aktualizowac
   $zmien_material = $mag->aktualizuj($zmien,$zmien1); // aktualizujemy dane w bazie
 //--------------------
 
-  $pobrany_material = $mag->dodaj_pobrany_material($pobierz); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam Material
+  $pobrany_material = $mag->dodaj_pobrany_material($pobierz); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Material
 }
 else {
     //ERROR
 }
 
   if($pobrany_material==true){
-    $pobrany_material = $mag->pobierz_podmagazyn($pobierz,0,'nie','',''); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam Materail pobrany
-    $pobrany_material->wyswietl_podmagazyn(); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $pobrany_material = $mag->pobierz_podmagazyn($pobierz,0,'nie','',''); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Materail pobrany
+    $pobrany_material->wyswietl_podmagazyn(); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
     echo 'dane nie zostaly dodane';
@@ -434,13 +434,13 @@ else {
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='do_zamowienia'){
 
-//$edycja = new Dane; // tworzymy now± jakby tablicê na dane
+//$edycja = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 //$edycja->id_material = $_REQUEST['indeks']; // podajemy indeks edytowanego materialu
 
- $pobierz_material = $mag->pobierz_material(); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+ $pobierz_material = $mag->pobierz_material(); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
 
   if($pobierz_material!=false){
-    $pobierz_material->wyswietl(); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $pobierz_material->wyswietl(); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
     echo 'dane nie zostaly pobrane<br>';
@@ -494,7 +494,7 @@ elseif($_REQUEST['szukaj']=='zaawansowane_podmagazyn'){
  require_once('./inc/filtr_formularzy.inc.php');
 
 // teraz szukamy:
-$szukamy = new Dane; // tworzymy now± tablicê na dane
+$szukamy = new Dane; // tworzymy nowï¿½ tablicï¿½ na dane
 
 if( isset($_POST['nazwa']) || isset($_POST['podmagazyn_osoba_wykorzystujaca']) || isset($_POST['czyData']) ){
   //czyszczenie zmiennych formularza !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -512,7 +512,7 @@ if( isset($_POST['nazwa']) || isset($_POST['podmagazyn_osoba_wykorzystujaca']) |
   $dataDo=$datadoY.'-'.$datadoM.'-'.$datadoD;
 
     //echo $_POST['nazwa'].' - POST nazwa<br>';
-  $szukamy->nazwa = $nazwa; // podajemy np. nazwê szukanego materia³u
+  $szukamy->nazwa = $nazwa; // podajemy np. nazwï¿½ szukanego materiaï¿½u
   $szukamy->osoba_wykorzystujaca = $podmagazyn_osoba_wykorzystujaca; // podajemy np. wpisujacego uzytkownika
 
   // zapamientujemy wyszukiwanie w zmiennej sesyjnej zeby mozna bylo skakac po stronach wyszukiwania
@@ -543,10 +543,10 @@ else {
 }
   //echo $str.' - numer strony<br>';
 
-  $material = $mag->pobierz_podmagazyn($szukamy,$str,$czyData,$dataOd,$dataDo); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam materia³
+  $material = $mag->pobierz_podmagazyn($szukamy,$str,$czyData,$dataOd,$dataDo); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam materiaï¿½
 
 if($material!=false){
-  $material->wyswietl_podmagazyn(); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+  $material->wyswietl_podmagazyn(); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
 }
 else{
   header("Location: biuro.php?strona=magazyn&wpis=wyszukaj_podmagazyn");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
@@ -557,14 +557,14 @@ else{
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='edycja_podmagazyn'){
 
-$edycja = new Dane; // tworzymy now± jakby tablicê na dane
+$edycja = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $edycja->id_material_user = $_REQUEST['indeks']; // podajemy indeks edytowanego materialu
 
-$edytowany_material = $mag->pobierz_edit_podmagazyn($edycja); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam Material
+$edytowany_material = $mag->pobierz_edit_podmagazyn($edycja); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Material
 
   if($edytowany_material!=false){
     $info='';
-    $edytowany_material->wyswietl_edycja_podmagazyn($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $edytowany_material->wyswietl_edycja_podmagazyn($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   elseif($edytowany_material==false){
     echo 'nie zostaly pobrane dane do edycji';
@@ -576,45 +576,45 @@ $edytowany_material = $mag->pobierz_edit_podmagazyn($edycja); // wyszukujemy w b
 //--------------------------------------------
 elseif($_REQUEST['wpis']=='update_podmagazyn'){
 
-$zmien = new Dane; // tworzymy now± jakby tablicê na dane
+$zmien = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $zmien->nazwa = $_POST['nazwa'];
 $zmien->osoba_wykorzystujaca = $_POST['osoba_wykorzystujaca'];
 $zmien->cena_materialu = $_POST['cena_materialu'];
 
-$zmien1 = new Dane; // tworzymy now± jakby tablicê na dane
+$zmien1 = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $zmien1->id_material_user = $_POST['indeks']; // podajemy indeks rekordu ktory bedziemy aktualizowac
 
 $zmien_material = $mag->aktualizuj_podmagazyn($zmien,$zmien1); // aktualizujemy dane w bazie
 
   if($zmien_material==true){
-    $zmien_material = $mag->pobierz_edit_podmagazyn($zmien1,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    $info='dane zosta³y zaktualizowane';
-    $zmien_material->wyswietl_edycja_podmagazyn($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $zmien_material = $mag->pobierz_edit_podmagazyn($zmien1,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    $info='dane zostaï¿½y zaktualizowane';
+    $zmien_material->wyswietl_edycja_podmagazyn($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    $zmien_material = $mag->pobierz_edit_podmagazyn($zmien1,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+    $zmien_material = $mag->pobierz_edit_podmagazyn($zmien1,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
     $info='dane nie zostaly zmienione';
-    $zmien_material->wyswietl_edycja_podmagazyn($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $zmien_material->wyswietl_edycja_podmagazyn($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
     //header("Location: ");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }
 
 elseif( $_REQUEST['usun_podmagazyn']=='wyk' || $_REQUEST['usun_podmagazyn']=='act' || $_REQUEST['usun_podmagazyn']=='del' ){
 
-$usun = new Dane; // tworzymy now± jakby tablicê na dane
+$usun = new Dane; // tworzymy nowï¿½ jakby tablicï¿½ na dane
 $usun->id_material_user = $_REQUEST['indeks']; // podajemy nazwisko dodawanego uzytkownika itd.
 
-$usuwany_material = $mag->usun_podmagazyn($usun,$_REQUEST['usun_podmagazyn']); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
+$usuwany_material = $mag->usun_podmagazyn($usun,$_REQUEST['usun_podmagazyn']); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
 
   if($usuwany_material!=false){
-    $usuwany_material = $mag->pobierz_edit_podmagazyn($usun,0); // wyszukujemy w bazie przekazuj±c jej dane z tablicy, baza zwraca nam U¿ytkownika
-    if($_REQUEST['usun_podmagazyn']=='wyk'){ $info='materia³ zosta³ wykorzystany'; }
-    elseif($_REQUEST['usun_podmagazyn']=='act'){ $info='materia³ zosta³ przywrócony'; }
-    elseif($_REQUEST['usun_podmagazyn']=='del'){ $info='materia³ zosta³ usuniêty'; }
-    $usuwany_material->wyswietl_edycja_podmagazyn($info); // wy¶wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
+    $usuwany_material = $mag->pobierz_edit_podmagazyn($usun,0); // wyszukujemy w bazie przekazujï¿½c jej dane z tablicy, baza zwraca nam Uï¿½ytkownika
+    if($_REQUEST['usun_podmagazyn']=='wyk'){ $info='materiaï¿½ zostaï¿½ wykorzystany'; }
+    elseif($_REQUEST['usun_podmagazyn']=='act'){ $info='materiaï¿½ zostaï¿½ przywrï¿½cony'; }
+    elseif($_REQUEST['usun_podmagazyn']=='del'){ $info='materiaï¿½ zostaï¿½ usuniï¿½ty'; }
+    $usuwany_material->wyswietl_edycja_podmagazyn($info); // wyï¿½wietlamy szablon Smarty jezeli sa jakies wyniki zapytania
   }
   else{
-    echo 'dane nie zostaly usuniête';
+    echo 'dane nie zostaly usuniï¿½te';
     //header("Location: wyszukaj.php");   //jak zapytanie nie zwrocilo wynikow to wracamy do wyszukiwania
   }
 }

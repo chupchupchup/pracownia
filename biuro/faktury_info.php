@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -77,14 +77,14 @@ function pobierz_dane ($sql) {
     $smarty->assign('tablica_wynikow', $tablica_wynikow);
 
 /*
-  if( $status_zamowienia=='niezap³acona' ){
-    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA NIE ZOSTA£A JESZCZE ZAP£ACONA !!!</b> ';
+  if( $status_zamowienia=='niezapï¿½acona' ){
+    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA NIE ZOSTAï¿½A JESZCZE ZAPï¿½ACONA !!!</b> ';
   }
-  elseif( $status_zamowienia=='zap³acona' ){
-    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA ZOSTA£A JU¯ ZAP£ACONA !!!</b> ';
+  elseif( $status_zamowienia=='zapï¿½acona' ){
+    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA ZOSTAï¿½A JUï¿½ ZAPï¿½ACONA !!!</b> ';
   }
   elseif( $status_zamowienia=='w trakcie realizacji' ){
-    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA ZOSTA£A ANULOWANA !!!</b> ';
+    $komunikat='STATUS FAKTURY: <b style="font-size:11px;color:#A90000;">FAKTURA ZOSTAï¿½A ANULOWANA !!!</b> ';
   }
   else{
     $komunikat='';
@@ -95,10 +95,10 @@ function pobierz_dane ($sql) {
   $smarty->assign('komunikat', $_REQUEST['komunikat']);
 
 //----------- S T A T U S -----------------
-          $status=array('niezap³acona','zap³acona','anulowana','usun');
+          $status=array('niezapï¿½acona','zapï¿½acona','anulowana','usun');
           $smarty->assign('status', $status);
 //----------- S P O S O B   Z A P L A T Y -----------------
-          $sposob_zaplaty=array('przelew','gotówka');
+          $sposob_zaplaty=array('przelew','gotï¿½wka');
           $smarty->assign('sposob_zaplaty', $sposob_zaplaty);
 //-----------------------------------------
 

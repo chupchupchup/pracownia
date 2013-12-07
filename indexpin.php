@@ -1,4 +1,4 @@
-<?
+<?php
 //------------------------------------------------------------------------------------------------------------------
 //funkcja posredniczaca w zapytaniu SQL - zwraca kod bledu zapytania
     function myquery ($query) {
@@ -50,7 +50,7 @@ require_once('./inc/filtr_formularzy.inc.php');
  }
  //jezeli status uzytkownika jest 'del'
  elseif(mysql_numrows($sql_result)==1 && $arr['status']<>'act'){
-    echo '<br />NIE MO¯NA PO£¡CZYÆ SIÊ Z BAZ¡ DANYCH PONIEWA¯ TO KONTO U¯YTKOWNIKA ZOSTA£O ZABLOKOWANE, W CELU ODBLOKOWANIA DOSTÊPU SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+    echo '<br />NIE MOï¿½NA POï¿½ï¿½CZYï¿½ SIï¿½ Z BAZï¿½ DANYCH PONIEWAï¿½ TO KONTO Uï¿½YTKOWNIKA ZOSTAï¿½O ZABLOKOWANE, W CELU ODBLOKOWANIA DOSTï¿½PU SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
  }
  //jezeli pin nie wystepuje w bazie
  else {
@@ -72,7 +72,7 @@ require_once('./inc/filtr_formularzy.inc.php');
         
         //ustawienie licznika w stan poczatkowy
         $c=1;//echo ' --------------- '.$c;
-        echo '<br />IP ZOSTA£ ZABLOKOWANY - ZBYT WIELE NIEUDANYCH PRÓB LOGOWANIA, W CELU ODBLOKOWANIA SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+        echo '<br />IP ZOSTAï¿½ ZABLOKOWANY - ZBYT WIELE NIEUDANYCH PRï¿½B LOGOWANIA, W CELU ODBLOKOWANIA SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
     }
     else{
       //pobranie IP komputera ktory sie laczy z baza
@@ -96,13 +96,13 @@ require_once('./inc/filtr_formularzy.inc.php');
       if(mysql_numrows($sql_result)==1 && $arr['status']=='act') {
 
 	  include('./inc/smarty_path.inc.php');
-          echo '<br />liczba nieudanych prób logowania: '.$c;
+          echo '<br />liczba nieudanych prï¿½b logowania: '.$c;
           $smarty->assign('count', $c);
 	       $smarty->display('loginpin.tpl');
 
       }
       else{
-          echo '<br />NIE MO¯NA PO£¡CZYÆ SIÊ Z BAZ¡ DANYCH Z TEGO IP - '.$ip.', W CELU ODBLOKOWANIA DOSTÊPU SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+          echo '<br />NIE MOï¿½NA POï¿½ï¿½CZYï¿½ SIï¿½ Z BAZï¿½ DANYCH Z TEGO IP - '.$ip.', W CELU ODBLOKOWANIA DOSTï¿½PU SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
       }	
 
     }
@@ -140,7 +140,7 @@ else {
 
       }
       else{
-          echo '<br />NIE MO¯NA PO£¡CZYÆ SIÊ Z BAZ¡ DANYCH Z TEGO IP - '.$ip.', W CELU ODBLOKOWANIA DOSTÊPU SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+          echo '<br />NIE MOï¿½NA POï¿½ï¿½CZYï¿½ SIï¿½ Z BAZï¿½ DANYCH Z TEGO IP - '.$ip.', W CELU ODBLOKOWANIA DOSTï¿½PU SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
       }	
 
 }

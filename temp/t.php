@@ -1,4 +1,4 @@
-<?
+<?php
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
     echo 'asdasdasdasdasdasdasdasdasda';
 }

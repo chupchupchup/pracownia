@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -38,7 +38,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
           $smarty->assign('rok', $rok);
 
 //----------- S T A T U S -----------------
-          $status=array('dowolny', 'niezap³acona', 'zap³acona','anulowana');
+          $status=array('dowolny', 'niezapï¿½acona', 'zapï¿½acona','anulowana');
           $smarty->assign('status', $status);
 
 //----------- K L I E N C I -----------------

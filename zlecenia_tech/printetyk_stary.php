@@ -20,10 +20,10 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 
 <div onclick="javascript:window.close();">
 
-<b style="font-size:10px;"><cite><?=$etykieta?></cite></b><br />
-<b style="font-size:10px;"><cite><?=$kategoria?></cite></b><br />
-<cite style="font-size:10px;">wprowadzono: <b><?=$datawpisania?> </b></cite><br />
-<cite style="font-size:10px;">termin realizacji: <b><?=$zwrotzlecenia?> </b></cite><br />
+<b style="font-size:10px;"><cite><?php=$etykieta?></cite></b><br />
+<b style="font-size:10px;"><cite><?php=$kategoria?></cite></b><br />
+<cite style="font-size:10px;">wprowadzono: <b><?php=$datawpisania?> </b></cite><br />
+<cite style="font-size:10px;">termin realizacji: <b><?php=$zwrotzlecenia?> </b></cite><br />
 
 <div style="margin-top:10px;margin-left:-4px;">
  <img
@@ -38,7 +38,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </body>
 </html>
 
-<?  
+<?php
 }
 else{
   header("Location: ./index.php");

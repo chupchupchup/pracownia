@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -82,7 +82,7 @@ elseif($_REQUEST['wpis']=='dodaj_form'){
     $tablica_wynikow=pobierz_dane($sql);
     $smarty->assign('tablica_wynikow', $tablica_wynikow);
 
-    $t_opis=array('Imiê'=>'200','Nazwisko'=>'200','Pesel'=>'100');
+    $t_opis=array('Imiï¿½'=>'200','Nazwisko'=>'200','Pesel'=>'100');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('lokalizacja', 'dodaj_pracownika');
@@ -120,7 +120,7 @@ elseif($_REQUEST['wpis']=='wyszukaj_form'){
     $tablica_wynikow=pobierz_dane($sql);
     $smarty->assign('tablica_wynikow', $tablica_wynikow);
 
-    $t_opis=array('Imiê'=>'200','Nazwisko'=>'200','Pesel'=>'100','Stanowisko'=>'100');
+    $t_opis=array('Imiï¿½'=>'200','Nazwisko'=>'200','Pesel'=>'100','Stanowisko'=>'100');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('lokalizacja', 'wyszukaj_pracownika');
@@ -134,7 +134,7 @@ elseif($_REQUEST['wpis']=='wyszukaj_form'){
     $smarty->assign('pesel', $pesel);
     $smarty->assign('stanowisko', $stanowisko);
 
-    $smarty->assign('komunikat', '&nbsp;<b>Brak wyników wyszukiwania:</b><br />');
+    $smarty->assign('komunikat', '&nbsp;<b>Brak wynikï¿½w wyszukiwania:</b><br />');
     $smarty->assign('sub', 'tak');
     $smarty->assign('plik', 'pracownicy.tpl');
   }

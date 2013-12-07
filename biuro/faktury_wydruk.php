@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -47,7 +47,7 @@ function czysc_zmienne_formularza($input)
 //------------------------------------------------------------------------------------------------------------------
 //Zmienne
     $sprzedawca_nazwa='Uslugi Protetyczne Jerzy Andryskowski';
-    $sprzedawca_adres='80-246 Gdañsk, ul.Jaskowa Dolina 9/1';
+    $sprzedawca_adres='80-246 Gdaï¿½sk, ul.Jaskowa Dolina 9/1';
     $sprzedawca_nip='PL 584-000-01-05';
 //------------------------------------------------------------------------------------------------------------------
     $liczba_el_fv=$_SESSION['liczba_el_fv'];
@@ -59,7 +59,7 @@ function czysc_zmienne_formularza($input)
 
     $smarty->assign('tab_suma', $_SESSION['tab_suma']);
                            //'PKWiU'=>'50',
-    $t_opis=array('l.p.'=>'20','Nazwa towaru/us³ugi'=>'150','Ilo¶æ'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Warto¶æ <br />netto'=>'80','Warto¶æ <br />VAT'=>'80','Warto¶æ <br />brutto'=>'80');
+    $t_opis=array('l.p.'=>'20','Nazwa towaru/usï¿½ugi'=>'150','Iloï¿½ï¿½'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Wartoï¿½ï¿½ <br />netto'=>'80','Wartoï¿½ï¿½ <br />VAT'=>'80','Wartoï¿½ï¿½ <br />brutto'=>'80');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('tab_el_fv', $_SESSION['tab_el_fv']);

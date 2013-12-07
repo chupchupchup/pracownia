@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -83,7 +83,7 @@ elseif($_POST['szukaj']=='zaawansowane'){
     if($zleceniodawca==''){
       $zleceniodawca_sql = "z.idzleceniapoz LIKE '%' ";
     }else{
-      $zleceniodawca_sql = "TRIM(LEADING '/' FROM SUBSTRING_INDEX(z.idzleceniapoz,'/',2)) = '".$zleceniodawca."' ";//!!!!!!!!!!!!!WA¯NE!!!!!!!
+      $zleceniodawca_sql = "TRIM(LEADING '/' FROM SUBSTRING_INDEX(z.idzleceniapoz,'/',2)) = '".$zleceniodawca."' ";//!!!!!!!!!!!!!WAï¿½NE!!!!!!!
 	}
 /*
  $idzewnetrzne = czysc_zmienne_formularza($_POST['idzewnetrzne']);
@@ -178,7 +178,7 @@ ORDER BY rt.idzleceniapoz,rt.idzlecenianr LIMIT 20;
   //tablice dopisanych wierszy
   $smarty->assign('tablica_wynikow', $tablica_wynikow);
 
-  $t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'60','Wycena'=>'100','Zap³acone'=>'60','INFO'=>'100');
+  $t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'60','Wycena'=>'100','Zapï¿½acone'=>'60','INFO'=>'100');
   $smarty->assign('sub', 'tak');
   $smarty->assign('tablica_opisy', $t_opis);
 
@@ -273,7 +273,7 @@ elseif($_REQUEST['kto']=='technik'){
 
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  $t_opis=array('<input type="checkbox" name="checkall" onclick="checkedAll();">'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'60','Wycena'=>'60','Czy Rozliczaæ'=>'100');
+  $t_opis=array('<input type="checkbox" name="checkall" onclick="checkedAll();">'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'60','Wycena'=>'60','Czy Rozliczaï¿½'=>'100');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('technik', $technik);
   
@@ -320,7 +320,7 @@ elseif($_REQUEST['rozlicz']=='tech'){
   $liczba_el_roz=$_REQUEST['liczba_el_roz'];
 
     //$tab_el_fv=array();
-    $suma_punktów=0;
+    $suma_punktï¿½w=0;
     for ($i=0;$i<$liczba_el_roz;$i+=1){
       if( isset($_POST['nr_'.$i]) ){
 
@@ -355,7 +355,7 @@ $sql="UPDATE rozlicz_technicy SET datarozliczenia='".$datarozliczenia."' WHERE t
              //echo 'juz dopisane <br>';
            }
            elseif(sizeof($tablica_wynikow) == 0){
-             //echo 'nie ma czego dodawaæ <br>';
+             //echo 'nie ma czego dodawaï¿½ <br>';
            }
         }
 
@@ -372,7 +372,7 @@ $sql="UPDATE rozlicz_technicy SET datarozliczenia='".$datarozliczenia."' WHERE t
 	    $smarty->assign('suma_punktow', $suma_punktow);
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaæ'=>'100');
+  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaï¿½'=>'100');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('technik', $technik);
 
@@ -434,7 +434,7 @@ elseif($_REQUEST['archiwum']=='technik_pokaz'){
           }
 	    $smarty->assign('suma_punktow', $suma_punktow);
 
-  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Wycena'=>'100','Czy Rozliczaæ'=>'100');
+  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Wycena'=>'100','Czy Rozliczaï¿½'=>'100');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('technik', $technik);
   $smarty->assign('datarozliczenia', $datarozliczenia);
@@ -450,7 +450,7 @@ elseif($_REQUEST['rozlicz']=='tech_anuluj'){
   $technik=$_REQUEST['technik'];
   $liczba_el_roz=$_REQUEST['liczba_el_roz'];
 
-    $suma_punktów=0;
+    $suma_punktï¿½w=0;
     for ($i=0;$i<$liczba_el_roz;$i+=1){
       if( isset($_POST['nr_'.$i]) ){
 
@@ -501,7 +501,7 @@ $sql="UPDATE rozlicz_technicy SET datarozliczenia='0000-00-00' WHERE technik='".
 	    $smarty->assign('suma_punktow', $suma_punktow);
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaæ'=>'100');
+  $t_opis=array('Roz.'=>'20','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaï¿½'=>'100');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('technik', $technik);
 
@@ -548,8 +548,8 @@ elseif($_REQUEST['kto']=='zleceniodawca'){
 	    $smarty->assign('suma_zaplacone', $suma_zaplacone);
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  $t_opis=array('FV'=>'30','Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','WZK'=>'100','Opis Zlecenia'=>'100','Czy Rozliczaæ'=>'60');
-  $smarty->assign('tablica_opisy', $t_opis);                                       // ,'Zaplacono'=>'80','Data Zap³aty'=>'100' 
+  $t_opis=array('FV'=>'30','Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','WZK'=>'100','Opis Zlecenia'=>'100','Czy Rozliczaï¿½'=>'60');
+  $smarty->assign('tablica_opisy', $t_opis);                                       // ,'Zaplacono'=>'80','Data Zapï¿½aty'=>'100' 
   $smarty->assign('lekarz', $lekarz);
 
   $smarty->assign('datarozliczenia', '0000-00-00');
@@ -623,7 +623,7 @@ $sql="SELECT DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.opiszlecenia 
     $smarty->assign('tab_suma', $suma);
     $_SESSION['tab_suma']=$suma;
                                    //,'PKWiU'=>'50'
-    $t_opis=array('l.p.'=>'20','Nazwa towaru/us³ugi'=>'150','Ilo¶æ'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Warto¶æ <br />netto'=>'80','Warto¶æ <br />VAT'=>'80','Warto¶æ <br />brutto'=>'80');
+    $t_opis=array('l.p.'=>'20','Nazwa towaru/usï¿½ugi'=>'150','Iloï¿½ï¿½'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Wartoï¿½ï¿½ <br />netto'=>'80','Wartoï¿½ï¿½ <br />VAT'=>'80','Wartoï¿½ï¿½ <br />brutto'=>'80');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('tab_el_fv', $tab_el_fv);
@@ -685,7 +685,7 @@ echo $arr2['max_nr_fv'].'<br>';
     $smarty->assign('kontrahent_nip', $arr1['nip']);
 
     $smarty->assign('sprzedawca_nazwa', 'Uslugi Protetyczne Jerzy Andryskowski');
-    $smarty->assign('sprzedawca_adres', '80-246 Gdañsk, ul.Jaskowa Dolina 9/1');
+    $smarty->assign('sprzedawca_adres', '80-246 Gdaï¿½sk, ul.Jaskowa Dolina 9/1');
     $smarty->assign('sprzedawca_nip', 'PL 584-000-01-05');
 
 
@@ -723,13 +723,13 @@ $sql="UPDATE rozlicz_zleceniodawca SET datarozliczenia='".$datarozliczenia."' WH
              echo 'juz dopisane <br>';
            }
            elseif(sizeof($tablica_wynikow) == 0){
-             echo 'nie ma czego dodawaæ <br>';
+             echo 'nie ma czego dodawaï¿½ <br>';
            }
         }
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Rozliczenie'=>'160','Zaplacono'=>'160','WZK'=>'100','Czy Rozliczaæ'=>'100');
-  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','WZK'=>'100','Czy Rozliczaæ'=>'60');
+  //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Rozliczenie'=>'160','Zaplacono'=>'160','WZK'=>'100','Czy Rozliczaï¿½'=>'100');
+  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','WZK'=>'100','Czy Rozliczaï¿½'=>'60');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('lekarz', $lekarz);
 
@@ -790,7 +790,7 @@ elseif($_REQUEST['archiwum']=='lekarz_pokaz'){
 	    $smarty->assign('suma_zl', $suma_zl);
 	    $smarty->assign('suma_zaplacone', $suma_zaplacone);
 
-  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','Data Zap³aty'=>'100','WZK'=>'100','Opis Zlecenia'=>'100','Czy Rozliczaæ'=>'60');
+  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','Data Zapï¿½aty'=>'100','WZK'=>'100','Opis Zlecenia'=>'100','Czy Rozliczaï¿½'=>'60');
 
   $smarty->assign('drukuj', 'rozlek');
   $smarty->assign('tablica_opisy', $t_opis);
@@ -835,7 +835,7 @@ $sql="UPDATE rozlicz_zleceniodawca SET datarozliczenia='0000-00-00' WHERE idzlec
         }
 
   //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Data'=>'100','Zwrot Godz'=>'100', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100');
-  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','WZK'=>'100','Czy Rozliczaæ'=>'60');
+  $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Rozliczenie'=>'80','Zaplacono'=>'80','WZK'=>'100','Czy Rozliczaï¿½'=>'60');
   $smarty->assign('tablica_opisy', $t_opis);
   $smarty->assign('lekarz', $lekarz);
 
@@ -856,7 +856,7 @@ elseif($_REQUEST['kto']=='pozostale'){
       on (rt.idzlecenianr=z.idzlecenianr and rt.idzleceniapoz=z.idzleceniapoz) where rt.idzleceniapoz is null and
       rt.idzlecenianr is null and (z.wpis='roz' OR z.wpis='zap') ORDER BY z.idzleceniapoz,z.idzlecenianr";
 
-      //$t_opis=array('Data Wpisania'=>'130','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaæ'=>'100');
+      //$t_opis=array('Data Wpisania'=>'130','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Technik'=>'160','Punkty'=>'100','Czy Rozliczaï¿½'=>'100');
       $t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200');
       $smarty->assign('tablica_opisy', $t_opis);
 
@@ -886,7 +886,7 @@ elseif($_REQUEST['kto']=='pozostale'){
       on (rz.idzlecenianr=z.idzlecenianr and rz.idzleceniapoz=z.idzleceniapoz) where rz.idzleceniapoz is null and
       rz.idzlecenianr is null and (z.wpis='roz' OR z.wpis='zap') ORDER BY z.idzleceniapoz,z.idzlecenianr";
 
-      //$t_opis=array('Data Wpisania'=>'130','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Rozliczenie / z³'=>'160','WZK'=>'100','Czy Rozliczaæ'=>'100');
+      //$t_opis=array('Data Wpisania'=>'130','Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Rozliczenie / zï¿½'=>'160','WZK'=>'100','Czy Rozliczaï¿½'=>'100');
       $t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200');
       $smarty->assign('tablica_opisy', $t_opis);
 

@@ -13,7 +13,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
             echo "MySQL error ".mysql_errno().": ".htmlspecialchars (mysql_error())."\n<br>";//When executing:<br>\n<b>$query\n</b><br>";
         }
         if (mysql_errno()==1062){
-        	echo "Zlecenie z takim identyfikatorem ju¿ istnieje, dodanie nie jest mo¿liwe - popraw zlecenie<br /><br /><br /><br />";
+        	echo "Zlecenie z takim identyfikatorem juï¿½ istnieje, dodanie nie jest moï¿½liwe - popraw zlecenie<br /><br /><br /><br />";
 		  }
 
     include('./inc/db_close.inc.php');
@@ -53,7 +53,7 @@ function spr_zlecenie($tabela){
  //$zakladka = czysc_zmienne_formularza($_SESSION['form_tab']['zakladka']);
 
 
- //sprawdzanie czy info o zleceniu jest ju¿ w bazie
+ //sprawdzanie czy info o zleceniu jest juï¿½ w bazie
  $sql="SELECT idzlecenianr,idzleceniapoz FROM zlecenieinfo WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' AND kategoria='".$tabela."' ";
  $wynik=myquery($sql);
  //$arr = mysql_fetch_assoc($wynik);
@@ -90,10 +90,10 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
 
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Wk³ady K-K";
+ $kategoria = "Porcelana Wkï¿½ady K-K";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_wkladykk";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -130,8 +130,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Korona Licowana";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_korona_licowana";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -148,7 +148,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
 				  )";
  myquery($sql);
 }
-//PORCELANA KORONA PE£NOCERAMICZNA
+//PORCELANA KORONA PEï¿½NOCERAMICZNA
 elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  //zmienne do czyszczenia
  $kolornik = czysc_zmienne_formularza($_SESSION['form_tab']['kolornik']);
@@ -159,10 +159,10 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Korona Pe³noceramiczna";
+ $kategoria = "Porcelana Korona Peï¿½noceramiczna";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_korona_pelnoceramiczna";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -178,7 +178,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 				  )";
  myquery($sql);
 }
-//PORCELANA INLAY / ONLAY / LICÓWKA
+//PORCELANA INLAY / ONLAY / LICï¿½WKA
 elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
  //zmienne do czyszczenia
  $material = czysc_zmienne_formularza($_SESSION['form_tab']['material']);
@@ -192,10 +192,10 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
 
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Inlay/Onlay/Licówka";
+ $kategoria = "Porcelana Inlay/Onlay/Licï¿½wka";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_inlay_onlay";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -228,8 +228,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Implanty";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_implanty";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -262,8 +262,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_6"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Praca Kombinowana";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_kombinowana";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -298,8 +298,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_7"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Korony Inne";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_korony_inne";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -326,8 +326,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_8"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Naprawa";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="porcelana_naprawa";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -369,8 +369,8 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_1"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Proteza Szkielet Szynoproteza";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="proteza_szkielet_szynoproteza";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -390,7 +390,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_1"){
 				  )";
  myquery($sql);
 }
-//PROTEZA CA£KOWITA
+//PROTEZA CAï¿½KOWITA
 elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
  //zmienne do czyszczenia
  $liczbaprotez = czysc_zmienne_formularza($_SESSION['form_tab']['liczbaprotez']);
@@ -409,10 +409,10 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
 
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Proteza Ca³kowita";
+ $kategoria = "Proteza Caï¿½kowita";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="proteza_calkowita";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -453,10 +453,10 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_3"){
 
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Proteza Czê¶ciowa";
+ $kategoria = "Proteza Czï¿½ciowa";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="proteza_czesciowa";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -498,8 +498,8 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Proteza Szyny";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="proteza_szyny";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -543,8 +543,8 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_5"){
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Proteza Naprawa";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  $_SESSION['zakladka'][]="proteza_naprawa";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -567,7 +567,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_5"){
 }
 
 
- $_SESSION['zakladka']=array_unique($_SESSION['zakladka']); //usuniecie duplikatów komórek tabeli zapisywanych zleceñ
+ $_SESSION['zakladka']=array_unique($_SESSION['zakladka']); //usuniecie duplikatï¿½w komï¿½rek tabeli zapisywanych zleceï¿½
 /* for ($i = 0; $i < sizeof($_SESSION['zakladka']); $i++){
  	  echo $_SESSION['zakladka'][$i].', ';	
  }

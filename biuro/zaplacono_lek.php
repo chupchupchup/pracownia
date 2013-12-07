@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -60,11 +60,11 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 	  $sql="SELECT zaplacono,datazaplaty FROM rozlicz_zleceniodawca WHERE idzlecenianr='".$nr_zlec."' AND idzleceniapoz='".$id_zlec."' ";
 	  $wy=myquery($sql);
           while( $ar = mysql_fetch_assoc($wy) ) {
-                 echo 'Zaplacono - '.$ar['zaplacono'].'zł, dnia: '.$ar['datazaplaty'].'<br />';
+                 echo 'Zaplacono - '.$ar['zaplacono'].'zďż˝, dnia: '.$ar['datazaplaty'].'<br />';
           }
      }
      else{
-         echo 'BRAK UPRAWNIEŃ DO UZUPEŁNIANIA ROZLICZENIA - UPRAWNIENIA POSIADA SZEF';
+         echo 'BRAK UPRAWNIEďż˝ DO UZUPEďż˝NIANIA ROZLICZENIA - UPRAWNIENIA POSIADA SZEF';
      }
 
  }
@@ -75,14 +75,14 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 </head>
  <body bgcolor="#F4FFF0">
-  <p><strong><u class="style2">ZAPŁACONO:</u></strong></p>
+  <p><strong><u class="style2">ZAPďż˝ACONO:</u></strong></p>
   <br>
   <form name="form" method="post" action="zaplacono_lek.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
 
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
 
    <input type="hidden" name="zmien" value="tak" >
 
@@ -90,17 +90,17 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1">
         <tr>
           <td width="150px;">
-            <input name='zaplacono' size='10' maxlength='50' value='<?=$zaplacono?>'/> ZŁ
+            <input name='zaplacono' size='10' maxlength='50' value='<?php=$zaplacono?>'/> Zďż˝
           </td>
-          <td><strong>&nbsp;- WPŁATA LEKARZA</strong>
+          <td><strong>&nbsp;- WPďż˝ATA LEKARZA</strong>
           </td>
         </tr>
      <tr><td><br></td></tr>
         <tr>
           <td width="150px;">
-            <input name='datazaplaty' size='10' maxlength='50' value='<?=$datazaplaty?>'/>
+            <input name='datazaplaty' size='10' maxlength='50' value='<?php=$datazaplaty?>'/>
           </td>
-          <td><strong>&nbsp;- DATA WPŁATY</strong>
+          <td><strong>&nbsp;- DATA WPďż˝ATY</strong>
           </td>
         </tr>
    </table>
@@ -109,13 +109,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1" align="left">
      <tr>
        <td><input type="submit" name="Submit" value="AKCEPTUJ">&nbsp;&nbsp;</td>
-       <td><input type="reset" name="RESET" value="WYCZYŚĆ"></td>
+       <td><input type="reset" name="RESET" value="WYCZYďż˝ďż˝"></td>
      </tr>
    </table>
 </form>
 </body>
 </html>
-<?
+<?php
 
 }
 else{

@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Dane
 {
@@ -69,13 +69,13 @@ class Dane
  return substr($list, 0, -2);
  }
 
- // zwraca listê atrybutow oddzielonych przecinkiem
+ // zwraca listï¿½ atrybutow oddzielonych przecinkiem
  function pobierzListeAtrybutow()
  {
  return join(', ', array_keys($this->dane));
  }
 
- // zwraca listê warto¶ci oddzielonych przecinkiem
+ // zwraca listï¿½ wartoï¿½ci oddzielonych przecinkiem
  function pobierzListeWartosci()
  {
  $values = array();
@@ -189,7 +189,7 @@ class Magazyn
  function pobierz(Dane $szukamy, $strona, $czyData, $dataOd, $dataDo)
  {
    //include('./inc/table_menu_arrays.inc.php');
-   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Ilo¶æ ca³kowita'=>'150','Ilo¶æ pozosta³a'=>'150','Cena zakupu'=>'100','Wpisuj±cy'=>'130');
+   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Iloï¿½ï¿½ caï¿½kowita'=>'150','Iloï¿½ï¿½ pozostaï¿½a'=>'150','Cena zakupu'=>'100','Wpisujï¿½cy'=>'130');
 
    include('./inc/db_connect.inc.php');
 
@@ -200,11 +200,11 @@ class Magazyn
      $data='';
    }
    
-   //Pobranie liczby rekordów
+   //Pobranie liczby rekordï¿½w
    $query_count = mysql_query('SELECT count(*) FROM material WHERE '.$szukamy->pobierzListeDanych().' '.$data );
        //echo 'query_count = '.'SELECT count(*) FROM material WHERE '.$szukamy->pobierzListeDanych().' '.$data .' <br>';
    $r = mysql_fetch_array($query_count);
-   //Liczba stron, u¿ycie ceil - zaokr±glenie w górê, w celu zapewnienia, ¿e ¿adna strona siê nie straci
+   //Liczba stron, uï¿½ycie ceil - zaokrï¿½glenie w gï¿½rï¿½, w celu zapewnienia, ï¿½e ï¿½adna strona siï¿½ nie straci
    //echo $r[0].'<br>';
    $pages = ceil($r[0]/15);
    $offset=$strona*15;
@@ -226,7 +226,7 @@ class Magazyn
  // DO EDYCJI
  function pobierz_edit(Dane $szukamy)
  {
-   //$wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Ilo¶æ ca³kowita'=>'150','Ilo¶æ pozosta³a'=>'150','Cena zakupu'=>'100','Wpisuj±cy'=>'130');
+   //$wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Iloï¿½ï¿½ caï¿½kowita'=>'150','Iloï¿½ï¿½ pozostaï¿½a'=>'150','Cena zakupu'=>'100','Wpisujï¿½cy'=>'130');
 
    include('./inc/db_connect.inc.php');
 
@@ -254,7 +254,7 @@ class Magazyn
  // DO EDYCJI PODMAGAZYN
  function pobierz_edit_podmagazyn(Dane $szukamy)
  {
-   //$wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Ilo¶æ ca³kowita'=>'150','Ilo¶æ pozosta³a'=>'150','Cena zakupu'=>'100','Wpisuj±cy'=>'130');
+   //$wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Iloï¿½ï¿½ caï¿½kowita'=>'150','Iloï¿½ï¿½ pozostaï¿½a'=>'150','Cena zakupu'=>'100','Wpisujï¿½cy'=>'130');
 
    include('./inc/db_connect.inc.php');
 
@@ -284,7 +284,7 @@ class Magazyn
  // DO ZAMOWIENIA bo sie konczy
  function pobierz_material()
  {
-   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Ilo¶æ ca³kowita'=>'150','Ilo¶æ pozosta³a'=>'150','Cena zakupu'=>'100','Wpisuj±cy'=>'130');
+   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Data'=>'100','Iloï¿½ï¿½ caï¿½kowita'=>'150','Iloï¿½ï¿½ pozostaï¿½a'=>'150','Cena zakupu'=>'100','Wpisujï¿½cy'=>'130');
 
    include('./inc/db_connect.inc.php');
 
@@ -292,7 +292,7 @@ class Magazyn
      //$pobierz='SELECT * FROM material WHERE 1';
      $query = mysql_query($pobierz);
 
-   //Pobranie liczby rekordów
+   //Pobranie liczby rekordï¿½w
    $query_count = mysql_query($pobierz);
    $r = mysql_fetch_array($query_count);
    $pages = ceil($r[0]/15);
@@ -312,7 +312,7 @@ class Magazyn
  function pobierz_podmagazyn(Dane $szukamy, $strona, $czyData, $dataOd, $dataDo)
  {
    //include('./inc/table_menu_arrays.inc.php');
-   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Ilo¶æ'=>'150','Cena materia³u'=>'150','Wykorzystuj±cy'=>'130','Data'=>'100');
+   $wyszukaj_template_table_menu=array('Nazwa'=>'200','Iloï¿½ï¿½'=>'150','Cena materiaï¿½u'=>'150','Wykorzystujï¿½cy'=>'130','Data'=>'100');
 
    include('./inc/db_connect.inc.php');
 
@@ -323,11 +323,11 @@ class Magazyn
      $data='';
    }
 
-   //Pobranie liczby rekordów
+   //Pobranie liczby rekordï¿½w
    $query_count = mysql_query('SELECT count(*) FROM material_user WHERE '.$szukamy->pobierzListeDanych().' '.$data );
        //echo 'query_count = '.'SELECT count(*) FROM material_user WHERE '.$szukamy->pobierzListeDanych().' '.$data.' <br>';
    $r = mysql_fetch_array($query_count);
-   //Liczba stron, u¿ycie ceil - zaokr±glenie w górê, w celu zapewnienia, ¿e ¿adna strona siê nie straci
+   //Liczba stron, uï¿½ycie ceil - zaokrï¿½glenie w gï¿½rï¿½, w celu zapewnienia, ï¿½e ï¿½adna strona siï¿½ nie straci
    //echo $r[0].'<br>';
    $pages = ceil($r[0]/15);
    $offset=$strona*15;

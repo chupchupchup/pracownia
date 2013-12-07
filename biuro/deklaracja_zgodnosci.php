@@ -29,8 +29,8 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		$today = date("Y-m-d");
 		
 		$this->SetFont($this->family, '', $this->font_size);
-		$this->SetX(195 - $this->GetStringWidth('Gdañsk, dnia '.$today));
-		$this->Write(0, 'Gdañsk, dnia '.$today);	
+		$this->SetX(195 - $this->GetStringWidth('Gdaï¿½sk, dnia '.$today));
+		$this->Write(0, 'Gdaï¿½sk, dnia '.$today);	
 	}
 
 	function footer() {
@@ -43,11 +43,11 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		$this->SetTextColor(0, 0, 0);
 
 		$this->SetXY(10,30);
-		$this->Cell(0,$this->height,'DEKLARACJA ZGODNO¦CI',0,1,'C');
+		$this->Cell(0,$this->height,'DEKLARACJA ZGODNOï¿½CI',0,1,'C');
 		$this->Ln();
 
 		$this->n();
-		$this->Cell(0,$this->height,'Proteza zêbów wykonana na zlecenie lekarza stomatologa / dentysty / kliniki stomatologicznej:',0,1);		
+		$this->Cell(0,$this->height,'Proteza zï¿½bï¿½w wykonana na zlecenie lekarza stomatologa / dentysty / kliniki stomatologicznej:',0,1);		
 		$this->MultiCell(0,$this->height,$this->klient, 0);
 		$this->Ln();
 		
@@ -67,7 +67,7 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		$this->MultiCell(0, $this->height, $this->opis_zlecenia, 0);
 		$this->Ln();
 		
-		$this->MultiCell(0, $this->height, 'Do wykonania powy¿szej pracy wykorzystano nastêpuj±ce materia³y, które u¿yte zosta³y zgodnie z instrukcj± producenta:', 0);
+		$this->MultiCell(0, $this->height, 'Do wykonania powyï¿½szej pracy wykorzystano nastï¿½pujï¿½ce materiaï¿½y, ktï¿½re uï¿½yte zostaï¿½y zgodnie z instrukcjï¿½ producenta:', 0);
 		$this->b();
 		$this->Cell(150, $this->height, 'Producent', 0, 0, 'C');
 		$this->Cell(25, $this->height, 'Nr seryjny', 0, 1, 'C');
@@ -84,23 +84,23 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		$this->Ln();
 		
 		$this->b();
-		$this->MultiCell(0, $this->height, 'Niniejszym o¶wiadczam, ¿e wyrób medyczny wymieniony powy¿ej jest wyrobem medycznym klasy II a, regu³a 5, oraz ¿e odpowiada wymaganiom zasadniczym.', 0);
+		$this->MultiCell(0, $this->height, 'Niniejszym oï¿½wiadczam, ï¿½e wyrï¿½b medyczny wymieniony powyï¿½ej jest wyrobem medycznym klasy II a, reguï¿½a 5, oraz ï¿½e odpowiada wymaganiom zasadniczym.', 0);
 		$this->Ln();
 		
 		$this->b();
-		$this->Cell(0, $this->height, 'Producent, podmiot odpowiedzialny za sporz±dzenie niniejszej deklaracji:', 0, 1);
+		$this->Cell(0, $this->height, 'Producent, podmiot odpowiedzialny za sporzï¿½dzenie niniejszej deklaracji:', 0, 1);
 		$this->i();
-		$this->Cell(0, $this->height, 'Us³ugi Protetyczne Andryskowski Jerzy; ul. Ja¶kowa Dolina 9/1; 80-246 Gdañsk', 0, 1);
+		$this->Cell(0, $this->height, 'Usï¿½ugi Protetyczne Andryskowski Jerzy; ul. Jaï¿½kowa Dolina 9/1; 80-246 Gdaï¿½sk', 0, 1);
 		$this->Ln();
 
 		$this->b();
 		$this->Cell(35, $this->height, 'Adres wykonania:', 0, 0);
 		$this->i();		
-		$this->Cell(0, $this->height, 'Us³ugi Protetyczne Andryskowski Jerzy; ul. Obroñców Westerplatte 32b; 80-317 Gdañsk', 0, 1);
+		$this->Cell(0, $this->height, 'Usï¿½ugi Protetyczne Andryskowski Jerzy; ul. Obroï¿½cï¿½w Westerplatte 32b; 80-317 Gdaï¿½sk', 0, 1);
 		$this->Ln();
 
 /*		$this->b();
-		$this->Cell(0, $this->height, 'Wyrób medyczny wymieniony powy¿ej jest objêty gwarancj± / nie jest objêty gwarancj± producenta.', 0, 1);
+		$this->Cell(0, $this->height, 'Wyrï¿½b medyczny wymieniony powyï¿½ej jest objï¿½ty gwarancjï¿½ / nie jest objï¿½ty gwarancjï¿½ producenta.', 0, 1);
 		$this->Ln();*/
 		$this->Ln();
 		
@@ -110,7 +110,7 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		$this->Ln($this->height);		
 		
 		$this->SetX(140);
-		$this->Write(0, '(podpis i piecz±tka laboratorium)');					
+		$this->Write(0, '(podpis i pieczï¿½tka laboratorium)');					
 	}
 
 	function draw($filename)
@@ -118,7 +118,7 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		global $registry;
 		
 		$this->Open();
-		$this->author = "Us³ugi Protetyczne Andryskowski Jerzy";
+		$this->author = "Usï¿½ugi Protetyczne Andryskowski Jerzy";
 			
 		$this->AddFont('Georgia', '', 'georgia.php');
 		$this->AddFont('Times', '', 'times.php');

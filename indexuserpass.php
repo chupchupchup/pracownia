@@ -1,4 +1,4 @@
-<?
+<?php
 //------------------------------------------------------------------------------------------------------------------
 //funkcja posredniczaca w zapytaniu SQL - zwraca kod bledu zapytania
     function myquery ($query) {
@@ -56,7 +56,7 @@ require_once('./inc/filtr_formularzy.inc.php');
  }
  //jezeli status uzytkownika jest 'del'
  elseif(mysql_numrows($sql_result)==1 && $arr['status']<>'act'){
-    echo '<br />NIE MO¯NA PO£¡CZYÆ SIÊ Z BAZ¡ DANYCH PONIEWA¯ TO KONTO U¯YTKOWNIKA ZOSTA£O ZABLOKOWANE, W CELU ODBLOKOWANIA DOSTÊPU SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+    echo '<br />NIE MOï¿½NA POï¿½ï¿½CZYï¿½ SIï¿½ Z BAZï¿½ DANYCH PONIEWAï¿½ TO KONTO Uï¿½YTKOWNIKA ZOSTAï¿½O ZABLOKOWANE, W CELU ODBLOKOWANIA DOSTï¿½PU SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
  }
  //jezeli nie wystepuje w bazie
  else {
@@ -70,7 +70,7 @@ require_once('./inc/filtr_formularzy.inc.php');
     else{
         $c=1;
     }
-    //jezeli licznik osiagnie 10 prob nieudanego logowania nastepuje zablokowanie konta u¿ytkownika
+    //jezeli licznik osiagnie 10 prob nieudanego logowania nastepuje zablokowanie konta uï¿½ytkownika
     //jest to mechanizm ochrony przed atakiem na baze
     if($c==10) {
         $sql="update loguserpass set status='del', datablokady='".date('H:i:s, d-n-Y')."' where login='".$log."'";
@@ -78,12 +78,12 @@ require_once('./inc/filtr_formularzy.inc.php');
 
         //ustawienie licznika w stan poczatkowy
         $c=1;//echo ' --------------- '.$c;
-        echo '<br />U¯YTKOWNIK ZOSTA£ ZABLOKOWANY - ZBYT WIELE NIEUDANYCH PRÓB LOGOWANIA, W CELU ODBLOKOWANIA SKONTAKTUJ SIÊ Z ADMINISTRATOREM SYSTEMU';
+        echo '<br />Uï¿½YTKOWNIK ZOSTAï¿½ ZABLOKOWANY - ZBYT WIELE NIEUDANYCH PRï¿½B LOGOWANIA, W CELU ODBLOKOWANIA SKONTAKTUJ SIï¿½ Z ADMINISTRATOREM SYSTEMU';
     }
-    //jezeli licznik jeszcze nie osiagnal 10 prob to wyswietla siê strona logowania ponownie
+    //jezeli licznik jeszcze nie osiagnal 10 prob to wyswietla siï¿½ strona logowania ponownie
     else{
 	   include('./inc/smarty_path.inc.php');
-      echo '<br />liczba nieudanych prób logowania: '.$c;
+      echo '<br />liczba nieudanych prï¿½b logowania: '.$c;
         $smarty->assign('count', $c);
 	     $smarty->display('login.tpl');
     }

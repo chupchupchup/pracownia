@@ -54,7 +54,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
  //dodatkowe zmienne
- $kategoria = "Porcelana Wk³ady K-K";
+ $kategoria = "Porcelana Wkï¿½ady K-K";
 
  //update zlecenia po zakonczeniu
  $sql="UPDATE porcelana_wkladykk SET material='".$material."', rodzajwkladu='".$rodzajwkladu."',
@@ -64,7 +64,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 
@@ -115,8 +115,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $kategoria = "Porcelana Korona Licowana Na Metalu";
  //$_SESSION['form_tab']['kategoria']="porcelana_korona_licowana";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
  //$_SESSION['zakladka'][]="porcelana_korona_licowana";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -155,7 +155,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
 
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 if ($dentyna_kiss) {
 	material_dentyna('dentyna_kiss', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
@@ -167,7 +167,7 @@ material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpi
 //-------------------------------------------
 }
 
-//PORCELANA KORONA PE£NOCERAMICZNA
+//PORCELANA KORONA PEï¿½NOCERAMICZNA
 elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  //zmienne do czyszczenia
  $material = czysc_zmienne_formularza($_SESSION['form_tab']['material']);
@@ -193,10 +193,10 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 
  //dodatkowe zmienne
 // $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Korona Pe³noceramiczna";
+ $kategoria = "Porcelana Korona Peï¿½noceramiczna";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
 // $_SESSION['zakladka'][]="porcelana_korona_pelnoceramiczna";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -219,7 +219,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 if ($dentyna_na_cerkon) {
 	material_dentyna('dentyna_na_cerkon', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
@@ -230,7 +230,7 @@ material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpi
 //-------------------------------------------
 
 }
-//PORCELANA INLAY / ONLAY / LICÓWKA
+//PORCELANA INLAY / ONLAY / LICï¿½WKA
 elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
  //zmienne do czyszczenia
  $rodzajkolornika = czysc_zmienne_formularza($_SESSION['form_tab']['rodzajkolornika']);
@@ -267,10 +267,10 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
 
  //dodatkowe zmienne
 // $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Inlay/Onlay/Licówka";
+ $kategoria = "Porcelana Inlay/Onlay/Licï¿½wka";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
 // $_SESSION['zakladka'][]="porcelana_inlay_onlay_licowka";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -298,7 +298,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
  
@@ -336,8 +336,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
 // $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Implanty";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
 // $_SESSION['zakladka'][]="porcelana_implanty";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -363,7 +363,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
 
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 if ($dentyna_na_cerkon) {
 	material_dentyna('dentyna_na_cerkon', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
@@ -402,8 +402,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_7"){
 // $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Korony Inne";
 
- //zapisanie do tabicy identyfikatorow tablic w bazie do których zostaly zapisane dane ¿eby na koncu
- //latwiej je by³o wyswietlic w podsumowaniu
+ //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
+ //latwiej je byï¿½o wyswietlic w podsumowaniu
 // $_SESSION['zakladka'][]="porcelana_korony_inne";
 
  //dopisywanie do tabeli zlecenieinfo informacji o nowym zleceniu
@@ -425,7 +425,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_7"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 $_SESSION['etykieta_materialu']='';
 
@@ -489,7 +489,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_1"){
 
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
@@ -497,7 +497,7 @@ material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpi
 //-------------------------------------------
 
 }
-//PROTEZA CA£KOWITA
+//PROTEZA CAï¿½KOWITA
 elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
  //zmienne do czyszczenia
  $proteza = czysc_zmienne_formularza($_SESSION['form_tab']['proteza']);
@@ -527,7 +527,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
  $plynproszek = czysc_zmienne_formularza($_SESSION['form_tab']['plynproszek']);
  
  //dodatkowe zmienne
- $kategoria = "Proteza Ca³kowita";
+ $kategoria = "Proteza Caï¿½kowita";
 
  //dodawanie zlecenia do bazy
  $sql="UPDATE proteza_calkowita SET kategoria='".$kategoria."', idzlecenianr='".$idzlecenianr."',
@@ -546,7 +546,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
  
@@ -581,7 +581,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_3"){
  $plynproszek = czysc_zmienne_formularza($_SESSION['form_tab']['plynproszek']);
  
  //dodatkowe zmienne
- $kategoria = "Proteza Czê¶ciowa";
+ $kategoria = "Proteza Czï¿½ciowa";
 
  //dodawanie zlecenia do bazy
  $sql="UPDATE proteza_czesciowa SET kategoria='".$kategoria."', idzlecenianr='".$idzlecenianr."',
@@ -600,7 +600,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_3"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
  
@@ -671,7 +671,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
 
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 $_SESSION['etykieta_materialu']='';
 
@@ -717,7 +717,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_5"){
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 $_SESSION['etykieta_materialu']='';
 
@@ -761,7 +761,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_6"){
 	
  myquery($sql);
 
-//-------------tworzenie etykiety materia³ów
+//-------------tworzenie etykiety materiaï¿½ï¿½w
 
 $_SESSION['etykieta_materialu']='';
 
@@ -775,7 +775,7 @@ include('./inc/oblicz_punkty.inc.php');
 $punkty = new PunktyCount;
 
 //------------------------------------------------------------------------------------------------------------------
-//OBLICZANIE PUNKTÓW
+//OBLICZANIE PUNKTï¿½W
 
 //  $s="SELECT * FROM rozlicz_technicy WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' AND technik='".$_SESSION['idusera']."' ";
 //  $w=myquery($s);
@@ -784,11 +784,11 @@ $punkty = new PunktyCount;
 //??? echo 'idzlecenianr: '.$idzlecenianr.', idzleceniapoz: '.$idzleceniapoz.'<br>';
     $sql_main="SELECT * FROM zlecenieinfo WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' AND wpis!='del' ";
     $wyn_main=myquery($sql_main);
-//??? echo  'liczba etapów: '.mysql_numrows($wyn_main).'<br>';
+//??? echo  'liczba etapï¿½w: '.mysql_numrows($wyn_main).'<br>';
     $punkty_fin=0;
     while($arr_main = mysql_fetch_assoc($wyn_main)){
      //echo 'kategoria: '.$arr_main['kategoria'].', datawpisania: '.$arr_main['datawpisania'].'<br>';
-     //punkty naliczamy wylacznie dla normalnych zleceñ
+     //punkty naliczamy wylacznie dla normalnych zleceï¿½
      if($arr_main['zlecenie']!='reklamacja' && $arr_main['zlecenie']!='naprawa gwarancyjna' && $_SESSION['form_tab']['kategoria_wybor']==$arr_main['kategoria']){
        //echo 'nie reklamacja<br>';
        $p=$punkty->punkty($idzlecenianr, $idzleceniapoz, $arr_main['kategoria'], $arr_main['datawpisania']);
@@ -798,21 +798,21 @@ $punkty = new PunktyCount;
 
     $_SESSION['form_tab']['punkty']=$punkty_fin;
 
-//  echo $_SESSION['idusera'].'<br>liczba punktów='.$punkty_fin.'<br>';
+//  echo $_SESSION['idusera'].'<br>liczba punktï¿½w='.$punkty_fin.'<br>';
     $smarty->assign('idtechnika', $_SESSION['idusera']);
     $smarty->assign('punkty', $_SESSION['form_tab']['punkty']);
 
-//KONIEC OBLICZANIA PUNKTÓW ----------------------------------------------------------------------------------------
+//KONIEC OBLICZANIA PUNKTï¿½W ----------------------------------------------------------------------------------------
 
 
-//Z£OTO -------------------------------------------------------------------------------------------------------------
+//Zï¿½OTO -------------------------------------------------------------------------------------------------------------
 
     $sql_zloto="SELECT wagazlota FROM zlecenieinfo WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' AND wpis!='del' ";
     $wyn_zloto=myquery($sql_zloto);
     $arr_zloto = mysql_fetch_assoc($wyn_zloto);
     $smarty->assign('wagazlota', $arr_zloto['wagazlota']);
     //pobrac z z bazy wartosc zlota
-    $sql="SELECT ilosc,cena_materialu FROM material_user WHERE nazwa='z³oto' AND osoba_wykorzystujaca='".$_SESSION['idusera']."' AND status='act' ";
+    $sql="SELECT ilosc,cena_materialu FROM material_user WHERE nazwa='zï¿½oto' AND osoba_wykorzystujaca='".$_SESSION['idusera']."' AND status='act' ";
     $w=myquery($sql); $arr = mysql_fetch_array($w);
     //echo $sql.'<br>';
 	if($arr['ilosc']==0){
@@ -840,7 +840,7 @@ $cena = new CenaCount;
 
     $sql_main="SELECT * FROM zlecenieinfo WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' AND wpis!='del' ";
     $wyn_main=myquery($sql_main);
-//??? echo  'liczba etapów do ceny: '.mysql_numrows($wyn_main).'<br>';
+//??? echo  'liczba etapï¿½w do ceny: '.mysql_numrows($wyn_main).'<br>';
     $cena_fin=0;
     while($arr_main = mysql_fetch_assoc($wyn_main)){
 //???     echo 'kategoria: '.$arr_main['kategoria'].', datawpisania: '.$arr_main['datawpisania'].'<br>';
@@ -866,7 +866,7 @@ $cena = new CenaCount;
             $info=$arr_pom[0];
             $size=(sizeof($arr_pom)/2); //na koncu bylo jeszcze -1
             for($j=5;$j<$size;$j++) {                    //&& substr($arr_pom[$j], 0, 8)!='dentyna_'
-                //wywalam  dentyny z opisu i inne materia³y bo drukuj± siê na etykietach
+                //wywalam  dentyny z opisu i inne materiaï¿½y bo drukujï¿½ siï¿½ na etykietach
                 if($arr_pom[$j]!='' && $arr_pom[$j]!='0' && $arr_pom[$j]!=$dentyna_na_zloto && $arr_pom[$j]!=$dentyna_kiss
                    && $arr_pom[$j]!=$dentyna_na_cerkon && $arr_pom[$j]!=$dentyna_na_empress && $arr_pom[$j]!=$dentyna_na_metal
                    && $arr_pom[$j]!=$zakupione_cena && $arr_pom[$j]!=$plynproszek && $arr_pom[$j]!=$material
