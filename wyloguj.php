@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    session_destroy();
@@ -22,13 +22,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </style>
 <br /><br /><br /><br /><br /><br />
 <div style="font-weight: BOLD;font-size: 20;text-align: CENTER;vertical-align: MIDDLE;horizontal-align: MIDDLE;text-decoration: NONE;letter-spacing: 2;word-spacing: 5;">
-  <button type="button" class="buttonf" onclick="parent.location.href='index.php' "> <b> NASTï¿½PIï¿½O WYLOGOWANIE Z SYSTEMU:<br /><br /> >>> NACIï¿½NIJ ABY ZALOGOWAï¿½ PONOWNIE <<< </b></button>
+  <button type="button" class="buttonf" onclick="parent.location.href='index.php' "> <b> NAST¡PI£O WYLOGOWANIE Z SYSTEMU:<br /><br /> >>> NACI¦NIJ ABY ZALOGOWAÆ PONOWNIE <<< </b></button>
 </div>
 
 </body>
 </html>
 
-<?php
+<?
    //header("Location: index.php");
 }
 else {

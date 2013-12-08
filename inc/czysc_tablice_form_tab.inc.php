@@ -1,4 +1,4 @@
-<?php
+<?
 //------------------------------------------------------------------------------------------------------------------
 //funkcja czyszczaca zmienna $_SESSION['form_tab']
     function czysc_tablice_form_tab () {

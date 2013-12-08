@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -121,7 +121,7 @@ elseif($_REQUEST['wpis']=='wyszukaj_kontrahenci'){
     $smarty->assign('nip', $nip);
     $smarty->assign('tel', $tel);
 
-    $smarty->assign('komunikat', '&nbsp;<b>Brak wynikï¿½w wyszukiwania:</b><br />');
+    $smarty->assign('komunikat', '&nbsp;<b>Brak wyników wyszukiwania:</b><br />');
     $smarty->assign('sub', 'tak');
     $smarty->assign('plik', 'kontrahenci.tpl');
   }

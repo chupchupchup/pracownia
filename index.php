@@ -1,4 +1,4 @@
-<?php
+<?
 //pobranie IP komputera ktory sie laczy z baza
       $ip = $HTTP_SERVER_VARS['REMOTE_ADDR'];
 

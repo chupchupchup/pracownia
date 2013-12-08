@@ -13,7 +13,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
             echo "MySQL error ".mysql_errno().": ".htmlspecialchars (mysql_error())."\n<br>";//When executing:<br>\n<b>$query\n</b><br>";
         }
         if (mysql_errno()==1062){
-        	echo "Zlecenie z takim identyfikatorem juï¿½ istnieje, dodanie nie jest moï¿½liwe - popraw zlecenie<br /><br /><br /><br />";
+        	echo "Zlecenie z takim identyfikatorem ju¿ istnieje, dodanie nie jest mo¿liwe - popraw zlecenie<br /><br /><br /><br />";
 		  }
 
     include('../inc/db_close.inc.php');
@@ -90,7 +90,7 @@ form {
 
 </form>
 
-<?php
+<?
 if( $_POST['nazwa']!='' ){
 
    $sql="SELECT nazwa,producent FROM material_nazwy WHERE nazwa LIKE '%".$_POST['nazwa']."%' ";
@@ -98,26 +98,26 @@ if( $_POST['nazwa']!='' ){
 
    ?>
     <hr />
-    <b style="margin-top:20px;margin-left:10px;">Wybierz nazwï¿½ materiaï¿½u:</b>
+    <b style="margin-top:20px;margin-left:10px;">Wybierz nazwê materia³u:</b>
     <table class="tab" style="margin-top:10px;margin-left:60px;">
-   <?php
+   <?
    $i=1;
    while( $arr = mysql_fetch_assoc($wynik) ){
         ?>
          <tr class="inputfr">
-           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?php=$arr['nazwa']?>','<?php=$arr['producent']?>');">
-           <td><?php=$i;?>. </td>
+           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?=$arr['nazwa']?>','<?=$arr['producent']?>');">
+           <td><?=$i;?>. </td>
            <td style="width:200px; height:15px; font-size: 12px;text-align:center;color:#000099;">
-              <?php=$arr['nazwa']?> | <?php=$arr['producent']?>
+              <?=$arr['nazwa']?> | <?=$arr['producent']?>
            </td>
            </a>
          </tr>
-        <?php
+        <?
    $i++;
    }
    ?>
    </table>
-   <?php
+   <?
 }
 
 }

@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -85,18 +85,18 @@ function pobierz_dane ($sql) {
     if($_REQUEST['status']=='dowolny'){
       $status_sql = "status LIKE '%' ";
     }else{
-      if( $_REQUEST['status']=='niezapï¿½acona' ){
-        $status_sql = "status = 'niezapï¿½acona' ";
+      if( $_REQUEST['status']=='niezap³acona' ){
+        $status_sql = "status = 'niezap³acona' ";
       }
-      elseif( $_REQUEST['status']=='zapï¿½acona' ){
-        $status_sql = "status = 'zapï¿½acona' ";
+      elseif( $_REQUEST['status']=='zap³acona' ){
+        $status_sql = "status = 'zap³acona' ";
       }
       elseif( $_REQUEST['status']=='anulowana' ){
         $status_sql = "status = 'anulowana' ";
       }
-      else{                                                        //te warunki potrzebne ï¿½eby przy powrocie do wyszukiwania miedzy stronami albo
-        $status_sql = $_SESSION['status_sql'];                      //z ostatnich wynikow wyszukiwania ze zmiennej sesyjnej ustawiï¿½ wartosci
-      }                                                             //wyszukiwanych pï¿½l - tak samo ponizej
+      else{                                                        //te warunki potrzebne ¿eby przy powrocie do wyszukiwania miedzy stronami albo
+        $status_sql = $_SESSION['status_sql'];                      //z ostatnich wynikow wyszukiwania ze zmiennej sesyjnej ustawiæ wartosci
+      }                                                             //wyszukiwanych pól - tak samo ponizej
     }
     $_SESSION['status_sql'] = $status_sql;
 
@@ -160,7 +160,7 @@ function pobierz_dane ($sql) {
 
 
     include('./inc/db_connect.inc.php');
-    //Pobranie liczby rekordï¿½w
+    //Pobranie liczby rekordów
     $query_count = mysql_query(" SELECT count(fv_nr) FROM faktury
                                  WHERE ".$fv_nr_sql."
                                  AND ".$status_sql."
@@ -168,7 +168,7 @@ function pobierz_dane ($sql) {
                                  AND ".$data_sql." " );
     $r = mysql_fetch_array($query_count);
     include('./inc/db_close.inc.php');
-    //Liczba stron, uï¿½ycie ceil - zaokrï¿½glenie w gï¿½rï¿½, w celu zapewnienia, ï¿½e ï¿½adna strona siï¿½ nie straci
+    //Liczba stron, u¿ycie ceil - zaokr±glenie w górê, w celu zapewnienia, ¿e ¿adna strona siê nie straci
     //echo $r[0].'<br>';
     $pages = ceil($r[0]/15);
     $_SESSION['pages'] = $pages;
@@ -177,7 +177,7 @@ function pobierz_dane ($sql) {
    $offset=$strona*15;
 
 if($_SESSION['idusera']=='JERZY.ANDRYSKOWSKI' || $_SESSION['idusera']=='ANIA.ANDRYSKOWSKA'){
-    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' zï¿½'), concat(kwota_zaplacona, ' zï¿½'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'), idzleceniodawcy
+    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' z³'), concat(kwota_zaplacona, ' z³'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'), idzleceniodawcy
           FROM faktury
           WHERE ".$fv_nr_sql."
           AND ".$status_sql."
@@ -198,7 +198,7 @@ if($_SESSION['idusera']=='JERZY.ANDRYSKOWSKI' || $_SESSION['idusera']=='ANIA.AND
           ORDER BY data_fv, idzleceniodawcy ";
 }
 else{
-    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' zï¿½'), concat(kwota_zaplacona, ' zï¿½'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'), idzleceniodawcy
+    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' z³'), concat(kwota_zaplacona, ' z³'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'), idzleceniodawcy
           FROM faktury
           WHERE ".$fv_nr_sql."
           AND ".$status_sql."
@@ -242,7 +242,7 @@ else{
     $smarty->assign('sum_wart_brutto', $sum_wart_brutto);
     $smarty->assign('sum_zaplacone', $sum_zaplacone);
 
-    $t_opis=array('NR FV'=>'80','STATUS'=>'100','WARTOï¿½ï¿½ <br />NETTO'=>'120','WARTOï¿½ï¿½ <br />BRUTTO'=>'120','ZAPï¿½ACONO <br />BRUTTO'=>'110','DATA <br />FV'=>'60','SPOSï¿½B <br />ZAPï¿½ATY'=>'100','TERMIN <br />ZAPï¿½ATY'=>'100', 'KLIENT'=>'120');
+    $t_opis=array('NR FV'=>'80','STATUS'=>'100','WARTO¦Æ <br />NETTO'=>'120','WARTO¦Æ <br />BRUTTO'=>'120','ZAP£ACONO <br />BRUTTO'=>'110','DATA <br />FV'=>'60','SPOSÓB <br />ZAP£ATY'=>'100','TERMIN <br />ZAP£ATY'=>'100', 'KLIENT'=>'120');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('pages_count', $pages);

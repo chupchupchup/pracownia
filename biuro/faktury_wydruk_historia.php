@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -49,7 +49,7 @@ if($_SESSION['autoryzacjapracowni']!='razdwatrzybabajagapatrzy'){
     $smarty->assign('kontrahent_nip', $arr['kontrahent_nip']);
 
     $smarty->assign('sprzedawca_nazwa', 'Uslugi Protetyczne Jerzy Andryskowski');
-    $smarty->assign('sprzedawca_adres', '80-246 Gdaï¿½sk, ul.Jaskowa Dolina 9/1');
+    $smarty->assign('sprzedawca_adres', '80-246 Gdañsk, ul.Jaskowa Dolina 9/1');
     $smarty->assign('sprzedawca_nip', '584-000-01-05');
 
     //$suma_wartosc_vat=$arr['wartosc_netto_fv']*0.22;
@@ -84,7 +84,7 @@ $sql1="SELECT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.opiszlecenia FROM roz
 
     $smarty->assign('tab_el_fv', $tab_el_fv);
                             //,'PKWiU'=>'50'
-    $t_opis=array('l.p.'=>'20','Nazwa towaru/usï¿½ugi'=>'150','Iloï¿½ï¿½'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Wartoï¿½ï¿½ <br />netto'=>'80','Wartoï¿½ï¿½ <br />VAT'=>'80','Wartoï¿½ï¿½ <br />brutto'=>'80');
+    $t_opis=array('l.p.'=>'20','Nazwa towaru/us³ugi'=>'150','Ilo¶æ'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Warto¶æ <br />netto'=>'80','Warto¶æ <br />VAT'=>'80','Warto¶æ <br />brutto'=>'80');
     $smarty->assign('tablica_opisy', $t_opis);
 
     //-----------------------------------------------------------------------------------------------------------

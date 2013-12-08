@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -73,7 +73,7 @@ else{
     $wy=myquery($sql);    //print_r($wy);
 }
  
-    header("Location: faktury_info.php?fv_nr=".$fv_nr."&komunikat=DANE ZOSTAï¿½Y ZAKTUALIZOWANE&amp ");
+    header("Location: faktury_info.php?fv_nr=".$fv_nr."&komunikat=DANE ZOSTA£Y ZAKTUALIZOWANE&amp ");
 
 }
 

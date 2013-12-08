@@ -1,4 +1,4 @@
-<?php
+<?
 
 // funkcja czyszczaca zmienne formularza !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

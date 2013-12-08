@@ -7,7 +7,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 require_once('./inc/common.php');	
 	
 //------------------------------------------------------------------------------------------------------------------
-//funkcja ustawiajaca ktï¿½re zï¿½by zostaï¿½y wybrane
+//funkcja ustawiajaca które zêby zosta³y wybrane
 function zeby ($zeby_lista) {
 }
 

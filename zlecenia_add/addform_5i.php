@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 //------------------------------------------------------------------------------------------------------------------
-//funkcja zapisujï¿½ca ktï¿½re zï¿½by zostaï¿½y wybrane
+//funkcja zapisuj±ca które zêby zosta³y wybrane
 function zab () {
   $zab="";
   for ($i = 1; $i <= 8; $i++) 
@@ -50,7 +50,7 @@ function zab () {
     $_SESSION['form_tab']['liczba_wkladow']=$_REQUEST['liczba_wkladow'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
  
@@ -84,17 +84,17 @@ function zab () {
     $_SESSION['form_tab']['stopien_porcelanowy']=$_REQUEST['stopien_porcelanowy'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 
-    if($_SESSION['form_tab']['metal']=='metal' || $_SESSION['form_tab']['powt_metalu']=='powtï¿½rka metalu'){
-      $termin_realizacji=4; //domyï¿½lna liczba dni realizacji zlecenia
+    if($_SESSION['form_tab']['metal']=='metal' || $_SESSION['form_tab']['powt_metalu']=='powtórka metalu'){
+      $termin_realizacji=4; //domy¶lna liczba dni realizacji zlecenia
     }
     elseif($_SESSION['form_tab']['gotowa']=='gotowa'){
-      $termin_realizacji=7; //domyï¿½lna liczba dni realizacji zlecenia
+      $termin_realizacji=7; //domy¶lna liczba dni realizacji zlecenia
     }
     elseif($_SESSION['form_tab']['surowa']=='surowa'){
-      $termin_realizacji=3; //domyï¿½lna liczba dni realizacji zlecenia
+      $termin_realizacji=3; //domy¶lna liczba dni realizacji zlecenia
     }
     else{
-      $termin_realizacji=0; //domyï¿½lna liczba dni realizacji zlecenia
+      $termin_realizacji=0; //domy¶lna liczba dni realizacji zlecenia
     }
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
@@ -116,7 +116,7 @@ function zab () {
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -151,7 +151,7 @@ function zab () {
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -175,7 +175,7 @@ function zab () {
     $_SESSION['form_tab']['elementy']=$_REQUEST['elementy'];
     $_SESSION['form_tab']['zakupione_cena']=$_REQUEST['zakupione_cena'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -210,7 +210,7 @@ function zab () {
     $_SESSION['form_tab']['akryl_skan']=$_REQUEST['akryl_skan'];
     $_SESSION['form_tab']['liczba_akryl_skan']=$_REQUEST['liczba_akryl_skan'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -218,7 +218,7 @@ function zab () {
  elseif($add=="addform_4i_porcelana_8.php"){
   	 $_SESSION['form_tab']['zakladka']="porcelana_8";
     $_SESSION['form_tab']['naprawa']=$_REQUEST['naprawa'];
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -246,7 +246,7 @@ function zab () {
     $_SESSION['form_tab']['zeby_ivoclar']=$_REQUEST['zeby_ivoclar'];
     $_SESSION['form_tab']['liczba_zeby_ivoclar']=$_REQUEST['liczba_zeby_ivoclar'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -270,7 +270,7 @@ function zab () {
     $_SESSION['form_tab']['liczba_zeby_ivoclar']=$_REQUEST['liczba_zeby_ivoclar'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -293,7 +293,7 @@ function zab () {
     $_SESSION['form_tab']['zeby_ivoclar']=$_REQUEST['zeby_ivoclar'];
     $_SESSION['form_tab']['liczba_zeby_ivoclar']=$_REQUEST['liczba_zeby_ivoclar'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
 
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -330,7 +330,7 @@ function zab () {
     $_SESSION['form_tab']['inne']=$_REQUEST['inne'];
     $_SESSION['form_tab']['liczbainne']=$_REQUEST['liczbainne'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
  }
  elseif($add=="addform_4i_proteza_5.php"){
   	 $_SESSION['form_tab']['zakladka']="proteza_5";
@@ -350,7 +350,7 @@ function zab () {
     $_SESSION['form_tab']['miekkie_podscielenie']=$_REQUEST['miekkie_podscielenie'];
     $_SESSION['form_tab']['lutowanie_wymiana_akrylu']=$_REQUEST['lutowanie_wymiana_akrylu'];
     $_SESSION['form_tab']['lutowanie_szkieletu']=$_REQUEST['lutowanie_szkieletu'];
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
  }
  elseif($add=="addform_4i_proteza_6.php"){
   	 $_SESSION['form_tab']['zakladka']="proteza_6";
@@ -366,7 +366,7 @@ function zab () {
     $_SESSION['form_tab']['liczba_lyzka_indywidualna']=$_REQUEST['liczba_lyzka_indywidualna'];
     $_SESSION['form_tab']['wypozyczenie_luku_twarzowego']=$_REQUEST['wypozyczenie_luku_twarzowego'];
 
-    $termin_realizacji=5; //domyï¿½lna liczba dni realizacji zlecenia
+    $termin_realizacji=5; //domy¶lna liczba dni realizacji zlecenia
  }
 
     $zakladka = explode('_', $_SESSION['form_tab']['zakladka']);
@@ -374,7 +374,7 @@ function zab () {
     $smarty->assign('cofnij0', $zakladka[0]);
     $smarty->assign('cofnij1', $zakladka[1]);
 
-    //ustawiï¿½ date realizacji zlecenia
+    //ustawiæ date realizacji zlecenia
     if( isset($_SESSION['form_tab']['zwrotzleceniadata']) ){
       $tablica_date_oddania = explode('-', $_SESSION['form_tab']['zwrotzleceniadata']);
       $Y=$tablica_date_oddania[0];

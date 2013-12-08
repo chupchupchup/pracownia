@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -45,7 +45,7 @@ elseif($_REQUEST['wpis']=='dodaj_form'){
 	    echo "MySQL error ".mysql_errno().": ".htmlspecialchars (mysql_error())."\n<br>When executing:<br>\n<b>$query\n</b><br>";
     }
 
-	header("Location: biuro.php?strona=glowna_producenci&wpis=edycja_producenta&id=".mysql_insert_id()."&komunikat=Producent zostaï¿½ dodany.&amp");    
+	header("Location: biuro.php?strona=glowna_producenci&wpis=edycja_producenta&id=".mysql_insert_id()."&komunikat=Producent zosta³ dodany.&amp");    
     
     include('./inc/db_close.inc.php');  
   }
@@ -74,7 +74,7 @@ elseif($_REQUEST['wpis']=='wyszukaj_form'){
   else{
     $smarty->assign('nazwa', $nazwa);
 
-    $smarty->assign('komunikat', '&nbsp;<b>Brak wynikï¿½w wyszukiwania:</b><br />');
+    $smarty->assign('komunikat', '&nbsp;<b>Brak wyników wyszukiwania:</b><br />');
     $smarty->assign('sub', 'tak');
     $smarty->assign('plik', 'producenci.tpl');
   }
@@ -102,7 +102,7 @@ elseif($_REQUEST['wpis']=='edycja_producenta'){
   else{
     $smarty->assign('nazwa', $nazwa);
 
-    $smarty->assign('komunikat', '&nbsp;<b>Nie mozna edytowaï¿½ (sprawdï¿½ ponownie):</b><br />');
+    $smarty->assign('komunikat', '&nbsp;<b>Nie mozna edytowaæ (sprawd¼ ponownie):</b><br />');
     $smarty->assign('sub', 'tak');
     $smarty->assign('plik', 'producenci.tpl');
   }

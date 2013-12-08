@@ -52,7 +52,7 @@ else{
   $idzlecenianr_warunek="= '".$idlok."' ";
 }
 
- //id zlecenia wczesniej juï¿½ wykonywanego 
+ //id zlecenia wczesniej ju¿ wykonywanego 
  $idpoz=$_SESSION['form_tab']['idzleceniapoz_tmp'].$_REQUEST['rok'];
 
  //$idzewnetrzne= czysc_zmienne_formularza($_REQUEST['idzewnetrzny']);

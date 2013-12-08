@@ -6,7 +6,7 @@ require_once('./inc/common.php');
 
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 //------------------------------------------------------------------------------------------------------------------
-//funkcja zapisujï¿½ca ktï¿½re zï¿½by zostaï¿½y wybrane
+//funkcja zapisuj±ca które zêby zosta³y wybrane
 function zab () {
   $zab="";
   for ($i = 1; $i <= 8; $i++) 

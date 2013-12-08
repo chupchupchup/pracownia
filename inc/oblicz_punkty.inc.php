@@ -1,4 +1,4 @@
-<?php
+<?
 class PunktyCount {
 
   // -------------------------------------------------------
@@ -71,7 +71,7 @@ function punkty ($idzlecenianr, $idzleceniapoz, $kategoria, $datawpisania) {
   return $p;
 }
 
-//FUNKCJA ZWRACAJï¿½CA LICZBï¿½ Zï¿½Bï¿½W
+//FUNKCJA ZWRACAJ¡CA LICZBÊ ZÊBÓW
 function ilosc_zebow($tablica_zlecenia) {
   $zabki = explode(',', $tablica_zlecenia['zeby']);
   $zabki_count=count($zabki);
@@ -79,7 +79,7 @@ function ilosc_zebow($tablica_zlecenia) {
   return $zabki_count;
 }
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI WKLADY K-K
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI WKLADY K-K
 function p_wkladykk($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -102,7 +102,7 @@ function p_wkladykk($tablica_punktow,$tablica_zlecenia) {
   return $p_pom;
 }
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA KORONA LICOWANA NA METALU
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA KORONA LICOWANA NA METALU
 function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
 
@@ -113,7 +113,7 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='zatrzaski' && $tablica_zlecenia[$klucz]!='zasuwy'
      && $tablica_zlecenia[$klucz]!='szklane podparcie' && $klucz!='przedzial_malowanie'
      && $tablica_zlecenia[$klucz]!='kompozyt' && $klucz!='porcelana'
-     && $tablica_zlecenia[$klucz]!='zï¿½oto'
+     && $tablica_zlecenia[$klucz]!='z³oto'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -142,7 +142,7 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA KORONA PEï¿½NOCERAMICZNA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA KORONA PE£NOCERAMICZNA
 function p_korona_pelnoceramiczna($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -168,7 +168,7 @@ function p_korona_pelnoceramiczna($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA INLAY ONLAY LICï¿½WKA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA INLAY ONLAY LICÓWKA
 function p_inlay_onlay_licowka($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -182,23 +182,23 @@ function p_inlay_onlay_licowka($tablica_punktow,$tablica_zlecenia) {
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
-    elseif($tablica_zlecenia[$klucz]=='licï¿½wka kompozyt'){
+    elseif($tablica_zlecenia[$klucz]=='licówka kompozyt'){
       $p_pom=$p_pom+$tablica_punktow['licowka_kompozyt']*$tablica_zlecenia['liczba_licowka_kompozyt'];
     }
-    elseif($tablica_zlecenia[$klucz]=='licï¿½wka Empress'){
+    elseif($tablica_zlecenia[$klucz]=='licówka Empress'){
       $p_pom=$p_pom+$tablica_punktow['licowka_Empress']*$tablica_zlecenia['liczba_licowka_Empress'];
 	  //echo $tablica_punktow['licowka_Empress'].' - cena <br>';
     }
-    elseif($tablica_zlecenia[$klucz]=='licï¿½wka cerkon'){
+    elseif($tablica_zlecenia[$klucz]=='licówka cerkon'){
       $p_pom=$p_pom+$tablica_punktow['licowka_cerkon']*$tablica_zlecenia['liczba_licowka_cerkon'];
     }
-    elseif($tablica_zlecenia[$klucz]=='licï¿½wka wypalana'){
+    elseif($tablica_zlecenia[$klucz]=='licówka wypalana'){
       $p_pom=$p_pom+$tablica_punktow['licowka_wypalana']*$tablica_zlecenia['liczba_licowka_wypalana'];
     }
-    elseif($tablica_zlecenia[$klucz]=='licï¿½wka Gradia'){
+    elseif($tablica_zlecenia[$klucz]=='licówka Gradia'){
       $p_pom=$p_pom+$tablica_punktow['licowka_Gradia']*$tablica_zlecenia['liczba_licowka_Gradia'];
     }
-    elseif($tablica_zlecenia[$klucz]=='inlay onlay zï¿½oto'){
+    elseif($tablica_zlecenia[$klucz]=='inlay onlay z³oto'){
       $p_pom=$p_pom+$tablica_punktow['inlay_onlay_zloto']*$tablica_zlecenia['liczba_inlay_onlay_zloto'];
     }
     elseif($tablica_zlecenia[$klucz]=='inlay onlay Gradia'){
@@ -225,21 +225,21 @@ function p_inlay_onlay_licowka($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA IMPLANTY
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA IMPLANTY
 function p_implanty($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
-     && $tablica_zlecenia[$klucz]!='licowane porcelanï¿½' && $tablica_zlecenia[$klucz]!='cerkon'
-     && $tablica_zlecenia[$klucz]!='korona z implantem' && $tablica_zlecenia[$klucz]!='przï¿½sï¿½o'
+     && $tablica_zlecenia[$klucz]!='licowane porcelan±' && $tablica_zlecenia[$klucz]!='cerkon'
+     && $tablica_zlecenia[$klucz]!='korona z implantem' && $tablica_zlecenia[$klucz]!='przês³o'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
     elseif($tablica_zlecenia[$klucz]=='korona z implantem'){
       $p_pom=$p_pom+$tablica_punktow['korona '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_korona_implant'];
     }
-    elseif($tablica_zlecenia[$klucz]=='przï¿½sï¿½o'){
-      $p_pom=$p_pom+$tablica_punktow['przï¿½sï¿½o '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_przeslo'];
+    elseif($tablica_zlecenia[$klucz]=='przês³o'){
+      $p_pom=$p_pom+$tablica_punktow['przês³o '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_przeslo'];
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -251,14 +251,14 @@ function p_implanty($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA KORONY INNE
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA KORONY INNE
 function p_korony_inne($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='korona akrylowa' && $tablica_zlecenia[$klucz]!='korona kompozytowa'
-     && $tablica_zlecenia[$klucz]!='wï¿½ï¿½kno szklane' && $tablica_zlecenia[$klucz]!='teleskop metal'
-     && $tablica_zlecenia[$klucz]!='teleskop zï¿½oty' && $tablica_zlecenia[$klucz]!='teleskop cerkon'
+     && $tablica_zlecenia[$klucz]!='w³ókno szklane' && $tablica_zlecenia[$klucz]!='teleskop metal'
+     && $tablica_zlecenia[$klucz]!='teleskop z³oty' && $tablica_zlecenia[$klucz]!='teleskop cerkon'
      && $tablica_zlecenia[$klucz]!='teleskop licowany kompozytem' && $tablica_zlecenia[$klucz]!='akrylowa skanowana'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
@@ -269,14 +269,14 @@ function p_korony_inne($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='korona kompozytowa'){
       $p_pom=$p_pom+$tablica_punktow['korona kompozytowa']*$tablica_zlecenia['liczba_korona_kompozyt'];
     }
-    elseif($tablica_zlecenia[$klucz]=='wï¿½ï¿½kno szklane'){
-      $p_pom=$p_pom+$tablica_punktow['wï¿½ï¿½kno szklane']*$tablica_zlecenia['liczba_wlokno_szklane'];
+    elseif($tablica_zlecenia[$klucz]=='w³ókno szklane'){
+      $p_pom=$p_pom+$tablica_punktow['w³ókno szklane']*$tablica_zlecenia['liczba_wlokno_szklane'];
     }
     elseif($tablica_zlecenia[$klucz]=='teleskop metal'){
       $p_pom=$p_pom+$tablica_punktow['teleskop metal']*$tablica_zlecenia['liczba_teleskop'];
     }
-    elseif($tablica_zlecenia[$klucz]=='teleskop zï¿½oty'){
-      $p_pom=$p_pom+$tablica_punktow['teleskop zï¿½oty']*$tablica_zlecenia['liczba_teleskop'];
+    elseif($tablica_zlecenia[$klucz]=='teleskop z³oty'){
+      $p_pom=$p_pom+$tablica_punktow['teleskop z³oty']*$tablica_zlecenia['liczba_teleskop'];
     }
     elseif($tablica_zlecenia[$klucz]=='teleskop cerkon'){
       $p_pom=$p_pom+$tablica_punktow['teleskop cerkon']*$tablica_zlecenia['liczba_teleskop'];
@@ -296,7 +296,7 @@ function p_korony_inne($tablica_punktow,$tablica_zlecenia) {
 }
 
 /*
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PORCELANA NAPRAWA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PORCELANA NAPRAWA
 function p_porcelana_naprawa($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -312,7 +312,7 @@ function p_porcelana_naprawa($tablica_punktow,$tablica_zlecenia) {
 }
 */
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PROTEZA SZKIELET SZYNOPROTEZA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PROTEZA SZKIELET SZYNOPROTEZA
 function p_szkielet_szynoproteza($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -320,7 +320,7 @@ function p_szkielet_szynoproteza($tablica_punktow,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='szkieletowa' && $tablica_zlecenia[$klucz]!='szkieletowa na zasuwach'
      && $tablica_zlecenia[$klucz]!='szkieletowa na zatrzaskach' && $tablica_zlecenia[$klucz]!='szkieletowa na teleskopach'
      && $tablica_zlecenia[$klucz]!='szynoproteza' && $tablica_zlecenia[$klucz]!='gotowa'
-     && $tablica_zlecenia[$klucz]!='zï¿½by ivoclar'
+     && $tablica_zlecenia[$klucz]!='zêby ivoclar'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -342,8 +342,8 @@ function p_szkielet_szynoproteza($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='gotowa'){
       $p_pom=$p_pom+$tablica_punktow['gotowa']*$tablica_zlecenia['liczba_gotowa'];
     }
-    elseif($tablica_zlecenia[$klucz]=='zï¿½by ivoclar'){
-      $p_pom=$p_pom+$tablica_punktow['zï¿½by ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
+    elseif($tablica_zlecenia[$klucz]=='zêby ivoclar'){
+      $p_pom=$p_pom+$tablica_punktow['zêby ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -354,31 +354,31 @@ function p_szkielet_szynoproteza($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PROTEZA CAï¿½KOWITA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PROTEZA CA£KOWITA
 function p_calkowita($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
-     && $tablica_zlecenia[$klucz]!='proteza standardowa' && $tablica_zlecenia[$klucz]!='proteza caï¿½kowita w artykulatorze'
-     && $tablica_zlecenia[$klucz]!='proteza w systemie iniekcyjnym' && $tablica_zlecenia[$klucz]!='nakï¿½ady'
-     && $tablica_zlecenia[$klucz]!='zï¿½by ivoclar'
+     && $tablica_zlecenia[$klucz]!='proteza standardowa' && $tablica_zlecenia[$klucz]!='proteza ca³kowita w artykulatorze'
+     && $tablica_zlecenia[$klucz]!='proteza w systemie iniekcyjnym' && $tablica_zlecenia[$klucz]!='nak³ady'
+     && $tablica_zlecenia[$klucz]!='zêby ivoclar'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
     elseif($tablica_zlecenia[$klucz]=='proteza standardowa'){
       $p_pom=$p_pom+$tablica_punktow['proteza standardowa']*$tablica_zlecenia['liczba_proteza'];
     }
-    elseif($tablica_zlecenia[$klucz]=='proteza caï¿½kowita w artykulatorze'){
-      $p_pom=$p_pom+$tablica_punktow['proteza caï¿½kowita w artykulatorze']*$tablica_zlecenia['liczba_proteza'];
+    elseif($tablica_zlecenia[$klucz]=='proteza ca³kowita w artykulatorze'){
+      $p_pom=$p_pom+$tablica_punktow['proteza ca³kowita w artykulatorze']*$tablica_zlecenia['liczba_proteza'];
     }
     elseif($tablica_zlecenia[$klucz]=='proteza w systemie iniekcyjnym'){
       $p_pom=$p_pom+$tablica_punktow['proteza w systemie iniekcyjnym']*$tablica_zlecenia['liczba_proteza'];
     }
-    elseif($tablica_zlecenia[$klucz]=='nakï¿½ady'){
-      $p_pom=$p_pom+$tablica_punktow['nakï¿½ady']*$tablica_zlecenia['liczba_naklady'];
+    elseif($tablica_zlecenia[$klucz]=='nak³ady'){
+      $p_pom=$p_pom+$tablica_punktow['nak³ady']*$tablica_zlecenia['liczba_naklady'];
     }
-    elseif($tablica_zlecenia[$klucz]=='zï¿½by ivoclar'){
-      $p_pom=$p_pom+$tablica_punktow['zï¿½by ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
+    elseif($tablica_zlecenia[$klucz]=='zêby ivoclar'){
+      $p_pom=$p_pom+$tablica_punktow['zêby ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -389,14 +389,14 @@ function p_calkowita($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PROTEZA CZÊ¦CIOWA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PROTEZA CZÊ¦CIOWA
 function p_czesciowa($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='proteza standardowa' && $tablica_zlecenia[$klucz]!='proteza w artykulatorze'
      && $tablica_zlecenia[$klucz]!='proteza w systemie iniekcyjnym' && $tablica_zlecenia[$klucz]!='mikroproteza'
-     && $tablica_zlecenia[$klucz]!='zï¿½by ivoclar'
+     && $tablica_zlecenia[$klucz]!='zêby ivoclar'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -404,7 +404,7 @@ function p_czesciowa($tablica_punktow,$tablica_zlecenia) {
       $p_pom=$p_pom+$tablica_punktow['proteza standardowa']*$tablica_zlecenia['liczba_proteza'];
     }
     elseif($tablica_zlecenia[$klucz]=='proteza w artykulatorze'){
-      $p_pom=$p_pom+$tablica_punktow['proteza caï¿½kowita w artykulatorze']*$tablica_zlecenia['liczba_proteza'];
+      $p_pom=$p_pom+$tablica_punktow['proteza ca³kowita w artykulatorze']*$tablica_zlecenia['liczba_proteza'];
     }
     elseif($tablica_zlecenia[$klucz]=='proteza w systemie iniekcyjnym'){
       $p_pom=$p_pom+$tablica_punktow['proteza w systemie iniekcyjnym']*$tablica_zlecenia['liczba_proteza'];
@@ -412,8 +412,8 @@ function p_czesciowa($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='mikroproteza'){
       $p_pom=$p_pom+$tablica_punktow['mikroproteza']*$tablica_zlecenia['liczba_proteza'];
     }
-    elseif($tablica_zlecenia[$klucz]=='zï¿½by ivoclar'){
-      $p_pom=$p_pom+$tablica_punktow['zï¿½by ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
+    elseif($tablica_zlecenia[$klucz]=='zêby ivoclar'){
+      $p_pom=$p_pom+$tablica_punktow['zêby ivoclar']*$tablica_zlecenia['liczba_zeby_ivoclar'];
     }
 
   }
@@ -423,7 +423,7 @@ function p_czesciowa($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PROTEZA SZYNY
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PROTEZA SZYNY
 function p_szyny($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
@@ -442,22 +442,22 @@ function p_szyny($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='wybielajaca'){
       $p_pom=$p_pom+$tablica_punktow['wybielajaca']*$tablica_zlecenia['liczbawybielajacych'];
     }
-    elseif($tablica_zlecenia[$klucz]=='relaksacyjna twardo-miï¿½kka'){
+    elseif($tablica_zlecenia[$klucz]=='relaksacyjna twardo-miêkka'){
       $p_pom=$p_pom+$tablica_punktow['relaksacyjnatm']*$tablica_zlecenia['liczbarelaksacyjnatm'];
     }
     elseif($tablica_zlecenia[$klucz]=='relaksacyjna twarda-nagryzowa'){
       $p_pom=$p_pom+$tablica_punktow['relaksacyjnatn']*$tablica_zlecenia['liczbarelaksacyjnatn'];
     }
-    elseif($tablica_zlecenia[$klucz]=='relaksacyjna miï¿½kka'){
+    elseif($tablica_zlecenia[$klucz]=='relaksacyjna miêkka'){
       $p_pom=$p_pom+$tablica_punktow['relaksacyjnam']*$tablica_zlecenia['liczbarelaksacyjnam'];
     }
-    elseif($tablica_zlecenia[$klucz]=='relaksacyjna miï¿½kka press-kolor'){
+    elseif($tablica_zlecenia[$klucz]=='relaksacyjna miêkka press-kolor'){
       $p_pom=$p_pom+$tablica_punktow['relaksacyjnampk']*$tablica_zlecenia['liczbarelaksacyjnampk'];
     }
     elseif($tablica_zlecenia[$klucz]=='ochronna kolor'){
       $p_pom=$p_pom+$tablica_punktow['ochronna']*$tablica_zlecenia['liczbaochronna'];
     }
-    elseif($tablica_zlecenia[$klucz]=='do pozycjonowania implantï¿½w z markerami'){
+    elseif($tablica_zlecenia[$klucz]=='do pozycjonowania implantów z markerami'){
       $p_pom=$p_pom+$tablica_punktow['pozycjonowanie']*$tablica_zlecenia['liczbapozycjonowanie'];
     }
     elseif($tablica_zlecenia[$klucz]=='nagryzowa w artykulatorze'){
@@ -472,10 +472,10 @@ function p_szyny($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='szyna do koron tymczasowych'){
       $p_pom=$p_pom+$tablica_punktow['szyna_korony_tymczasowe']*$tablica_zlecenia['liczbaszyna_korony_tymczasowe'];
     }
-    elseif($tablica_zlecenia[$klucz]=='szyna do zabiegï¿½w implantologicznych z nawierceniami'){
+    elseif($tablica_zlecenia[$klucz]=='szyna do zabiegów implantologicznych z nawierceniami'){
       $p_pom=$p_pom+$tablica_punktow['szyna_zabiegi_implantologiczne']*$tablica_zlecenia['liczbaszyna_zabiegi_implantologiczne'];
     }
-    elseif($tablica_zlecenia[$klucz]=='pï¿½yta podjï¿½zykowa twarda'){
+    elseif($tablica_zlecenia[$klucz]=='p³yta podjêzykowa twarda'){
       $p_pom=$p_pom+$tablica_punktow['plyta_podjezykowa']*$tablica_zlecenia['liczbaplyta_podjezykowa'];
     }
     elseif($tablica_zlecenia[$klucz]=='aparat przeciw chrapaniu'){
@@ -490,18 +490,18 @@ function p_szyny($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA LICZBï¿½ PUNKTï¿½W DLA TABELI PROTEZA NAPRAWA
+//FUNKCJA OBLICZAJ¡CA LICZBÊ PUNKTÓW DLA TABELI PROTEZA NAPRAWA
 function p_proteza_naprawa($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
-     && $tablica_zlecenia[$klucz]!='dostawienie zï¿½ba' && $tablica_zlecenia[$klucz]!='dostawienie klamry'
+     && $tablica_zlecenia[$klucz]!='dostawienie zêba' && $tablica_zlecenia[$klucz]!='dostawienie klamry'
      && $tablica_zlecenia[$klucz]!='element lany'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
-    elseif($tablica_zlecenia[$klucz]=='dostawienie zï¿½ba' && $tablica_zlecenia['dostawienie_zeba_ilosc']>0){
-      $p_pom=$p_pom+$tablica_punktow['dostawienie zï¿½ba']*$tablica_zlecenia['dostawienie_zeba_ilosc']+1;
+    elseif($tablica_zlecenia[$klucz]=='dostawienie zêba' && $tablica_zlecenia['dostawienie_zeba_ilosc']>0){
+      $p_pom=$p_pom+$tablica_punktow['dostawienie zêba']*$tablica_zlecenia['dostawienie_zeba_ilosc']+1;
     }
     elseif($tablica_zlecenia[$klucz]=='dostawienie klamry' && $tablica_zlecenia['dostawienie_klamry_ilosc']>0){
       $p_pom=$p_pom+$tablica_punktow['dostawienie klamry']*$tablica_zlecenia['dostawienie_klamry_ilosc']+1;
@@ -518,14 +518,14 @@ function p_proteza_naprawa($tablica_punktow,$tablica_zlecenia) {
 }
 
 
-//FUNKCJA OBLICZAJï¿½CA CENï¿½ DLA TABELI PROTEZA PRACE POMOCNICZE
+//FUNKCJA OBLICZAJ¡CA CENÊ DLA TABELI PROTEZA PRACE POMOCNICZE
 function p_proteza_prace_pomocnicze($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='model diagnostyczny / orientacyjny' && $tablica_zlecenia[$klucz]!='dodatkowy wzornik'
      && $tablica_zlecenia[$klucz]!='wax-up' && $tablica_zlecenia[$klucz]!='model dzielony dodatkowy'
-     && $tablica_zlecenia[$klucz]!='ï¿½yï¿½ka indywidualna'
+     && $tablica_zlecenia[$klucz]!='³y¿ka indywidualna'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -541,8 +541,8 @@ function p_proteza_prace_pomocnicze($tablica_punktow,$tablica_zlecenia) {
     elseif($tablica_zlecenia[$klucz]=='model dzielony dodatkowy'){
       $p_pom=$p_pom+$tablica_punktow['model dzielony dodatkowy']*$tablica_zlecenia['liczba_model_dzielony_dodatkowy'];
     }
-    elseif($tablica_zlecenia[$klucz]=='ï¿½yï¿½ka indywidualna'){
-      $p_pom=$p_pom+$tablica_punktow['ï¿½yï¿½ka indywidualna']*$tablica_zlecenia['liczba_lyzka_indywidualna'];
+    elseif($tablica_zlecenia[$klucz]=='³y¿ka indywidualna'){
+      $p_pom=$p_pom+$tablica_punktow['³y¿ka indywidualna']*$tablica_zlecenia['liczba_lyzka_indywidualna'];
     }
 
   //echo $p_pom.'-p_pom<br>';

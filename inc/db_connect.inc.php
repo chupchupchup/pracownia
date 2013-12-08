@@ -1,9 +1,9 @@
-<?php
+<?
 $database = mysql_connect("localhost", "pracownia", "#luserpracownia")
-   or die("Nie moï¿½na siï¿½ poï¿½ï¿½czyï¿½\n");
+   or die("Nie mo¿na siê po³¹czyæ\n");
 
 mysql_select_db("protetyka")
-    or die ("Nie mozna wybraï¿½ bazy danych");
+    or die ("Nie mozna wybraæ bazy danych");
 
 define('DB_INIT_CODE_1', "SET NAMES latin2");
 define('DB_INIT_CODE_2', "SET CHARACTER SET latin2");

@@ -62,7 +62,7 @@ else{
 	  $smarty->assign('tablica_wynikow', $t);
 	  $smarty->display('addform_7i.tpl');
 
-	  //usuniecie tablicy przechowyjacej info do jakich tablic w bazie byï¿½y dodawane dane
+	  //usuniecie tablicy przechowyjacej info do jakich tablic w bazie by³y dodawane dane
  	  unset($_SESSION['zakladka']);
 
 }

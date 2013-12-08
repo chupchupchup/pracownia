@@ -58,7 +58,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
     $_SESSION['form_tab']['punkty']=$punkty;
     $smarty->assign('punkty', $_SESSION['form_tab']['punkty']);
     //      echo 'cena: '.$cena.'<br>';
-    $cena=$cena+$cena_zlota;//razem z cenï¿½ zï¿½ota
+    $cena=$cena+$cena_zlota;//razem z cen± z³ota
     $_SESSION['form_tab']['cena']=$cena;
     $smarty->assign('cena', $_SESSION['form_tab']['cena']);
     //      echo 'wagazlota: '.$wagazlota.'<br>';
@@ -93,7 +93,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
      myquery($sql);
   }
 */
-// KONIEC PUNKTï¿½W ----------------------------------------------------------------------------------------------
+// KONIEC PUNKTÓW ----------------------------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------------------------
 // CENA
@@ -158,7 +158,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 
 
 
-	  //usuniecie tablicy przechowyjacej info do jakich tablic w bazie byï¿½y dodawane dane
+	  //usuniecie tablicy przechowyjacej info do jakich tablic w bazie by³y dodawane dane
  	  //unset($_SESSION['zakladka']);
 
     $smarty->assign('tablica_wynikow', $_SESSION['form_tab']);

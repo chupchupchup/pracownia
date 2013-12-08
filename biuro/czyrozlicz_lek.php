@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -44,7 +44,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
                //ok
            }
            else{
-             echo 'bďż˝ďż˝dnie wpisana data '.$dataarchiw.', nie ma rozliczenia lekarza z tďż˝ datďż˝<br />';
+             echo 'błędnie wpisana data '.$dataarchiw.', nie ma rozliczenia lekarza z tą datą<br />';
              $dataarchiw="0000-00-00";
            }
 
@@ -68,13 +68,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <meta http-equiv="Content-type" content="text/html; charset=ISO-8859-2" />
 </head>
  <body bgcolor="#F4FFF0">
-  <p><strong><u class="style2">DODAJ LUB USUďż˝ Z ROZLICZENIA:</u></strong></p>
+  <p><strong><u class="style2">DODAJ LUB USUŃ Z ROZLICZENIA:</u></strong></p>
   <br>
   <form name="form" method="post" action="czyrozlicz_lek.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
+   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
    <input type="hidden" name="zmien" value="tak" >
 
 <hr>
@@ -87,15 +87,15 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
               <option>nie_rozliczac</option>
             </select>
           </td>
-          <td><strong>&nbsp;- WYBIERZ CZY ZLECENIE MA BYďż˝ ROZLICZONE LEKARZOWI</strong>
+          <td><strong>&nbsp;- WYBIERZ CZY ZLECENIE MA BYĆ ROZLICZONE LEKARZOWI</strong>
           </td>
         </tr>
      <tr><td><br></td></tr>
         <tr>
           <td>
-          <input type="text" style="width:100px;" name="dataarchiw" value="<?php=$dataarchiw;?>" />
+          <input type="text" style="width:100px;" name="dataarchiw" value="<?=$dataarchiw;?>" />
           </td>
-          <td><strong>&nbsp;- WPISZ DATďż˝ ARCHIWUM DO KTďż˝REGO CHCESZ PRZENIEďż˝ďż˝ ZLECENIE</strong>
+          <td><strong>&nbsp;- WPISZ DATĘ ARCHIWUM DO KTÓREGO CHCESZ PRZENIEŚĆ ZLECENIE</strong>
           </td>
         </tr>
      <tr><td><br></td></tr>
@@ -104,14 +104,14 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <hr>
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1" align="left">
      <tr>
-       <td><input type="submit" name="Submit" value="ZMIEďż˝">&nbsp;&nbsp;</td>
-       <td><input type="reset" name="RESET" value="WYCZYďż˝ďż˝"></td>
+       <td><input type="submit" name="Submit" value="ZMIEŃ">&nbsp;&nbsp;</td>
+       <td><input type="reset" name="RESET" value="WYCZYŚĆ"></td>
      </tr>
    </table>
 </form>
 </body>
 </html>
-<?php
+<?
 
 }
 else{

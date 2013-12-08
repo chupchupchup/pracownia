@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -45,10 +45,10 @@ form {
 
 </head>
  <body>
-  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">ROZLICZANIE TECHNIKï¿½W </p>
+  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">ROZLICZANIE TECHNIKÓW </p>
 
     <button style="margin-left:100px;width:160px;height:25px;background-color:#E70000;color:#E8E8E8" type="button" onclick="javascript:window.opener='x';window.open('','_parent','');window.close();">
-      <b>ZAMKNIJ STRONï¿½</b>
+      <b>ZAMKNIJ STRONÊ</b>
     </button>
 
   <hr>
@@ -57,17 +57,17 @@ form {
   <form name="form1" method="post" action="edytujrozliczenietech1.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="data" value="<?php echo $data;?>" >
-   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
-   <input type="hidden" name="tabela" value="<?php echo $tabela;?>" >
-   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
-   <input type="hidden" name="technik_prowadzacy" value="<?php echo $technik_prowadzacy;?>" >
+   <input type="hidden" name="data" value="<? echo $data;?>" >
+   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
+   <input type="hidden" name="tabela" value="<? echo $tabela;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="technik_prowadzacy" value="<? echo $technik_prowadzacy;?>" >
 
    <table class="tab">
      <tr bgcolor="#D6D9FE">
        <td>
-         OKREï¿½L LICZBï¿½ TECHNIKï¿½W DO ROZLICZENIA:
+         OKRE¦L LICZBÊ TECHNIKÓW DO ROZLICZENIA:
        </td>
        <td style="width:100px;">
          <select name="liczbatech" style="margin-left:20px;width:60px;font-size:22px;">
@@ -93,20 +93,20 @@ form {
   <form name="form2" style="float:left;"  method="post" action="edytujrozliczenietech2.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="data" value="<?php echo $data;?>" >
-   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
-   <input type="hidden" name="tabela" value="<?php echo $tabela;?>" >
-   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="data" value="<? echo $data;?>" >
+   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
+   <input type="hidden" name="tabela" value="<? echo $tabela;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
    <input type="hidden" name="aktualizuj" value="tak" >
 
    <table class="tab">
      <tr bgcolor="#D6D9FE">
        <td style="font-size:14px;">
-         PRZEJDï¿½ DO EDYCJI ROZLICZEï¿½ JEï¿½ELI TECHNIK POJAWIï¿½ SIï¿½ NA LIï¿½CIE PO PRAWEJ STRONIE ---->
+         PRZEJD¬ DO EDYCJI ROZLICZEÑ JE¯ELI TECHNIK POJAWI£ SIÊ NA LI¦CIE PO PRAWEJ STRONIE ---->
        </td>
        <td style="width:60%;font-size:11px;font-weight:800;">
-<?php
+<?
 	  $sql="SELECT * FROM rozlicz_technicy WHERE idzlecenianr='".$nr_zlec."' AND idzleceniapoz='".$id_zlec."' ";
 	  $wy=myquery($sql);
           while( $ar = mysql_fetch_assoc($wy) ) {
@@ -126,7 +126,7 @@ form {
 
 </body>
 </html>
-<?php
+<?
 }
 else{
   header("Location: index.php");

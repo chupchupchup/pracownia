@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -35,26 +35,26 @@ function pobierz_dane ($sql) {
 }
 //------------------------------------------------------------------------------------------------------------------
 
-    $t_opis=array('NR FV'=>'80','STATUS'=>'100','WARTOï¿½ï¿½ <br />NETTO'=>'120','WARTOï¿½ï¿½ <br />BRUTTO'=>'120','ZAPï¿½ACONO <br />BRUTTO'=>'120','DATA <br />FV'=>'60','SPOSï¿½B <br />ZAPï¿½ATY'=>'100','TERMIN <br />ZAPï¿½ATY'=>'100','KLIENT'=>'120');
+    $t_opis=array('NR FV'=>'80','STATUS'=>'100','WARTO¦Æ <br />NETTO'=>'120','WARTO¦Æ <br />BRUTTO'=>'120','ZAP£ACONO <br />BRUTTO'=>'120','DATA <br />FV'=>'60','SPOSÓB <br />ZAP£ATY'=>'100','TERMIN <br />ZAP£ATY'=>'100','KLIENT'=>'120');
     $smarty->assign('tablica_opisy', $t_opis);
 
 if($_SESSION['idusera']=='JERZY.ANDRYSKOWSKI' || $_SESSION['idusera']=='ANIA.ANDRYSKOWSKA'){
-    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' zï¿½'), concat(kwota_zaplacona, ' zï¿½'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'),idzleceniodawcy 
+    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' z³'), concat(kwota_zaplacona, ' z³'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'),idzleceniodawcy 
           FROM faktury
-          WHERE status='niezapï¿½acona' ORDER BY data_fv, idzleceniodawcy ";
+          WHERE status='niezap³acona' ORDER BY data_fv, idzleceniodawcy ";
 
     $sql_sum="SELECT fv_nr, sum(wartosc_brutto_fv) as sum_b, sum(kwota_zaplacona) as sum_z, idzleceniodawcy
           FROM faktury
-          WHERE status='niezapï¿½acona' ORDER BY data_fv, idzleceniodawcy ";
+          WHERE status='niezap³acona' ORDER BY data_fv, idzleceniodawcy ";
 }
 else{
-    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' zï¿½'), concat(kwota_zaplacona, ' zï¿½'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'),idzleceniodawcy 
+    $sql="SELECT fv_nr, status, concat(wartosc_netto_fv, ' z³'), concat(kwota_zaplacona, ' z³'), data_fv, sposob_zaplaty, concat(termin_zaplaty, ' dni'),idzleceniodawcy 
           FROM faktury
-          WHERE status='niezapï¿½acona' AND fv_nr NOT LIKE '%/9999' ORDER BY data_fv, idzleceniodawcy ";
+          WHERE status='niezap³acona' AND fv_nr NOT LIKE '%/9999' ORDER BY data_fv, idzleceniodawcy ";
 
     $sql_sum="SELECT fv_nr, sum(wartosc_brutto_fv) as sum_b, sum(kwota_zaplacona) as sum_z, idzleceniodawcy
           FROM faktury
-          WHERE status='niezapï¿½acona' AND fv_nr NOT LIKE '%/9999' ORDER BY data_fv, idzleceniodawcy ";
+          WHERE status='niezap³acona' AND fv_nr NOT LIKE '%/9999' ORDER BY data_fv, idzleceniodawcy ";
 }
 
     $tablica_wynikow=pobierz_dane($sql);    //print_r($tablica_wynikow);

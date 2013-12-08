@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -15,7 +15,7 @@ elseif ( $_SESSION['panelgorny']=='techpin' ) {
   include('gorny_panel_tech.html');
 }
 else{
-  echo '<b>ERROR - sprawdï¿½ w pliku pracownia.php ustawienie zmiennej $_SESSION[\'panelgorny\'] </b><br><br>';
+  echo '<b>ERROR - sprawd¼ w pliku pracownia.php ustawienie zmiennej $_SESSION[\'panelgorny\'] </b><br><br>';
 }
 //---------------------------------------------------------------
 

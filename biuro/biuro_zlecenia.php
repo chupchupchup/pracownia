@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -26,7 +26,7 @@ function pobierz_dane1 ($sql,$row_number) {
 //------------------------------------------------------------------------------------------------------------------
 
   $t_opis=array('Nr Zlecenia'=>'60','ID Zlecenia'=>'200','Data Wpisania'=>'100','Zwrot Data'=>'80','Zwrot Godz'=>'50', 'Pacjent'=>'100','Tabela'=>'150','Technik'=>'100','Etap'=>'30');
-  //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Zlecenia'=>'130', 'Pacjent'=>'100','ID Zewnï¿½trzne'=>'100','Tabela'=>'150','Pracownik'=>'130','Waga Zï¿½ota'=>'100','UWAGI'=>'130','Wpis'=>'50');
+  //$t_opis=array('Nr Zlecenia'=>'90','ID Zlecenia'=>'200','Data Wpisania'=>'130','Zwrot Zlecenia'=>'130', 'Pacjent'=>'100','ID Zewnêtrzne'=>'100','Tabela'=>'150','Pracownik'=>'130','Waga Z³ota'=>'100','UWAGI'=>'130','Wpis'=>'50');
 
 if($_REQUEST['wpis']=='new' && !isset($_REQUEST['form_wyswietl_zlecenie']) ){
 	  //wyszukiwanie zlecen dopisanych
@@ -323,7 +323,7 @@ elseif($_REQUEST['form_wyswietl_zlecenie']=='form1'){
          // aktualizuje we wszystkich etapach
          $sql="UPDATE zlecenieinfo SET pacjent='".$pacjent_up."',pracownikid='".$technicy_up."', wpis='".$wpis_up."' WHERE idzlecenianr='".$nr_zlec_up."' AND idzleceniapoz='".$id_zlec_up."' ";
          $wynik=myquery($sql);
-         // aktualizuje szczegï¿½y wybranego etapu
+         // aktualizuje szczegó³y wybranego etapu
          $sql="UPDATE zlecenieinfo SET wagazlota='".$wagazlota_up."', zwrotzleceniadata='".$zwrotzleceniadata_up."', zwrotzleceniagodz='".$zwrotzleceniagodz_up."', zlecenie='".$zlecenie_up."', uwagi='".$uwagi_up."' WHERE idzlecenianr='".$nr_zlec_up."' AND idzleceniapoz='".$id_zlec_up."' AND datawpisania='".$data_up."' AND kategoria='".$tabela_up."' ";
          $wynik=myquery($sql);
 

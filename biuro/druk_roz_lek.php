@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -83,9 +83,9 @@ ORDER by f.fv_nr";
        <td NOWRAP ALIGN="left" VALIGN="center">NR FV&nbsp;</td>
        <td NOWRAP ALIGN="left" VALIGN="center">NR&nbsp;</td>
        <td NOWRAP ALIGN="center" VALIGN="center">ID ZLECENIA&nbsp;</td>
-       <td NOWRAP ALIGN="center" VALIGN="center" style="width:100px;">DO ZAPï¿½ATY&nbsp;</td>
-<!--       <td NOWRAP ALIGN="center" VALIGN="center">ZAPï¿½ACONO&nbsp;</td>
-        <td NOWRAP ALIGN="center" VALIGN="center">DATA ZAPï¿½ATY&nbsp;</td>
+       <td NOWRAP ALIGN="center" VALIGN="center" style="width:100px;">DO ZAP£ATY&nbsp;</td>
+<!--       <td NOWRAP ALIGN="center" VALIGN="center">ZAP£ACONO&nbsp;</td>
+        <td NOWRAP ALIGN="center" VALIGN="center">DATA ZAP£ATY&nbsp;</td>
  -->
        <td NOWRAP ALIGN="center" VALIGN="center" style="width:100px;">WZ&nbsp;</td>
        <td NOWRAP ALIGN="center" VALIGN="center" style="width:100px;">ZWROT&nbsp;</td>
@@ -94,21 +94,21 @@ ORDER by f.fv_nr";
 <!--        <td NOWRAP ALIGN="left" VALIGN="center">ETAP&nbsp;</td>
  -->
        </tr>
-<?php
+<?
      for($i=0;$i<mysql_numrows($tablica_wynikow);$i++) {
        $arr = mysql_fetch_array ($tablica_wynikow);
 
 ?>
        <tr style="height:30px;">
-       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["fv_nr"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="right" VALIGN="center" width="40px"><?php echo $arr["idzlecenianr"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["idzleceniapoz"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $arr["kwota"].'<!--  zï¿½ -->' ?></td>
-<!--       <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $arr["zaplacono"].' zï¿½' ?>&nbsp;</td>
-        <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $arr["datazaplaty"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["fv_nr"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="right" VALIGN="center" width="40px"><? echo $arr["idzlecenianr"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["idzleceniapoz"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="center" VALIGN="center"><? echo $arr["kwota"].'<!--  z³ -->' ?></td>
+<!--       <td NOWRAP ALIGN="center" VALIGN="center"><? echo $arr["zaplacono"].' z³' ?>&nbsp;</td>
+        <td NOWRAP ALIGN="center" VALIGN="center"><? echo $arr["datazaplaty"] ?>&nbsp;</td>
  -->
-       <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $arr["wzk"] ?>&nbsp;</td>
-<?php
+       <td NOWRAP ALIGN="center" VALIGN="center"><? echo $arr["wzk"] ?>&nbsp;</td>
+<?
 	  //wyszukiwanie zlecen do rozliczenia lekarza
          $sqll="select zwrotzleceniadata from zlecenieinfo
          where idzlecenianr='".$arr['idzlecenianr']."' and idzleceniapoz='".$arr["idzleceniapoz"]."'
@@ -124,12 +124,12 @@ ORDER by f.fv_nr";
            }
          }//echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$zwrotdata.'<br>';
 ?>
-       <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $zwrotdata ?>&nbsp;</td>
+       <td NOWRAP ALIGN="center" VALIGN="center"><? echo $zwrotdata ?>&nbsp;</td>
 
-       <td NOWRAP ALIGN="center" VALIGN="center"><?php echo $arr['pacjent'] ?>&nbsp;</td>
-       <td ALIGN="left" VALIGN="center" ><?php echo $arr["opiszlecenia"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="center" VALIGN="center"><? echo $arr['pacjent'] ?>&nbsp;</td>
+       <td ALIGN="left" VALIGN="center" ><? echo $arr["opiszlecenia"] ?>&nbsp;</td>
        </tr>
-<?php
+<?
      }
 ?>
      </table>
@@ -141,18 +141,18 @@ ORDER by f.fv_nr";
     <td>&nbsp;</td>
 </tr>
 <tr>
-    <td>SUMA DO ZAPï¿½ATY: </td>
-    <td>&nbsp;&nbsp;<b><?php=$_REQUEST['suma'];?> zï¿½</b></td>
+    <td>SUMA DO ZAP£ATY: </td>
+    <td>&nbsp;&nbsp;<b><?=$_REQUEST['suma'];?> z³</b></td>
 </tr>
 <tr>
-    <td>ZAPï¿½ACONO: </td>
-    <td>&nbsp;&nbsp;<b><?php=$_REQUEST['zaplacone'];?> zï¿½</b></td>
+    <td>ZAP£ACONO: </td>
+    <td>&nbsp;&nbsp;<b><?=$_REQUEST['zaplacone'];?> z³</b></td>
 </tr>
 </table>
  -->
 </body>
 </html>
-<?php
+<?
 }
 else{
   header("Location: index.php");

@@ -1,4 +1,4 @@
-<?php
+<?
 require_once('Image/Barcode.php');
 ?>
 
@@ -20,6 +20,6 @@ require_once('Image/Barcode.php');
 </body>
 </html>
 
-<?php
-//echo '<b style="font-size:30px;">Najlepsze ï¿½yczenia dla MAMY od Emilki !!!!!!<br>Mamo Mamo kocham Ciï¿½ wiï¿½c ï¿½yczenia skï¿½adam Ci.<br> Takie ï¿½yczenia fajne sï¿½ Mamo Mamo kocham Ciï¿½ !!!</b>';
+<?
+//echo '<b style="font-size:30px;">Najlepsze ¿yczenia dla MAMY od Emilki !!!!!!<br>Mamo Mamo kocham Ciê wiêc ¿yczenia sk³adam Ci.<br> Takie ¿yczenia fajne s± Mamo Mamo kocham Ciê !!!</b>';
 ?>

@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -24,9 +24,9 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <link rel="stylesheet" type="text/css" href="css/addform_tabs.css" />
 </head>
  <body>
-  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">ROZLICZANIE TECHNIKï¿½W </p>
+  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">ROZLICZANIE TECHNIKÓW </p>
     <button style="margin-left:100px;width:160px;height:25px;background-color:#E70000;color:#E8E8E8" type="button" onclick="javascript:window.opener='x';window.open('','_parent','');window.close();">
-      <b>ZAMKNIJ STRONï¿½</b>
+      <b>ZAMKNIJ STRONÊ</b>
     </button>
 
   <br>
@@ -34,7 +34,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table class="tab">
      <tr bgcolor="#D6D9FE" style="width:90%">
 
-<?php
+<?
  $data = $_REQUEST['data'];//data wpisania zlecenia
  $nr_zlec = $_REQUEST['nr_zlec'];
  $id_zlec = $_REQUEST['id_zlec'];
@@ -133,11 +133,11 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <form name="form1" method="post" action="edytujrozliczenietech2.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="data" value="<?php echo $data;?>" >
-   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
+   <input type="hidden" name="data" value="<? echo $data;?>" >
+   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
 
-   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
    <input type="hidden" name="update" value="tak" >
 
 <hr>
@@ -146,9 +146,9 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
         <tr bgcolor="#D6D9FE">
           <td>
             <select name='technik' style="float:right;font-size:14px;font-weight:800;">
-<?php              for($i=0;$i<sizeof($technicy);$i++) {
-?>                  <option><?php=$technicy[$i]?></option>
-<?php              }
+<?              for($i=0;$i<sizeof($technicy);$i++) {
+?>                  <option><?=$technicy[$i]?></option>
+<?              }
 ?>          </select>
           </td>
           <td>&nbsp;- WYBIERZ TECHNIKA
@@ -167,7 +167,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
            <option>usun</option>
        </select>
        </td>
-       <td>&nbsp; - CZY ROZLICZAï¿½ ZLECENIE</td>
+       <td>&nbsp; - CZY ROZLICZAÆ ZLECENIE</td>
      </tr>
      <tr><td><br></td></tr>
    </table>
@@ -175,13 +175,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1" align="left">
      <tr>
        <td><input type="submit" name="Submit" value="AKCEPTUJ" style="margin-top:5px;width:160px;height:25px;background-color:#CCFF99;" >
-       <td><input type="reset" name="RESET" value="WYCZYï¿½ï¿½" style="margin-top:5px;width:160px;height:25px;background-color:#E70000;color:#E8E8E8;" >
+       <td><input type="reset" name="RESET" value="WYCZY¦Æ" style="margin-top:5px;width:160px;height:25px;background-color:#E70000;color:#E8E8E8;" >
      </tr>
    </table>
 </form>
 </body>
 </html>
-<?php
+<?
 }
 else{
   header("Location: index.php");

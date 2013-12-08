@@ -1,4 +1,4 @@
-<?php
+<?
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -80,7 +80,7 @@ function czysc_zmienne_formularza($input)
 
     $smarty->assign('tab_suma', $_SESSION['tab_suma']);
                            //'PKWiU'=>'50',
-    $t_opis=array('l.p.'=>'20','Nazwa towaru/us3ugi'=>'150','Iloï¿½a'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Wartoï¿½a <br />netto'=>'80','Wartoï¿½a <br />VAT'=>'80','Wartoï¿½a <br />brutto'=>'80');
+    $t_opis=array('l.p.'=>'20','Nazwa towaru/us3ugi'=>'150','Ilo¶a'=>'60', 'jm'=>'50', 'Cena <br />netto'=>'80', 'Stawka <br />VAT %'=>'80','Warto¶a <br />netto'=>'80','Warto¶a <br />VAT'=>'80','Warto¶a <br />brutto'=>'80');
     $smarty->assign('tablica_opisy', $t_opis);
 
     $smarty->assign('tab_el_fv', $_SESSION['tab_el_fv']);
