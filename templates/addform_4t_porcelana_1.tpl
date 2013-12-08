@@ -118,9 +118,9 @@ div#newsel select{
        <td> <input type="checkbox" style="height:45px;width:45px;" name="wzornik" value="wzornik" {if $wzornik== "wzornik"}checked{/if}/></td>
        <td> - WZORNIK </td>
          <td> <select name="liczba_wzornik" style="height:40px;width:60px;font-size:20px;">
-                 <option value>  </option>
-                 <option value="1"> 1 </option>
-                 <option value="2"> 2 </option>
+                 <option {if $liczba_wzornik== ""}selected{/if} value>  </option>
+                 <option {if $liczba_wzornik== "1"}selected{/if} value="1"> 1 </option>
+                 <option {if $liczba_wzornik== "2"}selected{/if} value="2"> 2 </option>
              </select>
          </td>
          <td> - ILO¦Æ </td>
@@ -130,9 +130,9 @@ div#newsel select{
        <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka_indywidualna" value="lyzka_indywidualna" /></td>
        <td> - £Y¯KA INDYWIDUALNA </td>
        <td> <select name="liczba_lyzka_indywidualna" style="height:40px;width:60px;font-size:20px;">
-               <option value>  </option>
-               <option value="1"> 1 </option>
-               <option value="2"> 2 </option>
+               <option {if $liczba_indywidualna== ""}selected{/if} value>  </option>
+               <option {if $liczba_indywidualna== ""}selected{/if} value="1"> 1 </option>
+               <option {if $liczba_indywidualna== ""}selected{/if} value="2"> 2 </option>
            </select>
        </td>
        <td> - ILO¦Æ </td>
