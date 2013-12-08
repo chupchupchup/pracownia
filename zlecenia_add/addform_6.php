@@ -100,7 +100,10 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $rodzajwkladu = czysc_zmienne_formularza($_SESSION['form_tab']['rodzajwkladu']);
  $liczba_wkladow = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wkladow']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
+ $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
+ $lyzka_indywidualna = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka_indywidualna']);
+ $liczba_lyzka_indywidualna = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_lyzka_indywidualna']);
  $zeby = czysc_zmienne_formularza($_SESSION['form_tab']['zeby']);
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
@@ -119,9 +122,9 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  
  //dodawanie zlecenia do bazy
  $sql="INSERT INTO porcelana_wkladykk ( kategoria,idzlecenianr,idzleceniapoz,datawpisania,wpisujacy,
-                                        material,rodzajwkladu,liczba_wkladow,wzornik,poprawka,zeby)
+                                        material,rodzajwkladu,liczba_wkladow,wzornik,liczba_wzornik,poprawka,lyzka_indywidualna,liczba_lyzka_indywidualna,zeby)
 	    VALUES ('".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
-					'".$material."','".$rodzajwkladu."','".$liczba_wkladow."','".$wzornik."','".$poprawka."','".$zeby."'
+					'".$material."','".$rodzajwkladu."','".$liczba_wkladow."','".$wzornik."','".$liczba_wzornik."','".$poprawka."','".$lyzka_indywidualna."','".$liczba_lyzka_indywidualna."','"."','".$zeby."'
 					)";
  myquery($sql);
 }
@@ -134,6 +137,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $kolor = czysc_zmienne_formularza($_SESSION['form_tab']['kolor']);
  $lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
+ $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $metal = czysc_zmienne_formularza($_SESSION['form_tab']['metal']);
  $surowa = czysc_zmienne_formularza($_SESSION['form_tab']['surowa']);
 // $przymiarka_kompozytu = czysc_zmienne_formularza($_SESSION['form_tab']['przymiarka_kompozytu']);
@@ -175,7 +179,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
 
  //dodawanie zlecenia do bazy
  $sql="INSERT INTO porcelana_korona_licowana_na_metalu (kategoria , idzlecenianr , idzleceniapoz , datawpisania , wpisujacy ,
-                                              material , rodzajkolornika , kolor, lyzka, wzornik, metal, surowa,
+                                              material , rodzajkolornika , kolor, lyzka, wzornik, liczba_wzornik, metal, surowa,
                                               gotowa, powt_metalu, ponowne_nap_porcel,
                                               malowanie, przedzial_malowanie, dobor_koloru,
                                               zatrzaski, liczbazatrzaskow, zasuwy, liczbazasow, zeby,
@@ -184,7 +188,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
                                               )  
        VALUES (
 	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
-              '".$material."','".$kolornik."','".$kolor."','".$lyzka."','".$wzornik."','".$metal."','".$surowa."'
+              '".$material."','".$kolornik."','".$kolor."','".$lyzka."','".$wzornik."','".$liczba_wzornik."','".$metal."','".$surowa."'
               ,'".$gotowa."','".$powt_metalu."','".$ponowne_nap_porcel."',
               '".$malowanie."','".$przedzial_malowanie."','".$dobor_koloru."',
               '".$zatrzaski."','".$liczbazatrzaskow."','".$zasuwy."','".$liczbazasow."', '".$zeby."',

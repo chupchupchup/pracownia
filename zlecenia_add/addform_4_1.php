@@ -65,7 +65,10 @@ function zab () {
  	  //echo '<br />rodzaj wkladu: <b>'.$_SESSION['form_tab']['rodzajwkladu'].'</b>';
     $_SESSION['form_tab']['liczba_wkladow']=$_REQUEST['liczba_wkladow'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
+    $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
+    $_SESSION['form_tab']['lyzka_indywidualna']=$_REQUEST['lyzka_indywidualna'];
+    $_SESSION['form_tab']['liczba_lyzka_indywidualna']=$_REQUEST['liczba_lyzka_indywidualna'];
 
     $termin_realizacji=3; //domy¶lna liczba dni realizacji zlecenia
     
@@ -81,6 +84,7 @@ function zab () {
     $_SESSION['form_tab']['kolor']=$_REQUEST['kolor'];
     $_SESSION['form_tab']['lyzka']=$_REQUEST['lyzka'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
+    $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['metal']=$_REQUEST['metal'];
     $_SESSION['form_tab']['surowa']=$_REQUEST['surowa'];
 //    $_SESSION['form_tab']['przymiarka_kompozytu']=$_REQUEST['przymiarka_kompozytu'];

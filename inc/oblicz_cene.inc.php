@@ -86,17 +86,21 @@ function c_wkladykk($tablica_cen,$tablica_zlecenia) {
   $c_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
 
-    if($tablica_zlecenia[$klucz]!='' && isset($tablica_cen[$tablica_zlecenia[$klucz]]) && $klucz!='zeby' && $tablica_zlecenia[$klucz]!='wzornik'){
+    if($tablica_zlecenia[$klucz]!='' && isset($tablica_cen[$tablica_zlecenia[$klucz]]) && $klucz!='zeby' && $tablica_zlecenia[$klucz]!='wzornik' && $klucz!='liczba_wzornik' &&
+        $tablica_zlecenia[$klucz]!='lyzka_indywidualna' && $klucz!='liczba_lyzka_indywidualna'){
       $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]]*$tablica_zlecenia['liczba_wkladow'];
       //echo 'klucz='.$klucz.'; ---------------------------------------------------------------';
       //echo $tablica_zlecenia[$klucz].'='.$tablica_cen[$tablica_zlecenia[$klucz]].'<br><br><br>';
     }
-    elseif($tablica_zlecenia[$klucz]=='wzornik'){
-      $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]];
+    elseif($tablica_zlecenia[$klucz]=='wzornik' || $tablica_zlecenia[$klucz]=='lyzka_indywidualna'){
+      $ile=$tablica_zlecenia['liczba_'.$klucz];
+      if (!$ile) {
+          $ile = 1;
+      }
+      $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]]*$ile;
       //echo 'klucz='.$klucz.'; ---------------------------------------------------------------';
       //echo $tablica_zlecenia[$klucz].'='.$tablica_cen[$tablica_zlecenia[$klucz]].'<br><br><br>';
     }
-
   }
 
       //$c_pom=$c_pom*$this->ilosc_zebow($tablica_zlecenia);
@@ -115,7 +119,7 @@ function c_korona_licowana_na_metalu($tablica_cen,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='zatrzaski' && $tablica_zlecenia[$klucz]!='zasuwy'
      && $tablica_zlecenia[$klucz]!='szklane podparcie' && $klucz!='przedzial_malowanie'
      && $tablica_zlecenia[$klucz]!='kompozyt' && $klucz!='porcelana'
-     && $tablica_zlecenia[$klucz]!='z³oto'
+     && $tablica_zlecenia[$klucz]!='z³oto' && $tablica_zlecenia[$klucz]!='wzornik'
      ){
       $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]];
     }
@@ -136,6 +140,12 @@ function c_korona_licowana_na_metalu($tablica_cen,$tablica_zlecenia) {
     }
     elseif($klucz=='przedzial_malowanie'){
       $c_pom=$c_pom+$tablica_cen['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
+    } elseif ($klucz=='wzornik') {
+        $ile=$tablica_zlecenia['liczba_wzornik'];
+        if (!$ile) {
+            $ile = 1;
+        }
+        $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]]*$ile;
     }
 
   //echo $c_pom.'-c_pom<br>';

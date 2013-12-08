@@ -114,6 +114,13 @@ div#newsel select{
        <td>&nbsp;</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="wzornik" value="wzornik" /></td>
        <td> - WZORNIK</td>
+          <td> <select name="liczba_wzornik" style="height:40px;width:60px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
        <td>&nbsp;</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="metal" value="metal" /></td>
        <td> - METAL</td>

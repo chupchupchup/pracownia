@@ -119,8 +119,24 @@ div#newsel select{
      <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="wzornik" value="wzornik" /></td>
        <td> - WZORNIK </td>
+       <td> <select name="liczba_wzornik" style="height:40px;width:60px;font-size:20px;">
+               <option value>  </option>
+               <option value="1"> 1 </option>
+               <option value="2"> 2 </option>
+           </select>
+       </td>
+       <td> - ILO¦Æ </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" /></td>
        <td> - POPRAWKA </td>
+       <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka_indywidualna" value="lyzka_indywidualna" /></td>
+       <td> - £Y¯KA INDYWIDUALNA </td>
+         <td> <select name="liczba_lyzka_indywidualna" style="height:40px;width:60px;font-size:20px;">
+                 <option value>  </option>
+                 <option value="1"> 1 </option>
+                 <option value="2"> 2 </option>
+             </select>
+         </td>
+         <td> - ILO¦Æ </td>
      </tr>
    </table>	
 

@@ -48,6 +48,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $rodzajwkladu = czysc_zmienne_formularza($_SESSION['form_tab']['rodzajwkladu']);
  $liczba_wkladow = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wkladow']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
+ $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
  $zeby = czysc_zmienne_formularza($_SESSION['form_tab']['zeby']);
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
@@ -59,7 +60,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  //update zlecenia po zakonczeniu
  $sql="UPDATE porcelana_wkladykk SET material='".$material."', rodzajwkladu='".$rodzajwkladu."',
                                      liczba_wkladow='".$liczba_wkladow."', wzornik='".$wzornik."',
-                                     poprawka='".$poprawka."', zeby='".$zeby."'
+                                     liczba_wzornik='".$liczba_wzornik."',poprawka='".$poprawka."', zeby='".$zeby."'
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
@@ -81,6 +82,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $kolor = czysc_zmienne_formularza($_SESSION['form_tab']['kolor']);
  $lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
+ $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $metal = czysc_zmienne_formularza($_SESSION['form_tab']['metal']);
  $surowa = czysc_zmienne_formularza($_SESSION['form_tab']['surowa']);
 // $przymiarka_kompozytu = czysc_zmienne_formularza($_SESSION['form_tab']['przymiarka_kompozytu']);
@@ -131,6 +133,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
                                          kolor='".$kolor."',
                                          lyzka='".$lyzka."',
                                          wzornik='".$wzornik."',
+                                         liczba_wzornik='".$liczba_wzornik."',
                                          metal='".$metal."',
                                          surowa='".$surowa."',
                                          gotowa='".$gotowa."', liczba_gotowa='".$liczba_gotowa."',

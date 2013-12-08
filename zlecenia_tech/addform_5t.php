@@ -157,6 +157,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['rodzajwkladu']=$_REQUEST['rodzajwkladu'];
     $_SESSION['form_tab']['liczba_wkladow']=$_REQUEST['liczba_wkladow'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
+    $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
@@ -170,6 +171,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['kolor']=$_REQUEST['kolor'];
     $_SESSION['form_tab']['lyzka']=$_REQUEST['lyzka'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
+    $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['metal']=$_REQUEST['metal'];
     $_SESSION['form_tab']['surowa']=$_REQUEST['surowa'];
 //    $_SESSION['form_tab']['przymiarka_kompozytu']=$_REQUEST['przymiarka_kompozytu'];

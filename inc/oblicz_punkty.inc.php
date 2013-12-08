@@ -84,13 +84,18 @@ function p_wkladykk($tablica_punktow,$tablica_zlecenia) {
   $p_pom=0;
   foreach($tablica_zlecenia as $klucz => $wartosc){
 
-    if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby' && $tablica_zlecenia[$klucz]!='wzornik'){
+    if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby' && $tablica_zlecenia[$klucz]!='wzornik'
+        && $klucz!='liczba_wzornik' && $tablica_zlecenia[$klucz]!='lyzka_indywidualna' && $klucz!='liczba_lyzka_indywidualna'){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$tablica_zlecenia['liczba_wkladow'];
       //echo 'klucz='.$klucz.'; ---------------------------------------------------------------';
       //echo $tablica_zlecenia[$klucz].'='.$tablica_punktow[$tablica_zlecenia[$klucz]].'<br><br><br>';
     }
-    elseif($tablica_zlecenia[$klucz]=='wzornik'){
-      $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
+    elseif($tablica_zlecenia[$klucz]=='wzornik' || $tablica_zlecenia[$klucz]=='lyzka_indywidualna'){
+      $ile=$tablica_zlecenia['liczba_'.$klucz];
+      if (!$ile) {
+          $ile = 1;
+      }
+      $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$ile;
       //echo 'klucz='.$klucz.'; ---------------------------------------------------------------';
       //echo $tablica_zlecenia[$klucz].'='.$tablica_punktow[$tablica_zlecenia[$klucz]].'<br><br><br>';
     }
@@ -113,7 +118,7 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='zatrzaski' && $tablica_zlecenia[$klucz]!='zasuwy'
      && $tablica_zlecenia[$klucz]!='szklane podparcie' && $klucz!='przedzial_malowanie'
      && $tablica_zlecenia[$klucz]!='kompozyt' && $klucz!='porcelana'
-     && $tablica_zlecenia[$klucz]!='z³oto'
+     && $tablica_zlecenia[$klucz]!='z³oto' && $tablica_zlecenia[$klucz]!='wzornik'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -134,8 +139,13 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($klucz=='przedzial_malowanie'){
       $p_pom=$p_pom+$tablica_punktow['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
-    }
-  //    $p_pom=$p_pom*$this->ilosc_zebow($tablica_zlecenia);
+    } elseif ($klucz=='wzornik') {
+      $ile=$tablica_zlecenia['liczba_wzornik'];
+      if (!$ile) {
+          $ile = 1;
+      }
+      $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$ile;
+    }  //    $p_pom=$p_pom*$this->ilosc_zebow($tablica_zlecenia);
   }
   
   return $p_pom;

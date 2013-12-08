@@ -85,7 +85,7 @@ div#newsel select{
    <td><input type="checkbox" name="lyzka" value="³y¿ka indywidualna" /></td> 
    <td> - £Y¯KA INDYWIDUALNA</td> 
    <td><input type="checkbox" name="wzornik" value="wzornik" /></td> 
-   <td> - WZORNIK</td> 
+   <td> - WZORNIK</td>
    <td><input type="radio" name="etap" value="ustawka" /></td> 
    <td> - USTAWKA</td> 
    <td><input type="radio" name="etap" value="gotowa" /></td> 
