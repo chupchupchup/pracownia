@@ -62,8 +62,8 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  //update zlecenia po zakonczeniu
  $sql="UPDATE porcelana_wkladykk SET material='".$material."', rodzajwkladu='".$rodzajwkladu."',
                                      liczba_wkladow='".$liczba_wkladow."', wzornik='".$wzornik."',
-                                     liczba_wzornik='".$liczba_wzornik."',poprawka='".$poprawka."', zeby='".$zeby."'
-                                     liczba_lyzka_indywidualna='".$liczba_lyzka_indywidualna."', lyzka_indywidualna='".$lyzka_indywidualna."',
+                                     liczba_wzornik='".$liczba_wzornik."',poprawka='".$poprawka."', zeby='".$zeby."',
+                                     liczba_lyzka_indywidualna='".$liczba_lyzka_indywidualna."', lyzka_indywidualna='".$lyzka_indywidualna."'
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
