@@ -30,7 +30,7 @@ function material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz,
 		return;
 	}
 	
-	$sql="SELECT nazwa,producent,nr_seryjny,dostawca FROM material_user WHERE upper(nazwa) like upper('".$material."%') AND osoba_wykorzystujaca='".$_SESSION['idusera']."' AND status='act' ";
+	$sql="SELECT nazwa,producent,nr_seryjny,dostawca FROM material_user WHERE upper(nazwa) like upper('".$material."') AND osoba_wykorzystujaca='".$_SESSION['idusera']."' AND status='act' ";
 	$wynik=myquery($sql);
 
 	$i=0;

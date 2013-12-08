@@ -363,6 +363,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
 
  myquery($sql);
 
+
 //-------------tworzenie etykiety materia³ów
 if ($dentyna_na_cerkon) {
 	material_dentyna('dentyna_na_cerkon', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
@@ -878,15 +879,15 @@ $cena = new CenaCount;
             $opiszlecenia=$opiszlecenia.' '.$info.' -------';
           }
 
- $smarty->assign('opiszlecenia', $opiszlecenia);
  }
  else{
 	  $s1="SELECT opiszlecenia FROM rozlicz_zleceniodawca WHERE idzlecenianr='".$idzlecenianr."' AND idzleceniapoz='".$idzleceniapoz."' ";
            $wyn=myquery($s1);
            $arr = mysql_fetch_array($wyn);
-  $smarty->assign('opiszlecenia', $arr['opiszlecenia']);
-
+      $opiszlecenia=$arr['opiszlecenia'];
  }
+
+ $smarty->assign('opiszlecenia', $opiszlecenia);
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------------------------------
