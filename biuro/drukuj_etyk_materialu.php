@@ -17,9 +17,9 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <body style="margin-top:0px;margin-left:0px;" OnLoad="window.print();window.close();">
 
 <div onclick="javascript:window.close();">
-  <b style="font-size:12px;"><cite><?=$etykieta?></cite></b><br /><hr />
+  <b style="font-size:12px;"><cite><?php=$etykieta?></cite></b><br /><hr />
   <b style="font-size:12px;"><cite>U¯YTY MATERIA£:</cite></b><br />
-  <b style="font-size:12px;"><cite><?
+  <b style="font-size:12px;"><cite><?php
 //    foreach($_SESSION['etykieta_materialu_all'] as $klucz => $wartosc){
       //echo strtoupper($wartosc).'<br /><hr />';
 //      echo mb_convert_case($wartosc, MB_CASE_UPPER, "ISO-8859-2").'<br /><hr />';
@@ -32,7 +32,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </body>
 </html>
 
-<?  
+<?php
 }
 else{
   header("Location: ./index.php");

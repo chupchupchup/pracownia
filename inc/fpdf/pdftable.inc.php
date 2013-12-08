@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Title: Print a HTML Table to PDF file
  * Class: PDFTable

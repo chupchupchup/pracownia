@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    session_destroy();
@@ -28,7 +28,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </body>
 </html>
 
-<?
+<?php
    //header("Location: index.php");
 }
 else {

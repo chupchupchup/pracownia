@@ -1,4 +1,4 @@
-<?
+<?php
 $database = mysql_connect("localhost", "pracownia", "#luserpracownia")
    or die("Nie mo¿na siê po³¹czyæ\n");
 

@@ -1,4 +1,4 @@
-<?
+<?php
 
 global $HTML_ATTRIBUTE_STAND_ALONE;
 $HTML_ATTRIBUTE_STAND_ALONE = array('checked','compact','declare','defer','disabled','ismap','multiple','nohref','noresize','noshade','nowrap','readonly','selected');

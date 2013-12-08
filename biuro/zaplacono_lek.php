@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -81,8 +81,8 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
 
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
 
    <input type="hidden" name="zmien" value="tak" >
 
@@ -90,7 +90,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1">
         <tr>
           <td width="150px;">
-            <input name='zaplacono' size='10' maxlength='50' value='<?=$zaplacono?>'/> Z£
+            <input name='zaplacono' size='10' maxlength='50' value='<?php=$zaplacono?>'/> Z£
           </td>
           <td><strong>&nbsp;- WP£ATA LEKARZA</strong>
           </td>
@@ -98,7 +98,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
      <tr><td><br></td></tr>
         <tr>
           <td width="150px;">
-            <input name='datazaplaty' size='10' maxlength='50' value='<?=$datazaplaty?>'/>
+            <input name='datazaplaty' size='10' maxlength='50' value='<?php=$datazaplaty?>'/>
           </td>
           <td><strong>&nbsp;- DATA WP£ATY</strong>
           </td>
@@ -115,7 +115,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </form>
 </body>
 </html>
-<?
+<?php
 
 }
 else{

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -45,37 +45,37 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <link rel="stylesheet" type="text/css" href="css/addform_tabs.css" />
 </head>
  <body>
-  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">PODZIEL PUNKTY:  <b style="font-size:30px; color:#FF0000 ">[ <? echo $max_punkty;?> pkt. ]</b> &nbsp;&nbsp;</p>
+  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">PODZIEL PUNKTY:  <b style="font-size:30px; color:#FF0000 ">[ <?php echo $max_punkty;?> pkt. ]</b> &nbsp;&nbsp;</p>
   <br>
   <hr>
 
   <form name="form1" method="post" action="edytujrozliczenietech2.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
-   <input type="hidden" name="max_punkty" value="<? echo $max_punkty;?>" >
-   <input type="hidden" name="liczbatech" value="<? echo $liczbatech;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
+   <input type="hidden" name="max_punkty" value="<?php echo $max_punkty;?>" >
+   <input type="hidden" name="liczbatech" value="<?php echo $liczbatech;?>" >
    <input type="hidden" name="dodaj" value="tak" >
 
-   <input type="hidden" name="data" value="<? echo $data;?>" >
-   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="data" value="<?php echo $data;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
 
-<? for($j=0;$j<$liczbatech;$j++) {
+<?php for($j=0;$j<$liczbatech;$j++) {
     //echo $liczbatech.' - '.$j.'<br>';
 ?>
 
    <table class="tab">
         <tr bgcolor="#D6D9FE">
           <td>
-            <select name='technik<?=$j?>' style="float:right;font-size:14px;font-weight:800;">
-<?              for($i=0;$i<sizeof($technicy);$i++) {
+            <select name='technik<?php=$j?>' style="float:right;font-size:14px;font-weight:800;">
+<?php              for($i=0;$i<sizeof($technicy);$i++) {
                   if($technicy[$i]==$technik_prowadzacy){
-?>                    <option selected><?=$technicy[$i]?></option>
-<?                }
+?>                    <option selected><?php=$technicy[$i]?></option>
+<?php                }
                   else {
-?>                  <option><?=$technicy[$i]?></option>
-<?                }
+?>                  <option><?php=$technicy[$i]?></option>
+<?php                }
                 }
 ?>          </select>
           </td>
@@ -83,12 +83,12 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
           </td>
         </tr>
      <tr bgcolor="#D6D9FE">
-       <td><input type="text" name="punkty<?=$j?>" value="" style="float:right;width:80px;font-size:14px;font-weight:800;"></td>
+       <td><input type="text" name="punkty<?php=$j?>" value="" style="float:right;width:80px;font-size:14px;font-weight:800;"></td>
        <td>&nbsp; - PUNKTY</td>
      </tr>
      <tr><td><br></td></tr>
    </table>
-<?
+<?php
  }
 ?>
 
@@ -101,7 +101,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </form>
 </body>
 </html>
-<?
+<?php
 }
 else{
   header("Location: index.php");

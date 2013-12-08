@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Title: Library color function
  * Class: Color

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -74,20 +74,20 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
        <td ALIGN="left" VALIGN="center">INFO&nbsp;</td>
        <td NOWRAP ALIGN="left" VALIGN="center">ETAP&nbsp;</td>
        </tr>
-<?
+<?php
      for($i=0;$i<mysql_numrows($tablica_wynikow);$i++) {
        $arr = mysql_fetch_array ($tablica_wynikow);
        
 ?>
        <tr>
-       <td NOWRAP ALIGN="right" VALIGN="center"><? echo $arr["idzlecenianr"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["idzleceniapoz"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["datawpisania"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["zwrotzleceniadata"].', '.$arr["zwrotzleceniagodz"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["pacjent"] ?>&nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["pracownikid"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="right" VALIGN="center"><?php echo $arr["idzlecenianr"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["idzleceniapoz"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["datawpisania"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["zwrotzleceniadata"].', '.$arr["zwrotzleceniagodz"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["pacjent"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["pracownikid"] ?>&nbsp;</td>
        <td ALIGN="left" VALIGN="center">
-<?
+<?php
 	  //wyszukiwanie szczegolow zlecenia z odpowiedniej tabeli zlecen dopisanych
 	  $sql_pom="SELECT * FROM ".$arr[kategoria]." WHERE idzlecenianr='".$arr['idzlecenianr']."' AND idzleceniapoz='".$arr['idzleceniapoz']."' AND datawpisania='".$arr['datawpisania']."' ";
 	  $tab_pom=myquery($sql_pom);
@@ -106,15 +106,15 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
           echo $info;
 ?>
        &nbsp;</td>
-       <td NOWRAP ALIGN="left" VALIGN="center"><? echo $arr["wpis"] ?>&nbsp;</td>
+       <td NOWRAP ALIGN="left" VALIGN="center"><?php echo $arr["wpis"] ?>&nbsp;</td>
        </tr>
-<?
+<?php
      }
 ?>
      </table>
 </body>
 </html>
-<?
+<?php
 }
 else{
   header("Location: index.php");

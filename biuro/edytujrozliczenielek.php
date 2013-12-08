@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -180,18 +180,18 @@ if( (isset($_REQUEST['nr_zlec']) && isset($_REQUEST['id_zlec']) && isset($_REQUE
   <form name="form_rozlicz_lek" method="post" action="edytujrozliczenielek.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
-   <input type="hidden" name="tabela" value="<? echo $tabela;?>" >
-   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
-   <input type="hidden" name="czyjuzzleceniewpisane" value="<? echo $czyjuzzleceniewpisane;?>" >
-   <input type="hidden" name="stara_wz" value="<?= $stara_wz;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
+   <input type="hidden" name="tabela" value="<?php echo $tabela;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="czyjuzzleceniewpisane" value="<?php echo $czyjuzzleceniewpisane;?>" >
+   <input type="hidden" name="stara_wz" value="<?php= $stara_wz;?>" >
    <input type="hidden" name="edytuj" value="tak" >
 
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1" align="left">
      <tr>
        <td>
-         <input type="text" name="kwota" value="<?=$arr['kwota']?>" style="float:right;width:180px;">
+         <input type="text" name="kwota" value="<?php=$arr['kwota']?>" style="float:right;width:180px;">
        </td>
        <td>
          <strong>&nbsp; Z£ - ROZLICZENIE </strong>
@@ -199,46 +199,46 @@ if( (isset($_REQUEST['nr_zlec']) && isset($_REQUEST['id_zlec']) && isset($_REQUE
      </tr>
      <tr><td><br></td></tr>
      <tr>
-       <td><input type="text" name="wzk" value="<?=$wz?>" style="float:right;width:300px;" readonly></td>
+       <td><input type="text" name="wzk" value="<?php=$wz?>" style="float:right;width:300px;" readonly></td>
        <td><strong>&nbsp; - WZ</strong></td>
      </tr>
      <tr><td><br></td></tr>
      <tr>
        <td>
          <select name="czyrozlicz" style="float:right;width:120px;font-size:16px;">
-<?        if($arr['roz_lek']=='tak'){
+<?php        if($arr['roz_lek']=='tak'){
 ?>         <option selected>tak</option>
            <option>nie</option>
            <option>nie_rozliczac</option>
-<?         }
+<?php         }
            elseif($arr['roz_lek']=='nie'){
 ?>         <option>tak</option>
            <option selected>nie</option>
            <option>nie_rozliczac</option>
-<?         }
+<?php         }
            elseif($arr['roz_lek']=='nie_rozliczac'){
 ?>         <option>tak</option>
            <option>nie</option>
            <option selected>nie_rozliczac</option>
-<?         }
+<?php         }
            else{
 ?>         <option>tak</option>
            <option>nie</option>
            <option>nie_rozliczac</option>
-<?         }
+<?php         }
 ?>       </select>
        </td>
        <td><strong>&nbsp; - CZY ROZLICZAÆ ZLECENIE</strong></td>
      </tr>
      <tr><td><br></td></tr>
     <tr>
-     <td><textarea name="opiszlecenia" style="float:right;width:250px;" cols="30" rows="8"><?=$arr['opiszlecenia'];?></textarea></td>
+     <td><textarea name="opiszlecenia" style="float:right;width:250px;" cols="30" rows="8"><?php=$arr['opiszlecenia'];?></textarea></td>
      <td><strong>&nbsp; - INFORMACJA O ZLECENIU NA<br /> &nbsp;&nbsp;&nbsp;&nbsp;WZ-tce</strong></td>
     </tr>
      <tr><td><br /></td></tr>
      <tr>
        <td>
-         <input type="text" name="lekarz" value="<?=$arr['lekarz']?>" style="float:right;width:180px;">
+         <input type="text" name="lekarz" value="<?php=$arr['lekarz']?>" style="float:right;width:180px;">
        </td>
        <td>
          <strong>&nbsp; - LEKARZ ZLECAJ¡CY </strong>
@@ -258,19 +258,19 @@ if( (isset($_REQUEST['nr_zlec']) && isset($_REQUEST['id_zlec']) && isset($_REQUE
 
 <div style="width:100%;clear:both;float:left;margin-top:30px;">
 
-<?
+<?php
 if($arr['opiszlecenia']!=''){
 ?>
-<button style="width:200px;height:25px;background-color:#CDEDED;margin-left:10px;" type="button" onclick="window.open('drukuj_wz.php?kwota=<?=$arr['kwota']?>&wzk=<?=$arr['wzk'];?>&id_zlec=<?=$id_zlec;?>&nr_zlec=<?=$nr_zlec;?>&opiszlecenia=<?=$arr['opiszlecenia'];?>&pacjent=<?=$arrr['pacjent'];?>&datazwrotu=<?=$arr['zwrotzlecenia'];?>', 'drukowanie', 'toolbar=no, scrollbars=no, resizable=yes, status=no, menubar=no, location=no, directories=no, width=850, height=400')">
+<button style="width:200px;height:25px;background-color:#CDEDED;margin-left:10px;" type="button" onclick="window.open('drukuj_wz.php?kwota=<?php=$arr['kwota']?>&wzk=<?php=$arr['wzk'];?>&id_zlec=<?php=$id_zlec;?>&nr_zlec=<?php=$nr_zlec;?>&opiszlecenia=<?php=$arr['opiszlecenia'];?>&pacjent=<?php=$arrr['pacjent'];?>&datazwrotu=<?php=$arr['zwrotzlecenia'];?>', 'drukowanie', 'toolbar=no, scrollbars=no, resizable=yes, status=no, menubar=no, location=no, directories=no, width=850, height=400')">
   <b>DRUKUJ WZ</b>
 </button>
-<?
+<?php
 }
 ?>
 
 </body>
 </html>
-<?
+<?php
 }
 else{
   header("Location: index.php");

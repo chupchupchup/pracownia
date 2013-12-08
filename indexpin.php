@@ -1,4 +1,4 @@
-<?
+<?php
 //------------------------------------------------------------------------------------------------------------------
 //funkcja posredniczaca w zapytaniu SQL - zwraca kod bledu zapytania
     function myquery ($query) {

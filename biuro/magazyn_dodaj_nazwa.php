@@ -90,7 +90,7 @@ form {
 
 </form>
 
-<?
+<?php
 if( $_POST['nazwa']!='' ){
 
    $sql="SELECT nazwa,producent FROM material_nazwy WHERE nazwa LIKE '%".$_POST['nazwa']."%' ";
@@ -100,24 +100,24 @@ if( $_POST['nazwa']!='' ){
     <hr />
     <b style="margin-top:20px;margin-left:10px;">Wybierz nazwê materia³u:</b>
     <table class="tab" style="margin-top:10px;margin-left:60px;">
-   <?
+   <?php
    $i=1;
    while( $arr = mysql_fetch_assoc($wynik) ){
         ?>
          <tr class="inputfr">
-           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?=$arr['nazwa']?>','<?=$arr['producent']?>');">
-           <td><?=$i;?>. </td>
+           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?php=$arr['nazwa']?>','<?php=$arr['producent']?>');">
+           <td><?php=$i;?>. </td>
            <td style="width:200px; height:15px; font-size: 12px;text-align:center;color:#000099;">
-              <?=$arr['nazwa']?> | <?=$arr['producent']?>
+              <?php=$arr['nazwa']?> | <?php=$arr['producent']?>
            </td>
            </a>
          </tr>
-        <?
+        <?php
    $i++;
    }
    ?>
    </table>
-   <?
+   <?php
 }
 
 }

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -47,7 +47,7 @@ form {
 
 </head>
  <body>
-  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">PUNKTACJA <b style="font-size:30px; color:#FF0000 ">[ <? echo $max_punkty;?> pkt. ]</b></p>
+  <p style="font-size:20px;font-weight:800;margin-left:10px;float:left;">PUNKTACJA <b style="font-size:30px; color:#FF0000 ">[ <?php echo $max_punkty;?> pkt. ]</b></p>
   <br>
   <hr>
   <br>
@@ -55,14 +55,14 @@ form {
   <form name="form1" method="post" action="edytujrozliczenietech1.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
-   <input type="hidden" name="max_punkty" value="<? echo $max_punkty;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
+   <input type="hidden" name="max_punkty" value="<?php echo $max_punkty;?>" >
 
-   <input type="hidden" name="data" value="<? echo $data;?>" >
-   <input type="hidden" name="tabela" value="<? echo $tabela;?>" >
-   <input type="hidden" name="zwrotzleceniadata" value="<? echo $zwrotzlecenia;?>" >
-   <input type="hidden" name="technik_prowadzacy" value="<? echo $technik_prowadzacy;?>" >
+   <input type="hidden" name="data" value="<?php echo $data;?>" >
+   <input type="hidden" name="tabela" value="<?php echo $tabela;?>" >
+   <input type="hidden" name="zwrotzleceniadata" value="<?php echo $zwrotzlecenia;?>" >
+   <input type="hidden" name="technik_prowadzacy" value="<?php echo $technik_prowadzacy;?>" >
 
    <table class="tab">
      <tr bgcolor="#D6D9FE">
@@ -94,7 +94,7 @@ form {
 
 </body>
 </html>
-<?
+<?php
 }
 else{
   header("Location: index.php");

@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -73,8 +73,8 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
   <form name="form" method="post" action="czyrozlicz_lek.php">
 
    <!-- ukryte pole przekazujace identyfikator rekordu w bazie danych-->
-   <input type="hidden" name="nr_zlec" value="<? echo $nr_zlec;?>" >
-   <input type="hidden" name="id_zlec" value="<? echo $id_zlec;?>" >
+   <input type="hidden" name="nr_zlec" value="<?php echo $nr_zlec;?>" >
+   <input type="hidden" name="id_zlec" value="<?php echo $id_zlec;?>" >
    <input type="hidden" name="zmien" value="tak" >
 
 <hr>
@@ -93,7 +93,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
      <tr><td><br></td></tr>
         <tr>
           <td>
-          <input type="text" style="width:100px;" name="dataarchiw" value="<?=$dataarchiw;?>" />
+          <input type="text" style="width:100px;" name="dataarchiw" value="<?php=$dataarchiw;?>" />
           </td>
           <td><strong>&nbsp;- WPISZ DATÊ ARCHIWUM DO KTÓREGO CHCESZ PRZENIE¦Æ ZLECENIE</strong>
           </td>
@@ -111,7 +111,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 </form>
 </body>
 </html>
-<?
+<?php
 
 }
 else{
