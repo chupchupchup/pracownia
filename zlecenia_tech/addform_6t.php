@@ -368,7 +368,7 @@ if ($dentyna_na_cerkon) {
 	material_dentyna('dentyna_na_cerkon', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
 if ($dentyna_na_metal) {
-	material_dentyna('dentyna_kiss', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+	material_dentyna('dentyna_na_metal', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 
