@@ -159,6 +159,8 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
     $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
+    $_SESSION['form_tab']['lyzka_indywidualna']=$_REQUEST['lyzka_indywidualna'];
+    $_SESSION['form_tab']['liczba_lyzka_indywidualna']=$_REQUEST['liczba_lyzka_indywidualna'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
  
