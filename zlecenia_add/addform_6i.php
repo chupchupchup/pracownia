@@ -157,6 +157,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $kolornik = czysc_zmienne_formularza($_SESSION['form_tab']['kolornik']);
  $kolor = czysc_zmienne_formularza($_SESSION['form_tab']['kolor']);
  $lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka']);
+ $liczba_lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_lyzka']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
  $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $metal = czysc_zmienne_formularza($_SESSION['form_tab']['metal']);
@@ -174,7 +175,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['malowanie']);
  $przedzial_malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['przedzial_malowanie']);
  $dobor_koloru = czysc_zmienne_formularza($_SESSION['form_tab']['dobor_koloru']);
-   $frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['frezowane_podparcie']);
+ $frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['frezowane_podparcie']);
+ $liczba_frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_frezowane_podparcie']);
  $zatrzaski = czysc_zmienne_formularza($_SESSION['form_tab']['zatrzaski']);
  $liczbazatrzaskow = czysc_zmienne_formularza($_SESSION['form_tab']['liczbazatrzaskow']);
  $zasuwy = czysc_zmienne_formularza($_SESSION['form_tab']['zasuwy']);
@@ -183,7 +185,9 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
    $szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['szklane_podparcie']);
    $liczba_szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_szklane_podparcie']);
    $rozowe_dziaslo = czysc_zmienne_formularza($_SESSION['form_tab']['rozowe_dziaslo']);
+   $liczba_rozowe_dziaslo = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_rozowe_dziaslo']);
    $stopien_porcelanowy = czysc_zmienne_formularza($_SESSION['form_tab']['stopien_porcelanowy']);
+   $liczba_stopien_porcelanowy = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_stopien_porcelanowy']);
    $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
 
  //dodatkowe zmienne
@@ -215,7 +219,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
                                               malowanie, przedzial_malowanie, dobor_koloru,
                                               zatrzaski, liczbazatrzaskow, zasuwy, liczbazasow, zeby,
                                               liczba_gotowa,liczba_ponowne_nap_porcel,frezowane_podparcie,szklane_podparcie,
-                                              liczba_szklane_podparcie,rozowe_dziaslo,stopien_porcelanowy,poprawka
+                                              liczba_szklane_podparcie,rozowe_dziaslo,stopien_porcelanowy,poprawka,
+                                              liczba_lyzka, liczba_rozowe_dziaslo, liczba_stopien_porcelanowy, liczba_frezowane_podparcie
                                               )
        VALUES (
               '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
@@ -224,7 +229,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
               '".$malowanie."','".$przedzial_malowanie."','".$dobor_koloru."',
               '".$zatrzaski."','".$liczbazatrzaskow."','".$zasuwy."','".$liczbazasow."', '".$zeby."',
               '".$liczba_gotowa."','".$liczba_ponowne_nap_porcel."', '".$frezowane_podparcie."', '".$szklane_podparcie."',
-              '".$liczba_szklane_podparcie."','".$rozowe_dziaslo."', '".$stopien_porcelanowy."', '".$poprawka."'
+              '".$liczba_szklane_podparcie."','".$rozowe_dziaslo."', '".$stopien_porcelanowy."', '".$poprawka."',
+              '".$liczba_lyzka."','".$liczba_rozowe_dziaslo."', '".$liczba_stopien_porcelanowy."', '".$liczba_frezowane_podparcie."'
                )";
 
  myquery($sql);

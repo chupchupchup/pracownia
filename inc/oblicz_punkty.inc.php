@@ -119,6 +119,10 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='szklane podparcie' && $klucz!='przedzial_malowanie'
      && $tablica_zlecenia[$klucz]!='kompozyt' && $klucz!='porcelana'
      && $tablica_zlecenia[$klucz]!='z³oto' && $tablica_zlecenia[$klucz]!='wzornik'
+     && $tablica_zlecenia[$klucz]!='³y¿ka' && $tablica_zlecenia[$klucz]!='ró¿owe dzi±s³o'
+     && $tablica_zlecenia[$klucz]!='stopieñ porcelanowy' && $tablica_zlecenia[$klucz]!='frezowane podparcie'
+     && $klucz!='liczba_wzornik' && $klucz!='liczba_lyzka' && $klucz!='liczba_rozowe_dziaslo'
+     && $klucz!='liczba_stopien_porcelanowy' && $klucz!='liczba_frezowane_podparcie'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -139,8 +143,8 @@ function p_korona_licowana($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($klucz=='przedzial_malowanie'){
       $p_pom=$p_pom+$tablica_punktow['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
-    } elseif ($klucz=='wzornik') {
-      $ile=$tablica_zlecenia['liczba_wzornik'];
+    } elseif ($klucz=='wzornik' || $klucz=='lyzka' || $klucz=='rozowe_dziaslo' || $klucz=='stopien_porcelanowy' || $klucz=='frezowane_podparcie') {
+      $ile=$tablica_zlecenia['liczba_'.$klucz];
       if (!$ile) {
           $ile = 1;
       }

@@ -112,6 +112,12 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka" value="³y¿ka" {if $lyzka== "³y¿ka"}checked{/if} /></td>
        <td> - £Y¯KA</td>
+          <td> <select name="liczba_lyzka" style="height:40px;width:60px;font-size:20px;">
+                  <option {if $liczba_lyzka== ""}selected{/if} value>  </option>
+                  <option {if $liczba_lyzka== "1"}selected{/if} value="1"> 1 </option>
+                  <option {if $liczba_lyzka== "2"}selected{/if} value="2"> 2 </option>
+              </select>
+          </td>
        <td>&nbsp;</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="wzornik" value="wzornik" {if $wzornik== "wzornik"}checked{/if}/></td>
        <td> - WZORNIK</td>
@@ -247,6 +253,43 @@ div#newsel select{
        <td> - DOBÓR KOLORU</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="frezowane_podparcie" value="frezowane podparcie" {if $frezowane_podparcie== "frezowane podparcie"}checked{/if}/></td>
        <td> - FREZOWANE PODPARCIE</td>
+          <td> <select name="liczba_frezowane_podparcie" style="height:40px;width:60px;font-size:20px;">
+                  <option {if $liczba_frezowane_podparcie== ""}selected{/if} value>  </option>
+                  <option {if $liczba_frezowane_podparcie== "1"}selected{/if} value="1"> 1 </option>
+                  <option {if $liczba_frezowane_podparcie== "2"}selected{/if} value="2"> 2 </option>
+                  <option {if $liczba_frezowane_podparcie== "3"}selected{/if} value="3"> 3 </option>
+                  <option {if $liczba_frezowane_podparcie== "4"}selected{/if} value="4"> 4 </option>
+                  <option {if $liczba_frezowane_podparcie== "5"}selected{/if} value="5"> 5 </option>
+                  <option {if $liczba_frezowane_podparcie== "6"}selected{/if} value="6"> 6 </option>
+                  <option {if $liczba_frezowane_podparcie== "7"}selected{/if} value="7"> 7 </option>
+                  <option {if $liczba_frezowane_podparcie== "8"}selected{/if} value="8"> 8 </option>
+                  <option {if $liczba_frezowane_podparcie== "9"}selected{/if} value="9"> 9 </option>
+                  <option {if $liczba_frezowane_podparcie== "10"}selected{/if} value="10"> 10 </option>
+                  <option {if $liczba_frezowane_podparcie== "11"}selected{/if} value="11"> 11 </option>
+                  <option {if $liczba_frezowane_podparcie== "12"}selected{/if} value="12"> 12 </option>
+                  <option {if $liczba_frezowane_podparcie== "13"}selected{/if} value="13"> 13 </option>
+                  <option {if $liczba_frezowane_podparcie== "14"}selected{/if} value="14"> 14 </option>
+                  <option {if $liczba_frezowane_podparcie== "15"}selected{/if} value="15"> 15 </option>
+                  <option {if $liczba_frezowane_podparcie== "16"}selected{/if} value="16"> 16 </option>
+                  <option {if $liczba_frezowane_podparcie== "17"}selected{/if} value="17"> 17 </option>
+                  <option {if $liczba_frezowane_podparcie== "18"}selected{/if} value="18"> 18 </option>
+                  <option {if $liczba_frezowane_podparcie== "19"}selected{/if} value="19"> 19 </option>
+                  <option {if $liczba_frezowane_podparcie== "20"}selected{/if} value="20"> 20 </option>
+                  <option {if $liczba_frezowane_podparcie== "21"}selected{/if} value="21"> 21 </option>
+                  <option {if $liczba_frezowane_podparcie== "22"}selected{/if} value="22"> 22 </option>
+                  <option {if $liczba_frezowane_podparcie== "23"}selected{/if} value="23"> 23 </option>
+                  <option {if $liczba_frezowane_podparcie== "24"}selected{/if} value="24"> 24 </option>
+                  <option {if $liczba_frezowane_podparcie== "25"}selected{/if} value="25"> 25 </option>
+                  <option {if $liczba_frezowane_podparcie== "26"}selected{/if} value="26"> 26 </option>
+                  <option {if $liczba_frezowane_podparcie== "27"}selected{/if} value="27"> 27 </option>
+                  <option {if $liczba_frezowane_podparcie== "28"}selected{/if} value="28"> 28 </option>
+                  <option {if $liczba_frezowane_podparcie== "29"}selected{/if} value="29"> 29 </option>
+                  <option {if $liczba_frezowane_podparcie== "30"}selected{/if} value="30"> 30 </option>
+                  <option {if $liczba_frezowane_podparcie== "31"}selected{/if} value="31"> 31 </option>
+                  <option {if $liczba_frezowane_podparcie== "32"}selected{/if} value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
       </tr>
    </table>
 
@@ -310,8 +353,82 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="rozowe_dziaslo" value="ró¿owe dzi±s³o" {if $rozowe_dziaslo== "ró¿owe dzi±s³o"}checked{/if}/></td>
        <td> - RÓ¯OWE DZI¡S£O</td>
+          <td> <select name="liczba_rozowe_dziaslo" style="height:40px;width:60px;font-size:20px;">
+                  <option {if $liczba_rozowe_dziaslo== ""}selected{/if} value>  </option>
+                  <option {if $liczba_rozowe_dziaslo== "1"}selected{/if} value="1"> 1 </option>
+                  <option {if $liczba_rozowe_dziaslo== "2"}selected{/if} value="2"> 2 </option>
+                  <option {if $liczba_rozowe_dziaslo== "3"}selected{/if} value="3"> 3 </option>
+                  <option {if $liczba_rozowe_dziaslo== "4"}selected{/if} value="4"> 4 </option>
+                  <option {if $liczba_rozowe_dziaslo== "5"}selected{/if} value="5"> 5 </option>
+                  <option {if $liczba_rozowe_dziaslo== "6"}selected{/if} value="6"> 6 </option>
+                  <option {if $liczba_rozowe_dziaslo== "7"}selected{/if} value="7"> 7 </option>
+                  <option {if $liczba_rozowe_dziaslo== "8"}selected{/if} value="8"> 8 </option>
+                  <option {if $liczba_rozowe_dziaslo== "9"}selected{/if} value="9"> 9 </option>
+                  <option {if $liczba_rozowe_dziaslo== "10"}selected{/if} value="10"> 10 </option>
+                  <option {if $liczba_rozowe_dziaslo== "11"}selected{/if} value="11"> 11 </option>
+                  <option {if $liczba_rozowe_dziaslo== "12"}selected{/if} value="12"> 12 </option>
+                  <option {if $liczba_rozowe_dziaslo== "13"}selected{/if} value="13"> 13 </option>
+                  <option {if $liczba_rozowe_dziaslo== "14"}selected{/if} value="14"> 14 </option>
+                  <option {if $liczba_rozowe_dziaslo== "15"}selected{/if} value="15"> 15 </option>
+                  <option {if $liczba_rozowe_dziaslo== "16"}selected{/if} value="16"> 16 </option>
+                  <option {if $liczba_rozowe_dziaslo== "17"}selected{/if} value="17"> 17 </option>
+                  <option {if $liczba_rozowe_dziaslo== "18"}selected{/if} value="18"> 18 </option>
+                  <option {if $liczba_rozowe_dziaslo== "19"}selected{/if} value="19"> 19 </option>
+                  <option {if $liczba_rozowe_dziaslo== "20"}selected{/if} value="20"> 20 </option>
+                  <option {if $liczba_rozowe_dziaslo== "21"}selected{/if} value="21"> 21 </option>
+                  <option {if $liczba_rozowe_dziaslo== "22"}selected{/if} value="22"> 22 </option>
+                  <option {if $liczba_rozowe_dziaslo== "23"}selected{/if} value="23"> 23 </option>
+                  <option {if $liczba_rozowe_dziaslo== "24"}selected{/if} value="24"> 24 </option>
+                  <option {if $liczba_rozowe_dziaslo== "25"}selected{/if} value="25"> 25 </option>
+                  <option {if $liczba_rozowe_dziaslo== "26"}selected{/if} value="26"> 26 </option>
+                  <option {if $liczba_rozowe_dziaslo== "27"}selected{/if} value="27"> 27 </option>
+                  <option {if $liczba_rozowe_dziaslo== "28"}selected{/if} value="28"> 28 </option>
+                  <option {if $liczba_rozowe_dziaslo== "29"}selected{/if} value="29"> 29 </option>
+                  <option {if $liczba_rozowe_dziaslo== "30"}selected{/if} value="30"> 30 </option>
+                  <option {if $liczba_rozowe_dziaslo== "31"}selected{/if} value="31"> 31 </option>
+                  <option {if $liczba_rozowe_dziaslo== "32"}selected{/if} value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="stopien_porcelanowy" value="stopieñ porcelanowy" {if $stopien_porcelanowy== "stopieñ porcelanowy"}checked{/if}/></td>
        <td> - STOPIEÑ PORCELANOWY</td>
+          <td> <select name="liczba_stopien_porcelanowy" style="height:40px;width:60px;font-size:20px;">
+                  <option {if $liczba_stopien_porcelanowy== ""}selected{/if} value>  </option>
+                  <option {if $liczba_stopien_porcelanowy== "1"}selected{/if} value="1"> 1 </option>
+                  <option {if $liczba_stopien_porcelanowy== "2"}selected{/if} value="2"> 2 </option>
+                  <option {if $liczba_stopien_porcelanowy== "3"}selected{/if} value="3"> 3 </option>
+                  <option {if $liczba_stopien_porcelanowy== "4"}selected{/if} value="4"> 4 </option>
+                  <option {if $liczba_stopien_porcelanowy== "5"}selected{/if} value="5"> 5 </option>
+                  <option {if $liczba_stopien_porcelanowy== "6"}selected{/if} value="6"> 6 </option>
+                  <option {if $liczba_stopien_porcelanowy== "7"}selected{/if} value="7"> 7 </option>
+                  <option {if $liczba_stopien_porcelanowy== "8"}selected{/if} value="8"> 8 </option>
+                  <option {if $liczba_stopien_porcelanowy== "9"}selected{/if} value="9"> 9 </option>
+                  <option {if $liczba_stopien_porcelanowy== "10"}selected{/if} value="10"> 10 </option>
+                  <option {if $liczba_stopien_porcelanowy== "11"}selected{/if} value="11"> 11 </option>
+                  <option {if $liczba_stopien_porcelanowy== "12"}selected{/if} value="12"> 12 </option>
+                  <option {if $liczba_stopien_porcelanowy== "13"}selected{/if} value="13"> 13 </option>
+                  <option {if $liczba_stopien_porcelanowy== "14"}selected{/if} value="14"> 14 </option>
+                  <option {if $liczba_stopien_porcelanowy== "15"}selected{/if} value="15"> 15 </option>
+                  <option {if $liczba_stopien_porcelanowy== "16"}selected{/if} value="16"> 16 </option>
+                  <option {if $liczba_stopien_porcelanowy== "17"}selected{/if} value="17"> 17 </option>
+                  <option {if $liczba_stopien_porcelanowy== "18"}selected{/if} value="18"> 18 </option>
+                  <option {if $liczba_stopien_porcelanowy== "19"}selected{/if} value="19"> 19 </option>
+                  <option {if $liczba_stopien_porcelanowy== "20"}selected{/if} value="20"> 20 </option>
+                  <option {if $liczba_stopien_porcelanowy== "21"}selected{/if} value="21"> 21 </option>
+                  <option {if $liczba_stopien_porcelanowy== "22"}selected{/if} value="22"> 22 </option>
+                  <option {if $liczba_stopien_porcelanowy== "23"}selected{/if} value="23"> 23 </option>
+                  <option {if $liczba_stopien_porcelanowy== "24"}selected{/if} value="24"> 24 </option>
+                  <option {if $liczba_stopien_porcelanowy== "25"}selected{/if} value="25"> 25 </option>
+                  <option {if $liczba_stopien_porcelanowy== "26"}selected{/if} value="26"> 26 </option>
+                  <option {if $liczba_stopien_porcelanowy== "27"}selected{/if} value="27"> 27 </option>
+                  <option {if $liczba_stopien_porcelanowy== "28"}selected{/if} value="28"> 28 </option>
+                  <option {if $liczba_stopien_porcelanowy== "29"}selected{/if} value="29"> 29 </option>
+                  <option {if $liczba_stopien_porcelanowy== "30"}selected{/if} value="30"> 30 </option>
+                  <option {if $liczba_stopien_porcelanowy== "31"}selected{/if} value="31"> 31 </option>
+                  <option {if $liczba_stopien_porcelanowy== "32"}selected{/if} value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" {if $poprawka== "poprawka"}checked{/if}/></td>
        <td> - POPRAWKA</td>
       </tr>

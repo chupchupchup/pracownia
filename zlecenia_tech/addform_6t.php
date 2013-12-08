@@ -84,6 +84,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $rodzajkolornika = czysc_zmienne_formularza($_SESSION['form_tab']['rodzajkolornika']);
  $kolor = czysc_zmienne_formularza($_SESSION['form_tab']['kolor']);
  $lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka']);
+ $liczba_lyzka = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_lyzka']);
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
  $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $metal = czysc_zmienne_formularza($_SESSION['form_tab']['metal']);
@@ -101,7 +102,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
  $malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['malowanie']);
  $przedzial_malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['przedzial_malowanie']);
  $dobor_koloru = czysc_zmienne_formularza($_SESSION['form_tab']['dobor_koloru']);
-   $frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['frezowane_podparcie']);
+ $frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['frezowane_podparcie']);
+ $liczba_frezowane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_frezowane_podparcie']);
  $zatrzaski = czysc_zmienne_formularza($_SESSION['form_tab']['zatrzaski']);
  $liczbazatrzaskow = czysc_zmienne_formularza($_SESSION['form_tab']['liczbazatrzaskow']);
  $zasuwy = czysc_zmienne_formularza($_SESSION['form_tab']['zasuwy']);
@@ -110,7 +112,9 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
    $szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['szklane_podparcie']);
    $liczba_szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_szklane_podparcie']);
    $rozowe_dziaslo = czysc_zmienne_formularza($_SESSION['form_tab']['rozowe_dziaslo']);
+   $liczba_rozowe_dziaslo = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_rozowe_dziaslo']);
    $stopien_porcelanowy = czysc_zmienne_formularza($_SESSION['form_tab']['stopien_porcelanowy']);
+   $liczba_stopien_porcelanowy = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_stopien_porcelanowy']);
    $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
 
  $dentyna_kiss = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_kiss']);
@@ -135,6 +139,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
                                          rodzajkolornika='".$rodzajkolornika."',
                                          kolor='".$kolor."',
                                          lyzka='".$lyzka."',
+                                         liczba_lyzka='".$liczba_lyzka."',
                                          wzornik='".$wzornik."',
                                          liczba_wzornik='".$liczba_wzornik."',
                                          metal='".$metal."',
@@ -146,12 +151,15 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_2"){
                                          przedzial_malowanie='".$przedzial_malowanie."',
                                          dobor_koloru='".$dobor_koloru."',
                                          frezowane_podparcie='".$frezowane_podparcie."',
+                                         liczba_frezowane_podparcie='".$liczba_frezowane_podparcie."',
                                          zatrzaski='".$zatrzaski."', liczbazatrzaskow='".$liczbazatrzaskow."',
                                          zasuwy='".$zasuwy."', liczbazasow='".$liczbazasow."',
                                          szklane_podparcie='".$szklane_podparcie."',
                                          liczba_szklane_podparcie='".$liczba_szklane_podparcie."',
                                          rozowe_dziaslo='".$rozowe_dziaslo."',
+                                         liczba_rozowe_dziaslo='".$liczba_rozowe_dziaslo."',
                                          stopien_porcelanowy='".$stopien_porcelanowy."',
+                                         liczba_stopien_porcelanowy='".$liczba_stopien_porcelanowy."',
                                          poprawka='".$poprawka."',
                                          dentyna_kiss='".$dentyna_kiss."',
                                          dentyna_na_zloto='".$dentyna_na_zloto."',

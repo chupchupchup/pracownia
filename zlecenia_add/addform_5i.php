@@ -63,6 +63,7 @@ function zab () {
     $_SESSION['form_tab']['kolornik']=$_REQUEST['kolornik'];
     $_SESSION['form_tab']['kolor']=$_REQUEST['kolor'];
     $_SESSION['form_tab']['lyzka']=$_REQUEST['lyzka'];
+    $_SESSION['form_tab']['liczba_lyzka']=$_REQUEST['liczba_lyzka'];
     $_SESSION['form_tab']['wzornik']=$_REQUEST['wzornik'];
     $_SESSION['form_tab']['liczba_wzornik']=$_REQUEST['liczba_wzornik'];
     $_SESSION['form_tab']['metal']=$_REQUEST['metal'];
@@ -78,6 +79,7 @@ function zab () {
     $_SESSION['form_tab']['przedzial_malowanie']=$_REQUEST['przedzial_malowanie'];
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['frezowane_podparcie']=$_REQUEST['frezowane_podparcie'];
+    $_SESSION['form_tab']['liczba_frezowane_podparcie']=$_REQUEST['liczba_frezowane_podparcie'];
     $_SESSION['form_tab']['zatrzaski']=$_REQUEST['zatrzaski'];
     $_SESSION['form_tab']['liczbazatrzaskow']=$_REQUEST['liczbazatrzaskow'];
     $_SESSION['form_tab']['zasuwy']=$_REQUEST['zasuwy'];
@@ -85,7 +87,9 @@ function zab () {
     $_SESSION['form_tab']['szklane_podparcie']=$_REQUEST['szklane_podparcie'];
     $_SESSION['form_tab']['liczba_szklane_podparcie']=$_REQUEST['liczba_szklane_podparcie'];
     $_SESSION['form_tab']['rozowe_dziaslo']=$_REQUEST['rozowe_dziaslo'];
+    $_SESSION['form_tab']['liczba_rozowe_dziaslo']=$_REQUEST['liczba_rozowe_dziaslo'];
     $_SESSION['form_tab']['stopien_porcelanowy']=$_REQUEST['stopien_porcelanowy'];
+    $_SESSION['form_tab']['liczba_stopien_porcelanowy']=$_REQUEST['liczba_stopien_porcelanowy'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
 
     if($_SESSION['form_tab']['metal']=='metal' || $_SESSION['form_tab']['powt_metalu']=='powtórka metalu'){

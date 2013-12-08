@@ -111,6 +111,13 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka" value="³y¿ka" /></td>
        <td> - £Y¯KA</td>
+          <td> <select name="liczba_lyzka" style="height:40px;width:60px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
        <td>&nbsp;</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="wzornik" value="wzornik" /></td>
        <td> - WZORNIK</td>
@@ -247,6 +254,43 @@ div#newsel select{
        <td> - DOBÓR KOLORU</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="frezowane_podparcie" value="frezowane podparcie" /></td>
        <td> - FREZOWANE PODPARCIE</td>
+          <td> <select name="liczba_frezowane_podparcie" style="height:40px;width:60px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  <option value="9"> 9 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
       </tr>
    </table>
 
@@ -310,8 +354,82 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="rozowe_dziaslo" value="ró¿owe dzi±s³o" /></td>
        <td> - RÓ¯OWE DZI¡S£O</td>
-       <td> <input type="checkbox" style="height:45px;width:45px;" name="stopien_porcelanowy" value="stopieñ porcelanowy" /></td>
+          <td> <select name="liczba_rozowe_dziaslo" style="height:40px;width:60px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  <option value="9"> 9 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
+          <td> <input type="checkbox" style="height:45px;width:45px;" name="stopien_porcelanowy" value="stopieñ porcelanowy" /></td>
        <td> - STOPIEÑ PORCELANOWY</td>
+          <td> <select name="liczba_stopien_porcelanowy" style="height:40px;width:60px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3"> 3 </option>
+                  <option value="4"> 4 </option>
+                  <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                  <option value="7"> 7 </option>
+                  <option value="8"> 8 </option>
+                  <option value="9"> 9 </option>
+                  <option value="10"> 10 </option>
+                  <option value="11"> 11 </option>
+                  <option value="12"> 12 </option>
+                  <option value="13"> 13 </option>
+                  <option value="14"> 14 </option>
+                  <option value="15"> 15 </option>
+                  <option value="16"> 16 </option>
+                  <option value="17"> 17 </option>
+                  <option value="18"> 18 </option>
+                  <option value="19"> 19 </option>
+                  <option value="20"> 20 </option>
+                  <option value="21"> 21 </option>
+                  <option value="22"> 22 </option>
+                  <option value="23"> 23 </option>
+                  <option value="24"> 24 </option>
+                  <option value="25"> 25 </option>
+                  <option value="26"> 26 </option>
+                  <option value="27"> 27 </option>
+                  <option value="28"> 28 </option>
+                  <option value="29"> 29 </option>
+                  <option value="30"> 30 </option>
+                  <option value="31"> 31 </option>
+                  <option value="32"> 32 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" /></td>
        <td> - POPRAWKA</td>
       </tr>

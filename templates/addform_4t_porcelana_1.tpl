@@ -127,7 +127,7 @@ div#newsel select{
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" {if $poprawka== "poprawka"}checked{/if}/></td>
        <td> - POPRAWKA </td>
      </tr>
-       <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka_indywidualna" value="lyzka_indywidualna" /></td>
+       <td> <input type="checkbox" style="height:45px;width:45px;" name="lyzka_indywidualna" value="lyzka_indywidualna" {if $lyzka_indywidualna== "lyzka_indywidualna"}checked{/if}/></td>
        <td> - £Y¯KA INDYWIDUALNA </td>
        <td> <select name="liczba_lyzka_indywidualna" style="height:40px;width:60px;font-size:20px;">
                <option {if $liczba_indywidualna== ""}selected{/if} value>  </option>
