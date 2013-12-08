@@ -50,6 +50,8 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['wzornik']);
  $liczba_wzornik = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_wzornik']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
+ $lyzka_indywidualna = czysc_zmienne_formularza($_SESSION['form_tab']['lyzka_indywidualna']);
+ $lyzka_indywidualna = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_lyzka_indywidualna']);
  $zeby = czysc_zmienne_formularza($_SESSION['form_tab']['zeby']);
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
@@ -61,6 +63,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $sql="UPDATE porcelana_wkladykk SET material='".$material."', rodzajwkladu='".$rodzajwkladu."',
                                      liczba_wkladow='".$liczba_wkladow."', wzornik='".$wzornik."',
                                      liczba_wzornik='".$liczba_wzornik."',poprawka='".$poprawka."', zeby='".$zeby."'
+                                     liczba_lyzka_indywidualna='".$liczba_lyzka_indywidualna."', lyzka_indywidualna='".$lyzka_indywidualna."',
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
  myquery($sql);
@@ -874,6 +877,7 @@ $cena = new CenaCount;
                 if($arr_pom[$j]!='' && $arr_pom[$j]!='0' && $arr_pom[$j]!=$dentyna_na_zloto && $arr_pom[$j]!=$dentyna_kiss
                    && $arr_pom[$j]!=$dentyna_na_cerkon && $arr_pom[$j]!=$dentyna_na_empress && $arr_pom[$j]!=$dentyna_na_metal
                    && $arr_pom[$j]!=$zakupione_cena && $arr_pom[$j]!=$plynproszek && $arr_pom[$j]!=$material
+                   && $arr_pom[$j]!=$liczba_wzornik && $arr_pom[$j]!=$liczba_lyzka_indywidualna
                    ){
                   $info=$info.'; '.$arr_pom[$j];
                 }
