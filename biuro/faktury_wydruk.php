@@ -65,10 +65,16 @@ function czysc_zmienne_formularza($input)
     $smarty->assign('tab_el_fv', $_SESSION['tab_el_fv']);
 
     $smarty->assign('data_faktury', $_SESSION['data_faktury']);
+    $smarty->assign('data_wystawienia', $_SESSION['data_wystawienia']);
 
     $smarty->assign('sposob_zaplaty', $_SESSION['sposob_zaplaty']);
 
-    $smarty->assign('termin_zaplaty', $_SESSION['termin_zaplaty']);
+    $t = $_SESSION['termin_zaplaty'];
+    if ($t==-1) {
+        $smarty->assign('termin_zaplaty', 'zap³acono');
+    } else {
+        $smarty->assign('termin_zaplaty', $_SESSION['termin_zaplaty']);
+    }
 
     $smarty->assign('konto_bankowe', $_SESSION['konto_bankowe']);
 
@@ -127,10 +133,10 @@ if($_SESSION['czy_wystawic_fakture']!='nie'){
 		$nazwa=mysql_escape_string($arr1['nazwa']);
 		//echo $nazwa.'<br>';
 		//$nazwa=$arr1['nazwa'];
-    $sql3="INSERT INTO faktury (fv_nr,wartosc_netto_fv,data_fv,sposob_zaplaty,termin_zaplaty,kontrahent_nazwa,kontrahent_adres,kontrahent_nip,wartosc_brutto_fv,konto_bankowe,idzleceniodawcy,uwagi_fv)
+    $sql3="INSERT INTO faktury (fv_nr,wartosc_netto_fv,data_fv,sposob_zaplaty,termin_zaplaty,kontrahent_nazwa,kontrahent_adres,kontrahent_nip,wartosc_brutto_fv,konto_bankowe,idzleceniodawcy,uwagi_fv,data_wystawienia)
                   VALUES ('".$nr_fv."', '".$_SESSION['tab_suma'][0]."', '".$_SESSION['data_faktury']."',
                           '".$_SESSION['sposob_zaplaty']."', '".$_SESSION['termin_zaplaty']."', '".czysc_zmienne_formularza($nazwa)."',
-                          '".$arr1['adres']."','".$arr1['nip']."', '".$_SESSION['tab_suma'][0]."', '".$_SESSION['konto_bankowe']."', '".$arr1['idzleceniodawcy']."', '".addslashes($_SESSION['uwagi_fv'])."') ";
+                          '".$arr1['adres']."','".$arr1['nip']."', '".$_SESSION['tab_suma'][0]."', '".$_SESSION['konto_bankowe']."', '".$arr1['idzleceniodawcy']."', '".addslashes($_SESSION['uwagi_fv'])."', '".$_SESSION['data_wystawienia']."') ";
         echo $sql3.'<br>';
     $sql_result3=myquery($sql3);
     //-----------------------------------------------------------------------------------------------------------

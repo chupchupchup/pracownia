@@ -237,6 +237,10 @@ div#newsel select{
    </td>
    <td> - ILO¦Æ INNE</td>
   </tr>
+    <tr id="material">
+        <td><input type="checkbox" name="programator_koisa" value="programator koisa" /></td>
+        <td> - PROGRAMATOR KOISA</td>
+    </tr>
 </table>
 
 <hr style="width:100%;"/>

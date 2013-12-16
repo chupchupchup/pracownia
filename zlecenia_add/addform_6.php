@@ -211,6 +211,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  $material = czysc_zmienne_formularza($_SESSION['form_tab']['material']);
  $czapeczka_cerkon = czysc_zmienne_formularza($_SESSION['form_tab']['czapeczka_cerkon']);
  $szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['szklane_podparcie']);
+ $liczba_szklane_podparcie = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_szklane_podparcie']);
  $kolornik = czysc_zmienne_formularza($_SESSION['form_tab']['kolornik']);
  $kolor = czysc_zmienne_formularza($_SESSION['form_tab']['kolor']);
  $zeby = czysc_zmienne_formularza($_SESSION['form_tab']['zeby']);
@@ -225,7 +226,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  $przedzial_malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['przedzial_malowanie']);
  $dobor_koloru = czysc_zmienne_formularza($_SESSION['form_tab']['dobor_koloru']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
-
+ $ponowne_napalenie_porcelany = czysc_zmienne_formularza($_SESSION['form_tab']['ponowne_napalenie_porcelany']);
  //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Korona Pe³noceramiczna";
@@ -240,15 +241,15 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 
  //dodawanie zlecenia do bazy
  $sql="INSERT INTO porcelana_korona_pelnoceramiczna ( kategoria , idzlecenianr , idzleceniapoz , datawpisania , 
-		wpisujacy , material, czapeczka_cerkon, szklane_podparcie, rodzajkolornika , kolor , przymiarka,
+		wpisujacy , material, czapeczka_cerkon, szklane_podparcie, liczba_szklane_podparcie, rodzajkolornika , kolor , przymiarka,
                 przymiarka_kompozytu, gotowa, liczba_gotowa, malowanie, przedzial_malowanie, dobor_koloru, poprawka,
-                zeby
+                zeby, ponowne_napalenie_porcelany
                 )
        VALUES (
 	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
-              '".$material."','".$czapeczka_cerkon."','".$szklane_podparcie."','".$kolornik."','".$kolor."','".$przymiarka."',
+              '".$material."','".$czapeczka_cerkon."','".$szklane_podparcie."','".$liczba_szklane_podparcie."','".$kolornik."','".$kolor."','".$przymiarka."',
               '".$przymiarka_kompozytu."','".$gotowa."','".$liczba_gotowa."','".$malowanie."','".$przedzial_malowanie."',
-              '".$dobor_koloru."','".$poprawka."', '".$zeby."'
+              '".$dobor_koloru."','".$poprawka."', '".$zeby."', '".$ponowne_napalenie_porcelany."'
               )";
 
  myquery($sql);
@@ -309,7 +310,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
 				inlay_onlay_Gradia, liczba_inlay_onlay_Gradia, inlay_onlay_kompozyt, liczba_inlay_onlay_kompozyt,
 				inlay_onlay_Empress, liczba_inlay_onlay_Empress, inlay_onlay_cerkon, liczba_inlay_onlay_cerkon,
 				inlay_onlay_metal, liczba_inlay_onlay_metal,
-                malowanie, dobor_koloru, poprawka, zeby  )
+                malowanie, dobor_koloru, poprawka, zeby)
        VALUES (
     	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
               '".$kolornik."','".$kolor."','".$licowka_kompozyt."','".$liczba_licowka_kompozyt."',
@@ -348,12 +349,19 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
  $malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['malowanie']);
+ $przedzial_malowanie = czysc_zmienne_formularza($_SESSION['form_tab']['przedzial_malowanie']);
  $dobor_koloru = czysc_zmienne_formularza($_SESSION['form_tab']['dobor_koloru']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
  $elementy = czysc_zmienne_formularza($_SESSION['form_tab']['elementy']);
  $zakupione_cena = czysc_zmienne_formularza($_SESSION['form_tab']['zakupione_cena']);
 
- //dodatkowe zmienne
+ $klucz_do_implantow = czysc_zmienne_formularza($_SESSION['form_tab']['klucz_do_implantow']);
+ $liczba_klucz_do_implantow = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_klucz_do_implantow']);
+ $lacznik_hybrydowy = czysc_zmienne_formularza($_SESSION['form_tab']['lacznik_hybrydowy']);
+ $liczba_lacznik_hybrydowy = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_lacznik_hybrydowy']);
+
+
+    //dodatkowe zmienne
  $datawpisania = $_SESSION['datawpisania'];
  $kategoria = "Porcelana Implanty";
  $_SESSION['form_tab']['kategoria']='porcelana_implanty';//potrzebne do drukowania etykiety
@@ -368,13 +376,15 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_5"){
  //dodawanie zlecenia do bazy
  $sql="INSERT INTO porcelana_implanty ( kategoria , idzlecenianr , idzleceniapoz , datawpisania , wpisujacy ,
 			material, rodzajkolornika , kolor, korona_implant, liczba_korona_implant, przeslo, liczba_przeslo,
-                        lyzka,wzornik, przymiarka, surowa, gotowa, malowanie, dobor_koloru,
-                        poprawka, elementy, zakupione_cena, zeby  )
+                        lyzka,wzornik, przymiarka, surowa, gotowa, malowanie, przedzial_malowanie, dobor_koloru,
+                        poprawka, elementy, zakupione_cena, zeby,klucz_do_implantow, liczba_klucz_do_implantow,
+                lacznik_hybrydowy, liczba_lacznik_hybrydowy  )
        VALUES (
 	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
               '".$material."','".$kolornik."','".$kolor."','".$korona_implant."','".$liczba_korona_implant."','".$przeslo."','".$liczba_przeslo."',
               '".$lyzka."','".$wzornik."','".$przymiarka."','".$surowa."','".$gotowa."',
-              '".$malowanie."','".$dobor_koloru."','".$poprawka."','".$elementy."','".$zakupione_cena."','".$zeby."'
+              '".$malowanie."','".$przedzial_malowanie."','".$dobor_koloru."','".$poprawka."','".$elementy."','".$zakupione_cena."','".$zeby."',
+              '".$klucz_do_implantow."','".$liczba_klucz_do_implantow."','".$lacznik_hybrydowy."','".$liczba_lacznik_hybrydowy."'
 	      )";
 	
  myquery($sql);
@@ -440,6 +450,11 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_7"){
  $akryl_skan = czysc_zmienne_formularza($_SESSION['form_tab']['akryl_skan']);
  $liczba_akryl_skan = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_akryl_skan']);
  $zeby = czysc_zmienne_formularza($_SESSION['form_tab']['zeby']);
+
+ $liczba_waxup = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_waxup']);
+ $szyna_na_prowizorium = czysc_zmienne_formularza($_SESSION['form_tab']['szyna_na_prowizorium']);
+ $liczba_szyna_na_prowizorium = czysc_zmienne_formularza($_SESSION['form_tab']['liczba_szyna_na_prowizorium']);
+
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
@@ -460,13 +475,14 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_7"){
                                            lana, korona_akryl, liczba_korona_akryl, korona_kompozyt,liczba_korona_kompozyt,
                                            wlokno_szklane, liczba_wlokno_szklane, maryland, poprawka,
                                            rodzajkolornika, kolor, teleskop, liczba_teleskop, zeby, rodzaj,
-										   akryl_skan, liczba_akryl_skan
+										   akryl_skan, liczba_akryl_skan, liczba_waxup, szyna_na_prowizorium, liczba_szyna_na_prowizorium
                                          )
        VALUES (
               '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
               '".$lana."','".$korona_akryl."','".$liczba_korona_akryl."','".$korona_kompozyt."','".$liczba_korona_kompozyt."',
               '".$wlokno."','".$liczba_wlokno."','".$maryland."','".$poprawka."','".$kolornik."','".$kolor."',
-              '".$teleskop."','".$liczba_teleskop."','".$zeby."','".$rodzaj."','".$akryl_skan."','".$liczba_akryl_skan."'
+              '".$teleskop."','".$liczba_teleskop."','".$zeby."','".$rodzaj."','".$akryl_skan."','".$liczba_akryl_skan."',
+              '".$liczba_waxup."','".$szyna_na_prowizorium."','".$liczba_szyna_na_prowizorium."'
               )";
  myquery($sql);
 }
@@ -699,6 +715,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
  $liczbaaparat_przeciw_chrapaniu = czysc_zmienne_formularza($_SESSION['form_tab']['liczbaaparat_przeciw_chrapaniu']);
  $inne = czysc_zmienne_formularza($_SESSION['form_tab']['inne']);
  $liczbainne = czysc_zmienne_formularza($_SESSION['form_tab']['liczbainne']);
+ $programator_koisa = czysc_zmienne_formularza($_SESSION['form_tab']['programator_koisa']);
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
@@ -725,7 +742,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
                           aparat_ortodontyczny, liczbaaparat_ortodontyczny, szyna_korony_tymczasowe, liczbaszyna_korony_tymczasowe,
                           szyna_zabiegi_implantologiczne, liczbaszyna_zabiegi_implantologiczne,
                           plyta_podjezykowa, liczbaplyta_podjezykowa, aparat_przeciw_chrapaniu, liczbaaparat_przeciw_chrapaniu,
-                          inne, liczbainne  )
+                          inne, liczbainne, programator_koisa  )
        VALUES (
 	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
               '".$wybielajaca."','".$liczbawybielajacych."','".$relaksacyjnatm."','".$liczbarelaksacyjnatm."',
@@ -736,7 +753,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
               '".$szyna_korony_tymczasowe."','".$liczbaszyna_korony_tymczasowe."',
               '".$szyna_zabiegi_implantologiczne."','".$liczbaszyna_zabiegi_implantologiczne."',
               '".$plyta_podjezykowa."','".$liczbaplyta_podjezykowa."','".$aparat_przeciw_chrapaniu."','".$liczbaaparat_przeciw_chrapaniu."',
-              '".$inne."','".$liczbainne."'
+              '".$inne."','".$liczbainne."','".$programator_koisa."'
 	      )";
 	
  myquery($sql);

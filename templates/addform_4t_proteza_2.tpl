@@ -64,6 +64,8 @@ div#newsel select{
    <td> - PROTEZA &nbsp;&nbsp;STANDARDOWA </td>
    <td><input type="radio" name="proteza" value="proteza ca³kowita w artykulatorze" {if $proteza== "proteza ca³kowita w artykulatorze"}checked{/if}/></td>
    <td> - CA£KOWITA W &nbsp;&nbsp;ARTYKULATORZE</td>
+   <td><input type="radio" name="proteza" value="proteza na lokatorach" {if $proteza== "proteza na lokatorach"}checked{/if}/></td>
+   <td> - NA LOKATORACH</td>
    <td><input type="radio" name="proteza" value="proteza w systemie iniekcyjnym" {if $proteza== "proteza w systemie iniekcyjnym"}checked{/if}/></td>
    <td> - W SYSTEMIE &nbsp;&nbsp;INIEKCYJNYM</td>
    <td>

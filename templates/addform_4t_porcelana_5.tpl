@@ -96,7 +96,7 @@ div#newsel select{
        <td> - WIEDENT VITA {if $rodzajkolornika== "wiedentvita"}<br>&nbsp;&nbsp;<b>{$kolor}</b>{/if}</td>
      </tr>
    </table>
-         <input type="hidden" name="kolor" value="{$kolor}">
+         <!--input type="hidden" name="kolor" value="{$kolor}"-->
 
    <br />
    <div id="newsel">
@@ -217,6 +217,16 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="malowanie" value="malowanie" {if $malowanie== "malowanie"}checked{/if}/></td>
        <td> - MALOWANIE</td>
+          <td> <select name="przedzial_malowanie" style="height:40px;width:70px;font-size:20px;">
+                  <option value {if $przedzial_malowanie== ""}selected{/if}>  </option>
+                  <option value="1" {if $przedzial_malowanie== "1"}selected{/if}> 1 </option>
+                  <option value="2" {if $przedzial_malowanie== "2"}selected{/if}> 2 </option>
+                  <option value="3-5" {if $przedzial_malowanie== "3-5"}selected{/if}> 3-5 </option>
+                  <option value="6-8" {if $przedzial_malowanie== "6-8"}selected{/if}> 6-8 </option>
+                  <option value="9-14" {if $przedzial_malowanie== "9-14"}selected{/if}> 9-14 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ, </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="dobor_koloru" value="dobór koloru" {if $dobor_koloru== "dobór koloru"}checked{/if}/></td>
        <td> - DOBÓR KOLORU</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" {if $poprawka== "poprawka"}checked{/if}/> </td>
@@ -238,6 +248,38 @@ div#newsel select{
    <td>  <input type="text" name="zakupione_cena" style="height:25px;width:55px;font-size:16px;" {if $zakupione_cena!="0"} value="{$zakupione_cena}" {/if}/>
    </td>
   </tr>
+</table>
+
+<hr style="width:100%;"/>
+<table border="0" style="font-size:16px;width:70%;">
+    <tr>
+        <td> <input type="checkbox" style="height:45px;width:45px;" name="klucz_do_implantow" value="klucz do implantów" {if $klucz_do_implantow== "klucz do implantów"}checked{/if}/></td>
+        <td> - KLUCZ DO IMPLANTÓW</td>
+        <td> <select name="liczba_klucz_do_implantow" style="height:40px;width:70px;font-size:20px;">
+                <option value {if $liczba_klucz_do_implantow== ""}selected{/if}>  </option>
+                <option value="1" {if $liczba_klucz_do_implantow== "1"}selected{/if}> 1 </option>
+                <option value="2" {if $liczba_klucz_do_implantow== "2"}selected{/if}> 2 </option>
+                <option value="3" {if $liczba_klucz_do_implantow== "3"}selected{/if}> 3 </option>
+                <option value="4" {if $liczba_klucz_do_implantow== "4"}selected{/if}> 4 </option>
+                <option value="5" {if $liczba_klucz_do_implantow== "5"}selected{/if}> 5 </option>
+                <option value="6" {if $liczba_klucz_do_implantow== "6"}selected{/if}> 6 </option>
+            </select>
+        </td>
+        <td> - ILO¦Æ, </td>
+        <td> <input type="checkbox" style="height:45px;width:45px;" name="lacznik_hybrydowy" value="³±cznik hybrydowy" {if $lacznik_hybrydowy== "³±cznik hybrydowy"}checked{/if}/></td>
+        <td> - £¡CZNIK HYBRYDOWY</td>
+        <td> <select name="liczba_lacznik_hybrydowy" style="height:40px;width:70px;font-size:20px;">
+                <option value {if $liczba_lacznik_hybrydowy== ""}selected{/if}>  </option>
+                <option value="1" {if $liczba_lacznik_hybrydowy== "1"}selected{/if}> 1 </option>
+                <option value="2" {if $liczba_lacznik_hybrydowy== "2"}selected{/if}> 2 </option>
+                <option value="3" {if $liczba_lacznik_hybrydowy== "3"}selected{/if}> 3 </option>
+                <option value="4" {if $liczba_lacznik_hybrydowy== "4"}selected{/if}> 4 </option>
+                <option value="5" {if $liczba_lacznik_hybrydowy== "5"}selected{/if}> 5 </option>
+                <option value="6" {if $liczba_lacznik_hybrydowy== "6"}selected{/if}> 6 </option>
+            </select>
+        </td>
+        <td> - ILO¦Æ, </td>
+    </tr>
 </table>
 
 <hr style="width:100%;"/>

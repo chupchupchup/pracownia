@@ -78,6 +78,8 @@ div#newsel select{
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>
   <input type="hidden" name="add" value="addform_4t_porcelana_8.php">
   <input type="hidden" name="strona" value="zlecenia_tech/addform_5t.php">
+
+    {include file="materialy_extra.tpl"}
 </form>
 </div>
 

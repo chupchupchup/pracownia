@@ -24,6 +24,15 @@
             <strong>&nbsp;<--- wybierz lekarza</strong>
           </td>
         </tr>
+       <tr>
+           <td>
+               <select name="mode" style="margin-left:20px;float:left;">
+                   <option value="current">Bie¿±ce</option>
+                   <option value="all">Wszystkie</option>
+               </select>
+               <strong>&nbsp;<--- wybierz lekarza</strong>
+           </td>
+       </tr>
      <tr><td><br></td></tr>
    </table>
 <hr>

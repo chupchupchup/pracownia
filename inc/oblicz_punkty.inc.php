@@ -163,7 +163,8 @@ function p_korona_pelnoceramiczna($tablica_punktow,$tablica_zlecenia) {
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='cerkon' && $tablica_zlecenia[$klucz]!='empress'
      && $tablica_zlecenia[$klucz]!='gotowa' && $tablica_zlecenia[$klucz]!='liczba_gotowa'
-     && $klucz!='przedzial_malowanie'    //&& $tablica_zlecenia[$klucz]!='empress' && $tablica_zlecenia[$klucz]!='cerkon' 
+     && $klucz!='przedzial_malowanie'    //&& $tablica_zlecenia[$klucz]!='empress' && $tablica_zlecenia[$klucz]!='cerkon'
+     && $klucz!='szklane_podparcie' && $klucz!='liczba_szklane_podparcie'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -172,6 +173,12 @@ function p_korona_pelnoceramiczna($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($klucz=='przedzial_malowanie'){
       $p_pom=$p_pom+$tablica_punktow['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
+    } elseif ($klucz=='szklane_podparcie') {
+        $ile=$tablica_zlecenia['liczba_'.$klucz];
+        if (!$ile) {
+            $ile = 1;
+        }
+        $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$ile;
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -246,6 +253,8 @@ function p_implanty($tablica_punktow,$tablica_zlecenia) {
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='licowane porcelan±' && $tablica_zlecenia[$klucz]!='cerkon'
      && $tablica_zlecenia[$klucz]!='korona z implantem' && $tablica_zlecenia[$klucz]!='przês³o'
+     && $klucz!='przedzial_malowanie' && $klucz!='klucz_do_implantow' && $klucz!='liczba_klucz_do_implantow'
+     && $klucz!='lacznik_hybrydowy' && $klucz!='liczba_lacznik_hybrydowy'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -254,6 +263,14 @@ function p_implanty($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($tablica_zlecenia[$klucz]=='przês³o'){
       $p_pom=$p_pom+$tablica_punktow['przês³o '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_przeslo'];
+    } elseif($klucz=='przedzial_malowanie'){
+        $p_pom=$p_pom+$tablica_punktow['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
+    } elseif ($klucz=='klucz_do_implantow' || $klucz=='lacznik_hybrydowy') {
+        $ile=$tablica_zlecenia['liczba_'.$klucz];
+        if (!$ile) {
+            $ile = 1;
+        }
+        $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$ile;
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -274,6 +291,7 @@ function p_korony_inne($tablica_punktow,$tablica_zlecenia) {
      && $tablica_zlecenia[$klucz]!='w³ókno szklane' && $tablica_zlecenia[$klucz]!='teleskop metal'
      && $tablica_zlecenia[$klucz]!='teleskop z³oty' && $tablica_zlecenia[$klucz]!='teleskop cerkon'
      && $tablica_zlecenia[$klucz]!='teleskop licowany kompozytem' && $tablica_zlecenia[$klucz]!='akrylowa skanowana'
+     && klucz!='liczba_waxup' && klucz!='szyna_na_prowizorium' && klucz!='liczba_szyna_na_prowizorium'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -300,6 +318,13 @@ function p_korony_inne($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($tablica_zlecenia[$klucz]=='akrylowa skanowana'){
       $p_pom=$p_pom+$tablica_punktow['akrylowa skanowana']*$tablica_zlecenia['liczba_akryl_skan'];
+    }
+    elseif ($klucz=='szyna_na_prowizorium') {
+        $ile=$tablica_zlecenia['liczba_'.$klucz];
+        if (!$ile) {
+            $ile = 1;
+        }
+        $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]]*$ile;
     }
 
   //echo $p_pom.'-p_pom<br>';
@@ -375,7 +400,7 @@ function p_calkowita($tablica_punktow,$tablica_zlecenia) {
     if($tablica_zlecenia[$klucz]!='' && isset($tablica_punktow[$tablica_zlecenia[$klucz]]) && $klucz!='zeby'
      && $tablica_zlecenia[$klucz]!='proteza standardowa' && $tablica_zlecenia[$klucz]!='proteza ca³kowita w artykulatorze'
      && $tablica_zlecenia[$klucz]!='proteza w systemie iniekcyjnym' && $tablica_zlecenia[$klucz]!='nak³ady'
-     && $tablica_zlecenia[$klucz]!='zêby ivoclar'
+     && $tablica_zlecenia[$klucz]!='zêby ivoclar' && $tablica_zlecenia[$klucz]!='proteza na lokatorach'
      ){
       $p_pom=$p_pom+$tablica_punktow[$tablica_zlecenia[$klucz]];
     }
@@ -384,6 +409,9 @@ function p_calkowita($tablica_punktow,$tablica_zlecenia) {
     }
     elseif($tablica_zlecenia[$klucz]=='proteza ca³kowita w artykulatorze'){
       $p_pom=$p_pom+$tablica_punktow['proteza ca³kowita w artykulatorze']*$tablica_zlecenia['liczba_proteza'];
+    }
+    elseif($tablica_zlecenia[$klucz]=='proteza na lokatorach'){
+      $p_pom=$p_pom+$tablica_punktow['proteza na lokatorach']*$tablica_zlecenia['liczba_proteza'];
     }
     elseif($tablica_zlecenia[$klucz]=='proteza w systemie iniekcyjnym'){
       $p_pom=$p_pom+$tablica_punktow['proteza w systemie iniekcyjnym']*$tablica_zlecenia['liczba_proteza'];

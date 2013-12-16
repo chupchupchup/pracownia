@@ -17,6 +17,7 @@
 
 <div style="background-color:#ffffff; margin-left:80px; margin-top:20px; width:1000px; height:600px;" >
 <div style="font-size:10px;float:right;margin-right:20px;"> Data sprzeda¿y: <input name="data_faktury" type="text" value="{$data_sprzedazy}" style=" width:80px;"></div>
+<div style="font-size:10px;float:right;margin-right:20px;"> Data sprzeda¿y: <input name="data_wystawienia" type="text" value="{$data_wystawienia}" style=" width:80px;"></div>
 <br />
 <div style="font-size:26px;font-weight:bold;text-align:center;margin-top:20px;"> 
     Faktura VAT Miesiac-  <select name="fv_miesiac" style="font-weight:bold;">
@@ -79,23 +80,46 @@
     <td style="font-size:13px;">&nbsp;&nbsp;{$kontrahent_nip}</td>
 </tr>
 </table>
+<script src="javascript">
+    function invoice_payment_change(el) {
+        tgt = document.getElementById('termin_zaplaty');
+        l = tgt.options.length;
+        exists = false;
+        while (l) {
+            if (tgt.options[--l].value=='-1') {
+                exists = true;
+                break;
+            }
+        }
+        if (el.value=='gotówka') {
+            if (!exists) {
+                var o = document.createElement('option');
+                o.value = -1;
+                o.text = "zap³acono";
+                tgt.add(o);
+            }
+        } else {
+            tgt.remove(l);
+        }
+    }
+</script>
 <table cellspacing="0" cellpadding="0" border="0" frame="void" style="width:700px;background-color: #ffffff;margin-left:10px;margin-top:20px;">
 <tr>
     <td style="font-weight:bold;font-size:16px;width:120px;text-align:right;">Sposób zap³aty:</td>
     <td style="width:100px;">&nbsp;&nbsp;
-      <select name="sposob_zaplaty" style="font-weight:bold;">
-        <option selected>przelew</option>
-        <option>gotówka</option>
+      <select name="sposob_zaplaty" style="font-weight:bold;" onChange="invoice_payment_change(this);">
+        <option value="przelew" selected>przelew</option>
+        <option value="gotówka">gotówka</option>
       </select>
     </td>
     <td style="font-weight:normal;font-size:16px;width:90px;">termin zap³aty:</td>
     <td style="text-align:left;">&nbsp;&nbsp;
       <select name="termin_zaplaty" style="font-weight:bold;">
-        <option selected>7</option>
         <option>0</option>
         <option>1</option>
         <option>3</option>
         <option>5</option>
+        <option selected>7</option>
         <option>14</option>
         <option>21</option>
       </select>

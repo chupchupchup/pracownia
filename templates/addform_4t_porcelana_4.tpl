@@ -177,7 +177,7 @@ div#newsel select{
       </tr>
    </table>
 
-<hr style="width:100%;"/>
+    <hr style="width:100%;"/>
 {include file="wybor_zebow.tpl"}
 
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>

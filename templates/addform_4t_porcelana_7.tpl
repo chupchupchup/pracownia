@@ -78,8 +78,61 @@ div#newsel select{
     <td> - ELEMENT LANY </td>
     <td> <input type="radio" style="height:45px;width:15px; float:right" name="rodzaj" value="WAX-UP" {if $rodzaj== "WAX-UP"}checked{/if}/> </td>
     <td> - WAX-UP </td>
+      <td> <select name="liczba_waxup" style="height:40px;width:60px;font-size:20px;">
+              <option value {if $liczba_waxup== ""}selected{/if}>  </option>
+              <option value="1" {if $liczba_waxup== "1"}selected{/if}> 1 </option>
+              <option value="2" {if $liczba_waxup== "2"}selected{/if}> 2 </option>
+              <option value="3" {if $liczba_waxup== "3"}selected{/if}> 3 </option>
+              <option value="4" {if $liczba_waxup== "4"}selected{/if}> 4 </option>
+              <option value="5" {if $liczba_waxup== "5"}selected{/if}> 5 </option>
+              <option value="6" {if $liczba_waxup== "6"}selected{/if}> 6 </option>
+              <option value="7" {if $liczba_waxup== "7"}selected{/if}> 7 </option>
+              <option value="8" {if $liczba_waxup== "8"}selected{/if}> 8 </option>
+              <option value="9" {if $liczba_waxup== "9"}selected{/if}> 9 </option>
+              <option value="10" {if $liczba_waxup== "10"}selected{/if}> 10 </option>
+              <option value="11" {if $liczba_waxup== "11"}selected{/if}> 11 </option>
+              <option value="12" {if $liczba_waxup== "12"}selected{/if}> 12 </option>
+              <option value="13" {if $liczba_waxup== "13"}selected{/if}> 13 </option>
+              <option value="14" {if $liczba_waxup== "14"}selected{/if}> 14 </option>
+              <option value="15" {if $liczba_waxup== "15"}selected{/if}> 15 </option>
+              <option value="16" {if $liczba_waxup== "16"}selected{/if}> 16 </option>
+              <option value="17" {if $liczba_waxup== "17"}selected{/if}> 17 </option>
+              <option value="18" {if $liczba_waxup== "18"}selected{/if}> 18 </option>
+              <option value="19" {if $liczba_waxup== "19"}selected{/if}> 19 </option>
+              <option value="20" {if $liczba_waxup== "20"}selected{/if}> 20 </option>
+              <option value="21" {if $liczba_waxup== "21"}selected{/if}> 21 </option>
+              <option value="22" {if $liczba_waxup== "22"}selected{/if}> 22 </option>
+              <option value="23" {if $liczba_waxup== "23"}selected{/if}> 23 </option>
+              <option value="24" {if $liczba_waxup== "24"}selected{/if}> 24 </option>
+              <option value="25" {if $liczba_waxup== "25"}selected{/if}> 25 </option>
+              <option value="26" {if $liczba_waxup== "26"}selected{/if}> 26 </option>
+              <option value="27" {if $liczba_waxup== "27"}selected{/if}> 27 </option>
+              <option value="28" {if $liczba_waxup== "28"}selected{/if}> 28 </option>
+              <option value="29" {if $liczba_waxup== "29"}selected{/if}> 29 </option>
+              <option value="30" {if $liczba_waxup== "30"}selected{/if}> 30 </option>
+              <option value="31" {if $liczba_waxup== "31"}selected{/if}> 31 </option>
+              <option value="32" {if $liczba_waxup== "32"}selected{/if}> 32 </option>
+          </select>
+      </td>
+      <td> - ILO¦Æ </td>
   </tr>
- </table>	
+ </table>
+
+<hr style="width:100%;"/>
+
+<table border="0" style="font-size:16px;width:40%;">
+    <tr>
+        <td> <input type="checkbox" style="height:45px;width:15px; float:right" name="szyna_na_prowizorium" value="szyna na prowizorium" {if $rodzaj== "szyna na prowizorium"}checked{/if}/> </td>
+        <td> - SZYNA NA PROWIZORIUM </td>
+        <td> <select name="liczba_szyna_na_prowizorium" style="height:40px;width:60px;font-size:20px;">
+                <option value {if $liczba_szyna_na_prowizorium== ""}selected{/if}>  </option>
+                <option value="1" {if $liczba_szyna_na_prowizorium== "1"}selected{/if}> 1 </option>
+                <option value="2" {if $liczba_szyna_na_prowizorium== "2"}selected{/if}> 2 </option>
+            </select>
+        </td>
+        <td> - ILO¦Æ </td>
+    </tr>
+</table>
 
 <hr style="width:100%;"/>
 
@@ -324,6 +377,8 @@ div#newsel select{
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>
   <input type="hidden" name="add" value="addform_4t_porcelana_7.php">
   <input type="hidden" name="strona" value="zlecenia_tech/addform_5t.php">
+
+{include file="materialy_extra.tpl"}
 </form>
 </div>
 

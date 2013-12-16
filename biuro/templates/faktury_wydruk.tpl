@@ -6,6 +6,7 @@
 
 <div style="background-color: #ffffff;margin-left:80px;margin-top:20px;width:1000px;height:600px;">
 <div style="font-size;10px;float:right;margin-right:22px;"> Data sprzeda¿y: {$data_faktury}</div>
+<div style="font-size;10px;float:right;margin-right:22px;"> Data wystawienia: {$data_wystawienia}</div>
 <br /><br /><br />
 <div style="font-size:30px;font-weight:bold;text-align:center;margin-top:20px;"> Faktura VAT nr {$nr_fv}</div>
 <div style="font-size:16px;text-align:center;"> ORYGINA£ | KOPIA | DUPLIKAT</div>

@@ -64,6 +64,8 @@ div#newsel select{
    <td> - PROTEZA &nbsp;&nbsp;STANDARDOWA </td>
    <td><input type="radio" name="proteza" value="proteza ca³kowita w artykulatorze" /></td>
    <td> - CA£KOWITA W &nbsp;&nbsp;ARTYKULATORZE</td>
+   <td><input type="radio" name="proteza" value="proteza na lokatorach" /></td>
+   <td> - NA LOKATORACH</td>
    <td><input type="radio" name="proteza" value="proteza w systemie iniekcyjnym" /></td>
    <td> - W SYSTEMIE &nbsp;&nbsp;INIEKCYJNYM</td>
    <td>

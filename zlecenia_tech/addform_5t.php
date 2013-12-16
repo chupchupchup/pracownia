@@ -211,6 +211,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['material']=$_REQUEST['material'];
     $_SESSION['form_tab']['czapeczka_cerkon']=$_REQUEST['czapeczka_cerkon'];
     $_SESSION['form_tab']['szklane_podparcie']=$_REQUEST['szklane_podparcie'];
+    $_SESSION['form_tab']['liczba_szklane_podparcie']=$_REQUEST['liczba_szklane_podparcie'];
     $_SESSION['form_tab']['rodzajkolornika']=$_REQUEST['rodzajkolornika'];
     $_SESSION['form_tab']['kolor']=$_REQUEST['kolor'];
 
@@ -222,6 +223,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['przedzial_malowanie']=$_REQUEST['przedzial_malowanie'];
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
+    $_SESSION['form_tab']['ponowne_napawanie_porcelany']=$_REQUEST['ponowne_napawanie_porcelany'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
          dentyna('dentyna_na_cerkon');
          dentyna('dentyna_na_empress');
@@ -258,6 +260,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['malowanie']=$_REQUEST['malowanie'];
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
+
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
  elseif($add=="addform_4t_porcelana_5.php"){
@@ -277,10 +280,15 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['surowa']=$_REQUEST['surowa'];
     $_SESSION['form_tab']['gotowa']=$_REQUEST['gotowa'];
     $_SESSION['form_tab']['malowanie']=$_REQUEST['malowanie'];
+    $_SESSION['form_tab']['przedzial_malowanie']=$_REQUEST['przedzial_malowanie'];
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
     $_SESSION['form_tab']['elementy']=$_REQUEST['elementy'];
     $_SESSION['form_tab']['zakupione_cena']=$_REQUEST['zakupione_cena'];
+     $_SESSION['form_tab']['klucz_do_implantow']=$_REQUEST['klucz_do_implantow'];
+     $_SESSION['form_tab']['liczba_klucz_do_implantow']=$_REQUEST['liczba_klucz_do_implantow'];
+     $_SESSION['form_tab']['lacznik_hybrydowy']=$_REQUEST['lacznik_hybrydowy'];
+     $_SESSION['form_tab']['liczba_lacznik_hybrydowy']=$_REQUEST['liczba_lacznik_hybrydowy'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
          dentyna('dentyna_na_cerkon');
          dentyna('dentyna_na_metal');
@@ -319,6 +327,9 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['liczba_teleskop']=$_REQUEST['liczba_teleskop'];
     $_SESSION['form_tab']['akryl_skan']=$_REQUEST['akryl_skan'];
     $_SESSION['form_tab']['liczba_akryl_skan']=$_REQUEST['liczba_akryl_skan'];
+     $_SESSION['form_tab']['liczba_waxup']=$_REQUEST['liczba_waxup'];
+     $_SESSION['form_tab']['szyna_na_prowizorium']=$_REQUEST['szyna_na_prowizorium'];
+     $_SESSION['form_tab']['liczba_szyna_na_prowizorium']=$_REQUEST['liczba_szyna_na_prowizorium'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
  }
 /*
@@ -448,6 +459,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['liczbaaparat_przeciw_chrapaniu']=$_REQUEST['liczbaaparat_przeciw_chrapaniu'];
     $_SESSION['form_tab']['inne']=$_REQUEST['inne'];
     $_SESSION['form_tab']['liczbainne']=$_REQUEST['liczbainne'];
+     $_SESSION['form_tab']['programator_koisa']=$_REQUEST['programator_koisa'];
  }
  elseif($add=="addform_4t_proteza_5.php"){
 

@@ -217,6 +217,16 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="malowanie" value="malowanie" /></td>
        <td> - MALOWANIE</td>
+          <td> <select name="przedzial_malowanie" style="height:40px;width:70px;font-size:20px;">
+                  <option value>  </option>
+                  <option value="1"> 1 </option>
+                  <option value="2"> 2 </option>
+                  <option value="3-5"> 3-5 </option>
+                  <option value="6-8"> 6-8 </option>
+                  <option value="9-14"> 9-14 </option>
+              </select>
+          </td>
+          <td> - ILO¦Æ, </td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="dobor_koloru" value="dobór koloru" /></td>
        <td> - DOBÓR KOLORU</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="poprawka" value="poprawka" /> </td>
@@ -238,6 +248,39 @@ div#newsel select{
    <td><input type="text" name="zakupione_cena" style="font-size: 16px;" value="" size="2"> </td>
   </tr>
 </table>
+
+<hr style="width:100%;"/>
+<table border="0" style="font-size:16px;width:70%;">
+    <tr>
+        <td> <input type="checkbox" style="height:45px;width:45px;" name="klucz_do_implantow" value="klucz do implantów" /></td>
+        <td> - KLUCZ DO IMPLANTÓW</td>
+        <td> <select name="liczba_klucz_do_implantow" style="height:40px;width:70px;font-size:20px;">
+                <option value>  </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+            </select>
+        </td>
+        <td> - ILO¦Æ, </td>
+        <td> <input type="checkbox" style="height:45px;width:45px;" name="lacznik_hybrydowy" value="³±cznik hybrydowy" /></td>
+        <td> - £¡CZNIK HYBRYDOWY</td>
+        <td> <select name="liczba_lacznik_hybrydowy" style="height:40px;width:70px;font-size:20px;">
+                <option value>  </option>
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+            </select>
+        </td>
+        <td> - ILO¦Æ, </td>
+    </tr>
+</table>
+
 
 <hr style="width:100%;"/>
 

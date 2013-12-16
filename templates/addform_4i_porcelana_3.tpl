@@ -72,6 +72,13 @@ div#newsel select{
    <td> - CZAPECZKA CERKON</td>
    <td><input type="checkbox" name="szklane_podparcie" value="szklane podparcie" style="float:right" /></td>
    <td> - SZKLANE PODPARCIE</td>
+      <td> <select name="liczba_szklane_podparcie" style="height:40px;width:60px;font-size:20px;">
+              <option value>  </option>
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option>
+          </select>
+      </td>
+      <td> - ILO¦Æ </td>
   </tr>
 </table>
 
@@ -174,7 +181,16 @@ div#newsel select{
       </tr>
    </table>
 
-<hr style="width:100%;"/>
+    <hr style="width:100%;"/>
+
+    <table border="0" style="font-size:16px;width:70%;">
+        <tr>
+            <td> <input type="checkbox" style="height:45px;width:45px;" name="ponowne_napalenie_porcelany" value="ponowne_napalenie_porcelany" /></td>
+            <td> - PONOWNE NAPALENIE PORCELANY</td>
+        </tr>
+    </table>
+
+    <hr style="width:100%;"/>
 {include file="wybor_zebow.tpl"}
 
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>

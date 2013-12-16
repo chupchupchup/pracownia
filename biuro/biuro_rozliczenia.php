@@ -514,22 +514,34 @@ elseif($_REQUEST['kto']=='zleceniodawca'){
 
          $lekarz=$_REQUEST['zleceniodawca'];
 
-	 //																	rz.zaplacono,rz.datazaplaty,
-         $sql="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.wzk,rz.opiszlecenia from zlecenieinfo as z, rozlicz_zleceniodawca as rz
-         where rz.roz_lek='tak' and rz.idzlecenianr=z.idzlecenianr
-         and rz.idzleceniapoz=z.idzleceniapoz and rz.datarozliczenia='0000-00-00'
-         and ( z.wpis='roz' OR z.wpis='zap') and rz.idzleceniapoz LIKE '/".$lekarz."/%' AND rz.fv_nr='0'
-         ORDER BY rz.idzleceniapoz, rz.idzlecenianr";
+         $mode=$_REQUEST['mode'];
+         if ($mode=='current') {
+             $sql="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.wzk,rz.opiszlecenia from zlecenieinfo as z, rozlicz_zleceniodawca as rz
+                where rz.roz_lek='tak' and rz.idzlecenianr=z.idzlecenianr
+                and rz.idzleceniapoz=z.idzleceniapoz and rz.datarozliczenia='0000-00-00'
+                and ( z.wpis='roz' OR z.wpis='zap') and rz.idzleceniapoz LIKE '/".$lekarz."/%' AND rz.fv_nr='0'
+                ORDER BY rz.idzleceniapoz, rz.idzlecenianr";
+             $sql1="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.zaplacono,rz.wzk from zlecenieinfo as z, rozlicz_zleceniodawca as rz
+                where rz.roz_lek='tak' and rz.idzlecenianr=z.idzlecenianr
+                and rz.idzleceniapoz=z.idzleceniapoz and rz.datarozliczenia='0000-00-00'
+                and ( z.wpis='roz' OR z.wpis='zap') and rz.idzleceniapoz LIKE '/".$lekarz."/%' AND rz.fv_nr='0' ";
+         } else {
+             $sql="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.wzk,rz.opiszlecenia from zlecenieinfo as z
+             LEFT JOIN rozlicz_zleceniodawca as rz ON (rz.idzlecenianr=z.idzlecenianr AND rz.idzleceniapoz=z.idzleceniapoz)
+             where z.idzleceniapoz LIKE '/".$lekarz."/%'
+             ORDER BY rz.idzleceniapoz, rz.idzlecenianr";
+             $sql1="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,NVL(rz.kwota, 0),rz.wzk,nvl(rz.zaplacono) from zlecenieinfo as z
+             LEFT JOIN rozlicz_zleceniodawca as rz ON (rz.idzlecenianr=z.idzlecenianr AND rz.idzleceniapoz=z.idzleceniapoz)
+             where z.idzleceniapoz LIKE '/".$lekarz."/%'
+             ORDER BY rz.idzleceniapoz, rz.idzlecenianr";
+         }
 		 //echo $sql.'<br>';
 
 	  $tablica_wynikow=pobierz_dane($sql);
 	  //tablice dopisanych wierszy
 	  $smarty->assign('tablica_wynikow', $tablica_wynikow);
 
-         $sql1="select DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.zaplacono,rz.wzk from zlecenieinfo as z, rozlicz_zleceniodawca as rz
-         where rz.roz_lek='tak' and rz.idzlecenianr=z.idzlecenianr
-         and rz.idzleceniapoz=z.idzleceniapoz and rz.datarozliczenia='0000-00-00'
-         and ( z.wpis='roz' OR z.wpis='zap') and rz.idzleceniapoz LIKE '/".$lekarz."/%' AND rz.fv_nr='0' ";
+
           $suma_zl=0;
           $suma_zaplacone=0;
 	  $wyn=myquery($sql1);
@@ -631,6 +643,9 @@ $sql="SELECT DISTINCT rz.idzlecenianr,rz.idzleceniapoz,rz.kwota,rz.opiszlecenia 
 
     $smarty->assign('data_sprzedazy', date("Y-m-d"));
     $_SESSION['data_sprzedazy']=date("Y-m-d");
+
+    $smarty->assign('data_wystawienia', date("Y-m-d"));
+    $_SESSION['data_wystawienia']=date("Y-m-d");
 
     //pobranie z tabeli faktury - ostatniego nr faktury z aktualnego miesiaca i roku
     $sql222="SELECT  SUBSTRING( fv_nr, 1, LOCATE('/', fv_nr)-1 )  as max_nr_fv FROM faktury WHERE SUBSTRING(fv_nr, -4)='".date(Y)."' AND SUBSTRING(fv_nr, -7,2)='".date(m)."'";

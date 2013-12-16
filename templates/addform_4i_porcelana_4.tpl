@@ -169,7 +169,6 @@ div#newsel select{
       <tr>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="malowanie" value="malowanie" /></td>
        <td> - MALOWANIE</td>
-       <td>&nbsp;</td>
        <td> <input type="checkbox" style="height:45px;width:45px;" name="dobor_koloru" value="dobór koloru" /></td>
        <td> - DOBÓR KOLORU</td>
        <td>&nbsp;</td>
@@ -178,7 +177,7 @@ div#newsel select{
       </tr>
    </table>
 
-<hr style="width:100%;"/>
+    <hr style="width:100%;"/>
 {include file="wybor_zebow.tpl"}
 
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>
