@@ -2,41 +2,27 @@
 session_start();
 error_reporting(E_ALL ^ E_NOTICE);
 
+require_once('etykieta.php');
+require_once('../inc/common.php');
+
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 
-   $etykieta=$_SESSION['form_tab']['idzlecenianr'].$_SESSION['form_tab']['idzleceniapoz'];
+    $etykieta=$_SESSION['form_tab']['idzlecenianr'].$_SESSION['form_tab']['idzleceniapoz'];
 
-   $kod_kreskowy = $_SESSION['form_tab']['kod_kreskowy'];
-?>
+    $kod_kreskowy = $_SESSION['form_tab']['kod_kreskowy'];
 
-<html>
-<head>
- <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
-</head>
-<title> DRUKOWANIE ETYKIETY </title>
-<body style="margin-top:0px;margin-left:0px;" OnLoad="window.print();window.close();">
+    $pdf = new EtykietaPDF();
+    $pdf->etykieta = $etykieta;
+    $pdf->kategoria = $_SESSION['form_tab']['kategoria'];
+    $pdf->data = $_SESSION['datawpisania'];
+    $pdf->termin = $_SESSION['form_tab']['zwrotzleceniadata'].', '.$_SESSION['form_tab']['zwrotzleceniagodz'];
+    $pdf->barcode = "barcode_img.php?num=".$kod_kreskowy."&type=code128&imgtype=png";
+    $filename = '../inc/fpdf/out/etyk_'.md5(time().rand()).'.pdf';
+    $pdf->draw($filename);
 
-<div onclick="javascript:window.close();">
-
- <b style="font-size:10px;"><cite><?php=$etykieta?></cite></b><br />
- <b style="font-size:10px;"><cite><?php=$_SESSION['form_tab']['kategoria']?></cite></b><br />
- <cite style="font-size:10px;">wprowadzono: <b><?php=$_SESSION['datawpisania']?> </b></cite><br />
- <cite style="font-size:10px;">termin realizacji: <b><?php=$_SESSION['form_tab']['zwrotzleceniadata'].', '.$_SESSION['form_tab']['zwrotzleceniagodz']?> </b></cite><br />
-
-<div style="margin-top:10px;margin-left:-4px;">
- <img src="barcode_img.php?num=<?php echo($kod_kreskowy) ?>&type=code128&imgtype=png"
-   alt="PNG: <?php echo($kod_kreskowy) ?>" title="PNG: <?php echo($kod_kreskowy) ?>" >
-
-</div>
-
-</div>
-
-</body>
-</html>
-
-<?php
-}
-else{
-  header("Location: ./index.php");
+    header('Location: '.$filename);
+    //$kod_kreskowy = $_SESSION['form_tab']['kod_kreskowy'];
+} else {
+    header("Location: ./index.php");
 }
 ?>
