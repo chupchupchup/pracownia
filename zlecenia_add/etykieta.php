@@ -26,7 +26,7 @@ class EtykietaPDF extends FPDF
 	
 	function rysuj_etykiete() {
 		$this->n();
-		$this->Cell(0,$this->height,$this->$etykieta,0,1);
+		$this->Cell(0,$this->height,$this->etykieta,0,1);
         $this->Ln();
 
 		$this->Cell(35, $this->height, $this->kategoria, 0, 0);
@@ -40,7 +40,8 @@ class EtykietaPDF extends FPDF
         $this->Cell(0, $this->height, $this->termin, 0);
         $this->Ln();
 
-		$this->Cell(150, $this->height, $this->Image($this->barcode,0,0), 0, 0);
+        $this->Image($this->barcode, $this->GetX(), $this->GetY(), 0, 0, 'PNG');
+
 		$this->Ln();
 	}
 
