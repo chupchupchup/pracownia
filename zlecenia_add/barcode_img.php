@@ -1,6 +1,6 @@
 <?php
 
-require_once("Image/Barcode.php");
+require_once("../Image/Barcode.php");
 
 $num = isset($_REQUEST['num']) ? $_REQUEST['num'] : '0000000';
 $type = isset($_REQUEST['type']) ? $_REQUEST['type'] : 'int25';
