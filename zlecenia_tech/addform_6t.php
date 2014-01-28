@@ -530,7 +530,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_1"){
 
 //-------------tworzenie etykiety materia��w
 
-material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+material_etykiety($plynproszek.'%', $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 
 //-------------------------------------------
@@ -587,7 +587,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
 
 //-------------tworzenie etykiety materia��w
 
-material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+material_etykiety($plynproszek.'%', $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
  
 //-------------------------------------------
 
@@ -641,7 +641,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_3"){
 
 //-------------tworzenie etykiety materia��w
 
-material_etykiety($plynproszek, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+material_etykiety($plynproszek.'%', $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
  
 //-------------------------------------------
 
@@ -679,7 +679,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
  $liczbaaparat_przeciw_chrapaniu = czysc_zmienne_formularza($_SESSION['form_tab']['liczbaaparat_przeciw_chrapaniu']);
  $inne = czysc_zmienne_formularza($_SESSION['form_tab']['inne']);
  $liczbainne = czysc_zmienne_formularza($_SESSION['form_tab']['liczbainne']);
- $programator_koisa = czysc_zmienne_formularza($_SESSION['form_tab']['programator_koisa']);
+ $deprogramator_koisa = czysc_zmienne_formularza($_SESSION['form_tab']['deprogramator_koisa']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
  //dodatkowe zmienne
@@ -705,7 +705,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
                                          liczbaplyta_podjezykowa='".$liczbaplyta_podjezykowa."', aparat_przeciw_chrapaniu='".$aparat_przeciw_chrapaniu."',
                                          liczbaaparat_przeciw_chrapaniu='".$liczbaaparat_przeciw_chrapaniu."', inne='".$inne."',
                                          liczbainne='".$liczbainne."',
-                                         programator_koisa='".$programator_koisa."'
+                                         deprogramator_koisa='".$deprogramator_koisa."'
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
 

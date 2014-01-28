@@ -73,6 +73,21 @@ add column `proteza na lokatorach` float;
 alter table protetyka.proteza_calkowita_punkty
 add column `proteza na lokatorach` float;
 
+alter table protetyka.porcelana_korony_inne
+add column liczba_waxup int default 1;
+
+alter table protetyka.porcelana_korony_inne
+add column szyna_na_prowizorium varchar(25);
+
+alter table protetyka.proteza_szyny
+add column deprogramator_koisa varchar(20);
+
+alter table protetyka.proteza_szyny_cennik
+add column deprogramator_koisa float;
+
+alter table protetyka.proteza_szyny_punkty
+add column deprogramator_koisa float;
+
 alter table protetyka.faktury
 add column data_wystawienia date;
 

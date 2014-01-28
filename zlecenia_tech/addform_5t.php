@@ -459,7 +459,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['liczbaaparat_przeciw_chrapaniu']=$_REQUEST['liczbaaparat_przeciw_chrapaniu'];
     $_SESSION['form_tab']['inne']=$_REQUEST['inne'];
     $_SESSION['form_tab']['liczbainne']=$_REQUEST['liczbainne'];
-     $_SESSION['form_tab']['programator_koisa']=$_REQUEST['programator_koisa'];
+     $_SESSION['form_tab']['deprogramator_koisa']=$_REQUEST['deprogramator_koisa'];
  }
  elseif($add=="addform_4t_proteza_5.php"){
 

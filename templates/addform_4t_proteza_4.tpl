@@ -238,8 +238,8 @@ div#newsel select{
    <td> - ILO¦Æ INNE</td>
   </tr>
     <tr id="material">
-        <td><input type="checkbox" name="programator_koisa" value="programator koisa" {if $programator_koisa== "programator koisa"}checked{/if}/></td>
-        <td> - PROGRAMATOR KOISA</td>
+        <td><input type="checkbox" name="deprogramator_koisa" value="deprogramator koisa" {if $deprogramator_koisa== "deprogramator koisa"}checked{/if}/></td>
+        <td> - DEPROGRAMATOR KOISA</td>
     </tr>
 </table>
 

@@ -75,7 +75,7 @@ class Image_Barcode extends PEAR
         }
 
         if ( in_array($type . ".php", $supportedtypes) ) {
-            include_once("Image/Barcode/${type}.php");
+            include_once("../Image/Barcode/${type}.php");
         } else {
             return PEAR::raiseError("$type barcode is not supported");
         }

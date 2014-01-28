@@ -814,7 +814,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
  $liczbaaparat_przeciw_chrapaniu = czysc_zmienne_formularza($_SESSION['form_tab']['liczbaaparat_przeciw_chrapaniu']);
  $inne = czysc_zmienne_formularza($_SESSION['form_tab']['inne']);
  $liczbainne = czysc_zmienne_formularza($_SESSION['form_tab']['liczbainne']);
- $programator_koisa = czysc_zmienne_formularza($_SESSION['form_tab']['programator_koisa']);
+ $deprogramator_koisa = czysc_zmienne_formularza($_SESSION['form_tab']['deprogramator_koisa']);
  //$zwrotzlecenia = czysc_zmienne_formularza($_SESSION['form_tab']['zwrotzlecenia']);
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
@@ -851,7 +851,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
                           aparat_ortodontyczny, liczbaaparat_ortodontyczny, szyna_korony_tymczasowe, liczbaszyna_korony_tymczasowe,
                           szyna_zabiegi_implantologiczne, liczbaszyna_zabiegi_implantologiczne,
                           plyta_podjezykowa, liczbaplyta_podjezykowa, aparat_przeciw_chrapaniu, liczbaaparat_przeciw_chrapaniu,
-                          inne, liczbainne, programator_koisa  )
+                          inne, liczbainne, deprogramator_koisa  )
        VALUES (
 	      '".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
               '".$wybielajaca."','".$liczbawybielajacych."','".$relaksacyjnatm."','".$liczbarelaksacyjnatm."',
@@ -862,7 +862,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_4"){
               '".$szyna_korony_tymczasowe."','".$liczbaszyna_korony_tymczasowe."',
               '".$szyna_zabiegi_implantologiczne."','".$liczbaszyna_zabiegi_implantologiczne."',
               '".$plyta_podjezykowa."','".$liczbaplyta_podjezykowa."','".$aparat_przeciw_chrapaniu."','".$liczbaaparat_przeciw_chrapaniu."',
-              '".$inne."','".$liczbainne."','".$programator_koisa."'
+              '".$inne."','".$liczbainne."','".$deprogramator_koisa."'
 	      )";
 	
  myquery($sql);
