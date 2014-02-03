@@ -1,9 +1,9 @@
 <?php
 
-require_once ('../inc/fpdf/fpdf.php');
+require_once ('../inc/fpdf/pdf_ap.php');
 define ( 'FPDF_FONTPATH', '../inc/fpdf/font/' );
 
-class DeklaracjaZgodnosciPDF extends FPDF
+class DeklaracjaZgodnosciPDF extends PDF_AutoPrint
 {
 
 	public $klient, $pacjent, $nr_zlecenia, $opis_zlecenia,
@@ -128,6 +128,7 @@ class DeklaracjaZgodnosciPDF extends FPDF
 		
 		$this->SetMargins(10, 10, 10);
 		$this->rysuj_deklaracje();
+        $this->AutoPrint(true);
 		$this->Output($filename);
 	}
 
