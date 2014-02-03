@@ -7,9 +7,9 @@
   <td><input type="radio" name="plynproszek" value="Futura Press LT" {if $plynproszek == "Futura Press LT"}checked{/if} /></td>
   <td> - Futura Press LT (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br> - Futura Press LT (proszek)</td>
-  <td><input type="radio" name="plynproszek" value="Triplex Cold" {if $plynproszek == "Triplex Cold"}checked{/if} /></td>
-  <td> - Triplex Cold (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br> - Triplex Cold (proszek)</td>
+  <td><input type="radio" name="plynproszek" value="Triplex Cold" {if $plynproszek == "Triplex Hot"}checked{/if} /></td>
+  <td> - Triplex Hot (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br> - Triplex Hot (proszek)</td>
   </tr>
 
 </table>

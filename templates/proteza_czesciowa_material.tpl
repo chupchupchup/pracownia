@@ -10,9 +10,9 @@
   <td><input type="radio" name="plynproszek" value="Castavaria" {if $plynproszek == "Castavaria"}checked{/if} /></td>
   <td> - Castavaria (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br> - Castavaria (proszek)</td>
-  <td><input type="radio" name="plynproszek" value="Probase Cold" {if $plynproszek == "Probase Cold"}checked{/if} /></td>
-  <td> - Probase Cold (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br> - Probase Cold (proszek)</td>
+  <td><input type="radio" name="plynproszek" value="Probase Hot" {if $plynproszek == "Probase Hot"}checked{/if} /></td>
+  <td> - Probase Hot (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br> - Probase Hot (proszek)</td>
   </tr>
 </table>
 </div>
