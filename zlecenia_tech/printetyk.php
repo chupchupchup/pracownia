@@ -11,12 +11,18 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 
     $kod_kreskowy = $_SESSION['form_tab']['kod_kreskowy'];
 
-    $pdf = new EtykietaPDF();
+    $pdf = new EtykietaPDF('P','mm',array(75,50));
     $pdf->etykieta = $etykieta;
     $pdf->kategoria = $_SESSION['form_tab']['kategoria'];
     $pdf->data = $_SESSION['datawpisania'];
     $pdf->termin = $_SESSION['form_tab']['zwrotzleceniadata'].', '.$_SESSION['form_tab']['zwrotzleceniagodz'];
-    $pdf->barcode = "barcode_img.php?num=".$kod_kreskowy."&type=code128&imgtype=png";
+
+    $url  = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
+    $url .= $_SERVER['SERVER_NAME'];
+    $url .= htmlspecialchars($_SERVER['REQUEST_URI']);
+    $baseurl = dirname($url);
+
+    $pdf->barcode = $baseurl."/barcode_img.php?num=".$kod_kreskowy."&type=code128&imgtype=png";
     $filename = '../inc/fpdf/out/etyk_'.md5(time().rand()).'.pdf';
     $pdf->draw($filename);
 

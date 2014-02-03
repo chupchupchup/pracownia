@@ -25,6 +25,9 @@ class EtykietaPDF extends PDF_AutoPrint
 	}
 	
 	function rysuj_etykiete() {
+        $this->AddPage();
+        $this->SetXY(0,0);
+
 		$this->n();
 		$this->Cell(0,$this->height,$this->etykieta,0,1);
         $this->Ln();
@@ -40,7 +43,8 @@ class EtykietaPDF extends PDF_AutoPrint
         $this->Cell(0, $this->height, $this->termin, 0);
         $this->Ln();
 
-		$this->Cell(150, $this->height, $this->Image($this->barcode,0,0), 0, 0);
+        $this->Image($this->barcode, $this->GetX(), $this->GetY(), 0, 0, 'PNG');
+
 		$this->Ln();
 	}
 
