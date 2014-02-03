@@ -223,7 +223,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['przedzial_malowanie']=$_REQUEST['przedzial_malowanie'];
     $_SESSION['form_tab']['dobor_koloru']=$_REQUEST['dobor_koloru'];
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
-    $_SESSION['form_tab']['ponowne_napawanie_porcelany']=$_REQUEST['ponowne_napawanie_porcelany'];
+    $_SESSION['form_tab']['ponowne_napalenie_porcelany']=$_REQUEST['ponowne_napalenie_porcelany'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
          dentyna('dentyna_na_cerkon');
          dentyna('dentyna_na_empress');

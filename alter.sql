@@ -32,13 +32,13 @@ alter table protetyka.porcelana_korona_pelnoceramiczna
 add column liczba_szklane_podparcie int default 1 after szklane_podparcie;
 
 alter table protetyka.porcelana_korona_pelnoceramiczna
-add column ponowne_napawanie_porcelany varchar(30);
+add column ponowne_napalenie_porcelany varchar(30);
 
 alter table protetyka.porcelana_korona_pelnoceramiczna_cennik
-add column ponowne_napawanie_porcelany float;
+add column ponowne_napalenie_porcelany float;
 
 alter table protetyka.porcelana_korona_pelnoceramiczna_punkty
-add column ponowne_napawanie_porcelany float;
+add column ponowne_napalenie_porcelany float;
 
 alter table protetyka.porcelana_implanty
 add column przedzial_malowanie varchar(10) after malowanie;

@@ -203,7 +203,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  $dobor_koloru = czysc_zmienne_formularza($_SESSION['form_tab']['dobor_koloru']);
  $poprawka = czysc_zmienne_formularza($_SESSION['form_tab']['poprawka']);
 
- $ponowne_napawanie_porcelany = czysc_zmienne_formularza($_SESSION['form_tab']['ponowne_napawanie_porcelany']);
+ $ponowne_napalenie_porcelany = czysc_zmienne_formularza($_SESSION['form_tab']['ponowne_napalenie_porcelany']);
 
  $dentyna_na_cerkon = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_na_cerkon']);
  $dentyna_na_empress = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_na_empress']);
@@ -232,7 +232,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
                                          dentyna_na_cerkon='".$dentyna_na_cerkon."',
                                          dentyna_na_empress='".$dentyna_na_empress."',
                                          zeby='".$zeby."',
-                                         ponowne_napawanie_porcelany='".$ponowne_napawanie_porcelany."'
+                                         ponowne_napalenie_porcelany='".$ponowne_napalenie_porcelany."'
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
                                      idzleceniapoz='".$idzleceniapoz."' AND datawpisania='".$datawpisania."' ";
 
