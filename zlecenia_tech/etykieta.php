@@ -1,9 +1,9 @@
 <?php
 
-require_once('../inc/fpdf/fpdf.php');
+require_once('../inc/fpdf/pdf_ap.php');
 define ( 'FPDF_FONTPATH', '../inc/fpdf/font/' );
 
-class EtykietaPDF extends FPDF
+class EtykietaPDF extends PDF_AutoPrint
 {
 
 	public $etykieta, $kategoria, $data, $termin, $barcode;
@@ -59,6 +59,7 @@ class EtykietaPDF extends FPDF
 		
 		$this->SetMargins(0, 0, 0);
 		$this->rysuj_etykiete();
+        $this->AutoPrint(true);
 		$this->Output($filename);
 	}
 
