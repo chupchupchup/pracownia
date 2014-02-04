@@ -105,10 +105,10 @@ if( $_POST['nazwa']!='' ){
    while( $arr = mysql_fetch_assoc($wynik) ){
         ?>
          <tr class="inputfr">
-           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?php=$arr['nazwa']?>','<?php=$arr['producent']?>');">
-           <td><?php=$i;?>. </td>
+           <a href="javascript: void(0);" style="text-decoration:none;" onClick="sendvalue(targetfield1,targetfield2,'<?php echo $arr['nazwa']?>','<?php echo $arr['producent']?>');">
+           <td><?php echo $i;?>. </td>
            <td style="width:200px; height:15px; font-size: 12px;text-align:center;color:#000099;">
-              <?php=$arr['nazwa']?> | <?php=$arr['producent']?>
+              <?php echo $arr['nazwa']?> | <?php echo $arr['producent']?>
            </td>
            </a>
          </tr>

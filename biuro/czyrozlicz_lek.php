@@ -93,7 +93,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
      <tr><td><br></td></tr>
         <tr>
           <td>
-          <input type="text" style="width:100px;" name="dataarchiw" value="<?php=$dataarchiw;?>" />
+          <input type="text" style="width:100px;" name="dataarchiw" value="<?php echo $dataarchiw;?>" />
           </td>
           <td><strong>&nbsp;- WPISZ DATÊ ARCHIWUM DO KTÓREGO CHCESZ PRZENIE¦Æ ZLECENIE</strong>
           </td>

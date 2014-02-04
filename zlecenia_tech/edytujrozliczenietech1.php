@@ -68,13 +68,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table class="tab">
         <tr bgcolor="#D6D9FE">
           <td>
-            <select name='technik<?php=$j?>' style="float:right;font-size:14px;font-weight:800;">
+            <select name='technik<?php echo $j?>' style="float:right;font-size:14px;font-weight:800;">
 <?php              for($i=0;$i<sizeof($technicy);$i++) {
                   if($technicy[$i]==$technik_prowadzacy){
-?>                    <option selected><?php=$technicy[$i]?></option>
+?>                    <option selected><?php echo $technicy[$i]?></option>
 <?php                }
                   else {
-?>                  <option><?php=$technicy[$i]?></option>
+?>                  <option><?php echo $technicy[$i]?></option>
 <?php                }
                 }
 ?>          </select>
@@ -83,7 +83,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
           </td>
         </tr>
      <tr bgcolor="#D6D9FE">
-       <td><input type="text" name="punkty<?php=$j?>" value="" style="float:right;width:80px;font-size:14px;font-weight:800;"></td>
+       <td><input type="text" name="punkty<?php echo $j?>" value="" style="float:right;width:80px;font-size:14px;font-weight:800;"></td>
        <td>&nbsp; - PUNKTY</td>
      </tr>
      <tr><td><br></td></tr>

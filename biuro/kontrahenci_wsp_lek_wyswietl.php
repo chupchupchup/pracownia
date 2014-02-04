@@ -15,8 +15,8 @@ $tablica_wynikow_wsp_lek=$_SESSION['tablica_wynikow_wsp_lek'];
 foreach($tablica_wynikow_wsp_lek as $value){
 ?>
     <tr onmouseover="this.style.background='#FFE3C7'" onmouseout="this.style.background='#ECECEC'" style="background:#ECECEC; margin-left:10px;margin-top:0px;margin-bottom:0px;height:22px; width:548px;">
-      <a style="color:white;" href="../biuro.php?strona=glowna_kontrahenci&wpis=edycja_wsp_lek&idzleceniodawcy=<?php=$value[1]?>&id_wsp_lek=<?php=$value[0]?>&amp" target="_parent">
-        <td nowrap style="float:left;text-align:left;font-size:12px; width:400px;">Wspolpracujacy lekarz:<b> <?php= $value[2] ?> </b>&nbsp;</td>
+      <a style="color:white;" href="../biuro.php?strona=glowna_kontrahenci&wpis=edycja_wsp_lek&idzleceniodawcy=<?php echo $value[1]?>&id_wsp_lek=<?php echo $value[0]?>&amp" target="_parent">
+        <td nowrap style="float:left;text-align:left;font-size:12px; width:400px;">Wspolpracujacy lekarz:<b> <?php echo  $value[2] ?> </b>&nbsp;</td>
       </a>
     </tr>
 <?php

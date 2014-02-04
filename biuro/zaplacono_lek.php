@@ -90,7 +90,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
    <table width="100%" border="0" CELLPADDING="0" CELLSPACING="1">
         <tr>
           <td width="150px;">
-            <input name='zaplacono' size='10' maxlength='50' value='<?php=$zaplacono?>'/> Z£
+            <input name='zaplacono' size='10' maxlength='50' value='<?php echo $zaplacono?>'/> Z£
           </td>
           <td><strong>&nbsp;- WP£ATA LEKARZA</strong>
           </td>
@@ -98,7 +98,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
      <tr><td><br></td></tr>
         <tr>
           <td width="150px;">
-            <input name='datazaplaty' size='10' maxlength='50' value='<?php=$datazaplaty?>'/>
+            <input name='datazaplaty' size='10' maxlength='50' value='<?php echo $datazaplaty?>'/>
           </td>
           <td><strong>&nbsp;- DATA WP£ATY</strong>
           </td>

@@ -147,7 +147,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
           <td>
             <select name='technik' style="float:right;font-size:14px;font-weight:800;">
 <?php              for($i=0;$i<sizeof($technicy);$i++) {
-?>                  <option><?php=$technicy[$i]?></option>
+?>                  <option><?php echo $technicy[$i]?></option>
 <?php              }
 ?>          </select>
           </td>

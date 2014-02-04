@@ -58,21 +58,21 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <table border="1px" width="800px" height="200px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:center;width:170px;height:30px;">WZ (wydanie zewnêtrzne):&nbsp;</td>
-    <td style="font-size:17px;text-align:left;width:170px;height:30px;">&nbsp;&nbsp;<b><?php=$wzk;?></b></td>
+    <td style="font-size:17px;text-align:left;width:170px;height:30px;">&nbsp;&nbsp;<b><?php echo $wzk;?></b></td>
     <td>&nbsp;</td>
     <td style="text-align:right;width:80px;height:30px;">GDAÑSK&nbsp;</td>
-    <td style="text-align:center;width:100px;height:30px;">&nbsp;<?php=$datawystawienia;?></td>
+    <td style="text-align:center;width:100px;height:30px;">&nbsp;<?php echo $datawystawienia;?></td>
 </tr>
 <tr>
     <td style="text-align:left;width:130px;height:30px;">&nbsp;&nbsp;ZLECENIE NR:</td>
-    <td style="font-size:18px;text-align:left;width:300px;height:30px;">&nbsp;&nbsp;<b><?php=$zlecenie;?></b></td>
+    <td style="font-size:18px;text-align:left;width:300px;height:30px;">&nbsp;&nbsp;<b><?php echo $zlecenie;?></b></td>
     <td>&nbsp;</td>
     <td style="text-align:left;width:80px;height:30px;">&nbsp;Z DNIA: </td>
-    <td style="font-size:16px;text-align:left;width:130px;height:30px;">&nbsp;&nbsp;<b><?php=$datazwrotu;?></b></td>
+    <td style="font-size:16px;text-align:left;width:130px;height:30px;">&nbsp;&nbsp;<b><?php echo $datazwrotu;?></b></td>
 </tr>
 <tr>
     <td style="text-align:left;width:170px;height:20px;">&nbsp;&nbsp;PACJENT:</td>
-    <td style="font-size:18px;text-align:left;height:20px;">&nbsp;&nbsp;<b><?php=ucwords($pacjent);?></b></td>
+    <td style="font-size:18px;text-align:left;height:20px;">&nbsp;&nbsp;<b><?php echo ucwords($pacjent);?></b></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -81,13 +81,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <table border="0px" width="800px" height="100px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:left;width:170px;">&nbsp;&nbsp;OPIS ZLECENIA:</td>
-    <td style="font-size:18px;text-align:left;">&nbsp;&nbsp;<b><?php=$opiszlecenia;?></b></td>
+    <td style="font-size:18px;text-align:left;">&nbsp;&nbsp;<b><?php echo $opiszlecenia;?></b></td>
 </tr>
 </table>
 <table border="1px" width="800px" height="35px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:left;width:170px;height:25px;">&nbsp;&nbsp;DO ZAP£ATY:</td>
-    <td style="font-size:18px;text-align:left;width:170px;height:25px;">&nbsp;&nbsp;<b><?php=$kwota;?>z³</b></td>
+    <td style="font-size:18px;text-align:left;width:170px;height:25px;">&nbsp;&nbsp;<b><?php echo $kwota;?>z³</b></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -101,21 +101,21 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <table border="1px" width="800px" height="200px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:center;width:170px;height:30px;">WZ (wydanie zewnêtrzne):&nbsp;</td>
-    <td style="font-size:17px;text-align:left;width:170px;height:30px;">&nbsp;&nbsp;<b><?php=$wzk;?></b></td>
+    <td style="font-size:17px;text-align:left;width:170px;height:30px;">&nbsp;&nbsp;<b><?php echo $wzk;?></b></td>
     <td>&nbsp;</td>
     <td style="text-align:right;width:80px;height:30px;">GDAÑSK&nbsp;</td>
-    <td style="text-align:center;width:100px;height:30px;">&nbsp;<?php=$datawystawienia;?></td>
+    <td style="text-align:center;width:100px;height:30px;">&nbsp;<?php echo $datawystawienia;?></td>
 </tr>
 <tr>
     <td style="text-align:left;width:130px;height:30px;">&nbsp;&nbsp;ZLECENIE NR:</td>
-    <td style="font-size:18px;text-align:left;width:300px;height:30px;">&nbsp;&nbsp;<b><?php=$zlecenie;?></b></td>
+    <td style="font-size:18px;text-align:left;width:300px;height:30px;">&nbsp;&nbsp;<b><?php echo $zlecenie;?></b></td>
     <td>&nbsp;</td>
     <td style="text-align:left;width:80px;height:30px;">&nbsp;Z DNIA: </td>
-    <td style="font-size:16px;text-align:left;width:130px;height:30px;">&nbsp;&nbsp;<b><?php=$datazwrotu;?></b></td>
+    <td style="font-size:16px;text-align:left;width:130px;height:30px;">&nbsp;&nbsp;<b><?php echo $datazwrotu;?></b></td>
 </tr>
 <tr>
     <td style="text-align:left;width:170px;height:20px;">&nbsp;&nbsp;PACJENT:</td>
-    <td style="font-size:18px;text-align:left;height:20px;">&nbsp;&nbsp;<b><?php=ucwords($pacjent);?></b></td>
+    <td style="font-size:18px;text-align:left;height:20px;">&nbsp;&nbsp;<b><?php echo ucwords($pacjent);?></b></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -124,13 +124,13 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <table border="0px" width="800px" height="100px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:left;width:170px;">&nbsp;&nbsp;OPIS ZLECENIA:</td>
-    <td style="font-size:18px;text-align:left;">&nbsp;&nbsp;<b><?php=$opiszlecenia;?></b></td>
+    <td style="font-size:18px;text-align:left;">&nbsp;&nbsp;<b><?php echo $opiszlecenia;?></b></td>
 </tr>
 </table>
 <table border="1px" width="800px" height="35px" align="CENTER" valign="MIDDLE" cellspacing="0" CELLPADDING="0" frame="hsides" rules="rows">
 <tr>
     <td style="text-align:left;width:170px;height:25px;">&nbsp;&nbsp;DO ZAP£ATY:</td>
-    <td style="font-size:18px;text-align:left;width:170px;height:25px;">&nbsp;&nbsp;<b><?php=$kwota;?>z³</b></td>
+    <td style="font-size:18px;text-align:left;width:170px;height:25px;">&nbsp;&nbsp;<b><?php echo $kwota;?>z³</b></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>

@@ -17,7 +17,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 <body style="margin-top:0px;margin-left:0px;" OnLoad="window.print();window.close();">
 
 <div onclick="javascript:window.close();">
-  <b style="font-size:12px;"><cite><?php=$etykieta?></cite></b><br /><hr />
+  <b style="font-size:12px;"><cite><?php echo $etykieta?></cite></b><br /><hr />
   <b style="font-size:12px;"><cite>U¯YTY MATERIA£:</cite></b><br />
   <b style="font-size:12px;"><cite><?php
 //    foreach($_SESSION['etykieta_materialu_all'] as $klucz => $wartosc){

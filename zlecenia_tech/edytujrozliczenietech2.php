@@ -67,7 +67,7 @@ if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 		 else{
 		   $punkty_ok='nie';
 ?>		   <td style="font-size:14px;font-weight:800; width:100%; ">	
-		     <a href="edytujrozliczenietech.php?id_zlec=<?php= $id_zlec;?>&nr_zlec=<?php= $nr_zlec;?>&punkty=<?php= $max_punkty;?>&amp" target="_self" style="text-decoration:none; color:#FF0000; width:100%; "> NIEPRAWID£OWO ROZDZIELONA LICZBA PUNKTÓW <br> >>> powtórz wprowadzanie <<< </a>
+		     <a href="edytujrozliczenietech.php?id_zlec=<?php echo  $id_zlec;?>&nr_zlec=<?php echo  $nr_zlec;?>&punkty=<?php echo  $max_punkty;?>&amp" target="_self" style="text-decoration:none; color:#FF0000; width:100%; "> NIEPRAWID£OWO ROZDZIELONA LICZBA PUNKTÓW <br> >>> powtórz wprowadzanie <<< </a>
 		   </td></tr><tr bgcolor="#D6D9FE" style="width:90%">
 <?php
 		 }

@@ -142,11 +142,11 @@ ORDER by f.fv_nr";
 </tr>
 <tr>
     <td>SUMA DO ZAP£ATY: </td>
-    <td>&nbsp;&nbsp;<b><?php=$_REQUEST['suma'];?> z³</b></td>
+    <td>&nbsp;&nbsp;<b><?php echo $_REQUEST['suma'];?> z³</b></td>
 </tr>
 <tr>
     <td>ZAP£ACONO: </td>
-    <td>&nbsp;&nbsp;<b><?php=$_REQUEST['zaplacone'];?> z³</b></td>
+    <td>&nbsp;&nbsp;<b><?php echo $_REQUEST['zaplacone'];?> z³</b></td>
 </tr>
 </table>
  -->
