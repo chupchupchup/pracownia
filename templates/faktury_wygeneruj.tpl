@@ -80,6 +80,7 @@
     <td style="font-size:13px;">&nbsp;&nbsp;{$kontrahent_nip}</td>
 </tr>
 </table>
+{literal}
 <script src="javascript">
     function invoice_payment_change(el) {
         tgt = document.getElementById('termin_zaplaty');
@@ -103,6 +104,7 @@
         }
     }
 </script>
+{/literal}
 <table cellspacing="0" cellpadding="0" border="0" frame="void" style="width:700px;background-color: #ffffff;margin-left:10px;margin-top:20px;">
 <tr>
     <td style="font-weight:bold;font-size:16px;width:120px;text-align:right;">Sposób zap³aty:</td>
