@@ -274,14 +274,14 @@ function c_implanty($tablica_cen,$tablica_zlecenia) {
       $c_pom=$c_pom+$tablica_cen['przês³o '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_przeslo'];
       //echo $c_pom;
     }
+    elseif($tablica_zlecenia[$klucz]=='klucz do implantów'){
+        $c_pom=$c_pom+$tablica_cen['klucz_do_implantow']*$tablica_zlecenia['liczba_klucz_do_implantow'];
+    }
+    elseif($tablica_zlecenia[$klucz]=='³±cznik hybrydowy'){
+        $c_pom=$c_pom+$tablica_cen['lacznik_hybrydowy']*$tablica_zlecenia['liczba_lacznik_hybrydowy'];
+    }
     elseif($klucz=='przedzial_malowanie'){
         $c_pom=$c_pom+$tablica_cen['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
-    } elseif ($klucz=='klucz_do_implantow' || $klucz=='lacznik_hybrydowy') {
-        $ile=$tablica_zlecenia['liczba_'.$klucz];
-        if (!$ile) {
-            $ile = 1;
-        }
-        $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]]*$ile;
     }
 
 //  echo $c_pom.'-c_pom<br>';
