@@ -6,7 +6,7 @@ require_once('./inc/common.php');
 
 if($_SESSION['autoryzacjapracowni']=='razdwatrzybabajagapatrzy'){
 //------------------------------------------------------------------------------------------------------------------
-//funkcja zapisuj±ca które zêby zosta³y wybrane
+//funkcja zapisujï¿½ca ktï¿½re zï¿½by zostaï¿½y wybrane
 function zab () {
   $zab="";
   for ($i = 1; $i <= 8; $i++) 
@@ -226,7 +226,7 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['ponowne_napalenie_porcelany']=$_REQUEST['ponowne_napalenie_porcelany'];
 	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
          dentyna('dentyna_na_cerkon');
-         dentyna('dentyna_na_empress');
+         dentyna('dentyna_na_emax');
  }
  elseif($add=="addform_4t_porcelana_4.php"){
 
@@ -285,11 +285,11 @@ function dentyna ($rodzaj_dentyny) {
     $_SESSION['form_tab']['poprawka']=$_REQUEST['poprawka'];
     $_SESSION['form_tab']['elementy']=$_REQUEST['elementy'];
     $_SESSION['form_tab']['zakupione_cena']=$_REQUEST['zakupione_cena'];
-     $_SESSION['form_tab']['klucz_do_implantow']=$_REQUEST['klucz_do_implantow'];
-     $_SESSION['form_tab']['liczba_klucz_do_implantow']=$_REQUEST['liczba_klucz_do_implantow'];
-     $_SESSION['form_tab']['lacznik_hybrydowy']=$_REQUEST['lacznik_hybrydowy'];
-     $_SESSION['form_tab']['liczba_lacznik_hybrydowy']=$_REQUEST['liczba_lacznik_hybrydowy'];
-	 zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
+    $_SESSION['form_tab']['klucz_do_implantow']=$_REQUEST['klucz_do_implantow'];
+    $_SESSION['form_tab']['liczba_klucz_do_implantow']=$_REQUEST['liczba_klucz_do_implantow'];
+    $_SESSION['form_tab']['lacznik_hybrydowy']=$_REQUEST['lacznik_hybrydowy'];
+    $_SESSION['form_tab']['liczba_lacznik_hybrydowy']=$_REQUEST['liczba_lacznik_hybrydowy'];
+	zab();//funkcja zab() zapisuje do zmiennej sesyjnej wybrane zeby
          dentyna('dentyna_na_cerkon');
          dentyna('dentyna_na_metal');
  }

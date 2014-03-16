@@ -64,8 +64,8 @@ div#newsel select{
 <br /><br />
 <table cellspacing="0" cellpadding="0" border="0" style="width:80%;">
   <tr id="material">
-   <td><input type="radio" name="material" value="empress"  style="float:right"/></td>
-   <td> - EMPRESS</td>
+   <td><input type="radio" name="material" value="emax"  style="float:right"/></td>
+   <td> - EMAX</td>
    <td><input type="radio" name="material" value="cerkon"  style="float:right"/></td>
    <td> - CERKON</td>
    <td><input type="checkbox" name="czapeczka_cerkon" value="czapeczka cerkon"  style="float:right"/></td>

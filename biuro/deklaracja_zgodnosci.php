@@ -71,15 +71,19 @@ class DeklaracjaZgodnosciPDF extends PDF_AutoPrint
 		$this->b();
 		$this->Cell(150, $this->height, 'Producent', 0, 0, 'C');
 		$this->Cell(25, $this->height, 'Nr seryjny', 0, 1, 'C');
-		$this->n();		
-		foreach ($this->extra as $e) {
-			$this->Cell(150, $this->height, $e['nazwa'], 0, 0);
-			$this->Cell(25, $this->height, $e['nr_seryjny'], 0, 1);
-		};
-		foreach ($this->etykieta as $e) {
-			$this->Cell(150, $this->height, $e['nazwa'], 0, 0);
-			$this->Cell(25, $this->height, $e['nr_seryjny'], 0, 1);
-		};
+		$this->n();
+        if (is_array($this->extra)){
+            foreach ($this->extra as $e) {
+                $this->Cell(150, $this->height, $e['nazwa'], 0, 0);
+                $this->Cell(25, $this->height, $e['nr_seryjny'], 0, 1);
+            };
+        }
+        if (is_array($this->etykieta)){
+    		foreach ($this->etykieta as $e) {
+	    		$this->Cell(150, $this->height, $e['nazwa'], 0, 0);
+		    	$this->Cell(25, $this->height, $e['nr_seryjny'], 0, 1);
+		    };
+        }
 		$this->Ln();
 		$this->Ln();
 		

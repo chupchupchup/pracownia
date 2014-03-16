@@ -188,6 +188,12 @@ function material_dentyna ($rodzaj_dentyna, $kategoria, $idzlecenianr, $idzlecen
 		material_etykiety('Porcelana Dentyna Na Metal '.$wartosc, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
     }
   }
+  elseif($rodzaj_dentyna=='dentyna_na_emax'){
+      $dent='';
+      foreach($dentyna as $klucz => $wartosc){
+          material_etykiety('Porcelana Dentyna Na EMAX '.$wartosc, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+      }
+  }
 
 }
 

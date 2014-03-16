@@ -10,7 +10,7 @@ class EtykietaPDF extends PDF_AutoPrint
 
     private $family = 'Times';
     private $height = 5;
-    private $font_size = 12;
+    private $font_size = 14;
 
     function n() {
         $this->SetFont($this->family, '', $this->font_size);
@@ -35,17 +35,15 @@ class EtykietaPDF extends PDF_AutoPrint
         $this->Cell(35, $this->height, $this->kategoria, 0, 0);
         $this->Ln();
 
-        $this->Cell(10, $this->height, 'wprowadzono: ', 0, 0);
+        $this->Cell(35, $this->height, 'wprowadzono: ', 0, 0);
         $this->Cell(0, $this->height, $this->data, 0);
         $this->Ln();
 
-        $this->Cell(25, $this->height, 'termin realizacji: ', 0, 0);
+        $this->Cell(35, $this->height, 'termin realizacji: ', 0, 0);
         $this->Cell(0, $this->height, $this->termin, 0);
         $this->Ln();
 
         $this->Image($this->barcode, $this->GetX(), $this->GetY(), 0, 0, 'PNG');
-
-        $this->Ln();
     }
 
     function draw($filename)
@@ -53,7 +51,7 @@ class EtykietaPDF extends PDF_AutoPrint
         global $registry;
 
         $this->Open();
-        $this->author = "Us³ugi Protetyczne Andryskowski Jerzy";
+        $this->author = "Usï¿½ugi Protetyczne Andryskowski Jerzy";
 
         $this->AddFont('Georgia', '', 'georgia.php');
         $this->AddFont('Times', '', 'times.php');

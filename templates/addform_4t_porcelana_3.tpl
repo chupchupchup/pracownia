@@ -64,8 +64,8 @@ div#newsel select{
 <br /><br />
 <table cellspacing="0" cellpadding="0" border="0" style="width:80%;">
   <tr id="material">
-   <td><input type="radio" name="material" value="empress" style="float:right" {if $material== "empress"}checked{/if}/></td>
-   <td> - EMPRESS</td>
+   <td><input type="radio" name="material" value="emax" style="float:right" {if $material== "emax"}checked{/if}/></td>
+   <td> - EMAX</td>
    <td><input type="radio" name="material" value="cerkon" style="float:right" {if $material== "cerkon"}checked{/if}/></td>
    <td> - CERKON</td>
    <td><input type="checkbox" name="czapeczka_cerkon" value="czapeczka cerkon" style="float:right" {if $czapeczka_cerkon == "czapeczka cerkon"}checked{/if}/></td>
@@ -195,7 +195,7 @@ div#newsel select{
 
 {include file="porcelana_na_cerkon_dentyna.tpl"}
 
-{include file="porcelana_na_empress_dentyna.tpl"}
+{include file="porcelana_na_emax_dentyna.tpl"}
 
   <button class="b" style="background-color:#f1baba;margin-left:-110px;margin-top:-80px;" type="submit" name="dalej">DALEJ</button>
   <input type="hidden" name="add" value="addform_4t_porcelana_3.php">

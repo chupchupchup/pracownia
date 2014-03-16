@@ -215,7 +215,7 @@ if(isset($_REQUEST['cofka']) ){
   }
   elseif($_SESSION['form_tab']['kategoria_wybor']=='porcelana_korona_pelnoceramiczna'){
     dentyna('dentyna_na_cerkon');
-    dentyna('dentyna_na_empress');
+    dentyna('dentyna_na_emax');
     $smarty->display('addform_4t_porcelana_3.tpl');
   }
   elseif($_SESSION['form_tab']['kategoria_wybor']=='porcelana_inlay_onlay_licowka'){

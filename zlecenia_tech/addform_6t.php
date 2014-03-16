@@ -57,7 +57,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $idusera = czysc_zmienne_formularza($_SESSION['idusera']);
 
  //dodatkowe zmienne
- $kategoria = "Porcelana Wkï¿½ady K-K";
+ $kategoria = "Porcelana Wk³ady K-K";
 
  //update zlecenia po zakonczeniu
  $sql="UPDATE porcelana_wkladykk SET material='".$material."', rodzajwkladu='".$rodzajwkladu."',
@@ -206,11 +206,11 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
  $ponowne_napalenie_porcelany = czysc_zmienne_formularza($_SESSION['form_tab']['ponowne_napalenie_porcelany']);
 
  $dentyna_na_cerkon = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_na_cerkon']);
- $dentyna_na_empress = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_na_empress']);
+ $dentyna_na_emax = czysc_zmienne_formularza($_SESSION['form_tab']['dentyna_na_emax']);
 
  //dodatkowe zmienne
 // $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Korona Peï¿½noceramiczna";
+ $kategoria = "Porcelana Korona Pe³noceramiczna";
 
  //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
  //latwiej je byï¿½o wyswietlic w podsumowaniu
@@ -230,7 +230,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
                                          malowanie='".$malowanie."',przedzial_malowanie='".$przedzial_malowanie."',
                                          dobor_koloru='".$dobor_koloru."', poprawka='".$poprawka."',
                                          dentyna_na_cerkon='".$dentyna_na_cerkon."',
-                                         dentyna_na_empress='".$dentyna_na_empress."',
+                                         dentyna_na_emax='".$dentyna_na_emax."',
                                          zeby='".$zeby."',
                                          ponowne_napalenie_porcelany='".$ponowne_napalenie_porcelany."'
                                      WHERE kategoria='".$kategoria."' AND idzlecenianr='".$idzlecenianr."' AND
@@ -242,8 +242,8 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_3"){
 if ($dentyna_na_cerkon) {
 	material_dentyna('dentyna_na_cerkon', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
-if ($dentyna_na_empress) {
-	material_dentyna('dentyna_na_empress', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+if ($dentyna_na_emax) {
+	material_dentyna('dentyna_na_emax', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 //-------------------------------------------
@@ -286,7 +286,7 @@ elseif($_SESSION['form_tab']['zakladka']=="porcelana_4"){
 
  //dodatkowe zmienne
 // $datawpisania = $_SESSION['datawpisania'];
- $kategoria = "Porcelana Inlay/Onlay/Licï¿½wka";
+ $kategoria = "Porcelana Inlay/Onlay/Licówka";
 
  //zapisanie do tabicy identyfikatorow tablic w bazie do ktï¿½rych zostaly zapisane dane ï¿½eby na koncu
  //latwiej je byï¿½o wyswietlic w podsumowaniu
@@ -401,7 +401,7 @@ if ($dentyna_na_metal) {
 	material_dentyna('dentyna_na_metal', $material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
 material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
-if ($material == 'licowane porcelanÄ…' || $material == 'licowane kompozytem') { //w tych przypadkach zawsze uzywany jest tez chrom
+if ($material == 'licowane porcelan±' || $material == 'licowane kompozytem') { //w tych przypadkach zawsze uzywany jest tez chrom
     material_etykiety('chrom kobalt', $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
 }
 
@@ -566,7 +566,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_2"){
  $plynproszek = czysc_zmienne_formularza($_SESSION['form_tab']['plynproszek']);
  
  //dodatkowe zmienne
- $kategoria = "Proteza Caï¿½kowita";
+ $kategoria = "Proteza Ca³kowita";
 
  //dodawanie zlecenia do bazy
  $sql="UPDATE proteza_calkowita SET kategoria='".$kategoria."', idzlecenianr='".$idzlecenianr."',
@@ -620,7 +620,7 @@ elseif($_SESSION['form_tab']['zakladka']=="proteza_3"){
  $plynproszek = czysc_zmienne_formularza($_SESSION['form_tab']['plynproszek']);
  
  //dodatkowe zmienne
- $kategoria = "Proteza Czï¿½ciowa";
+ $kategoria = "Proteza Czê¶ciowa";
 
  //dodawanie zlecenia do bazy
  $sql="UPDATE proteza_czesciowa SET kategoria='".$kategoria."', idzlecenianr='".$idzlecenianr."',
@@ -909,7 +909,7 @@ $cena = new CenaCount;
             for($j=5;$j<$size;$j++) {                    //&& substr($arr_pom[$j], 0, 8)!='dentyna_'
                 //wywalam  dentyny z opisu i inne materiaï¿½y bo drukujï¿½ siï¿½ na etykietach
                 if($arr_pom[$j]!='' && $arr_pom[$j]!='0' && $arr_pom[$j]!=$dentyna_na_zloto && $arr_pom[$j]!=$dentyna_kiss
-                   && $arr_pom[$j]!=$dentyna_na_cerkon && $arr_pom[$j]!=$dentyna_na_empress && $arr_pom[$j]!=$dentyna_na_metal
+                   && $arr_pom[$j]!=$dentyna_na_cerkon && $arr_pom[$j]!=$dentyna_na_emax && $arr_pom[$j]!=$dentyna_na_metal
                    && $arr_pom[$j]!=$zakupione_cena && $arr_pom[$j]!=$plynproszek && $arr_pom[$j]!=$material
                    && $arr_pom[$j]!=$liczba_wzornik && $arr_pom[$j]!=$liczba_lyzka_indywidualna
                    ){
