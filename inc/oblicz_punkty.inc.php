@@ -265,15 +265,16 @@ function p_implanty($tablica_punktow,$tablica_zlecenia) {
       $p_pom=$p_pom+$tablica_punktow['przês³o '.$tablica_zlecenia['material']]*$tablica_zlecenia['liczba_przeslo'];
     } elseif($klucz=='przedzial_malowanie'){
         $p_pom=$p_pom+$tablica_punktow['przedzial_malowanie_'.$tablica_zlecenia[$klucz]];
-    }
-    elseif($tablica_zlecenia[$klucz]=='klucz do implantów'){
-        $p_pom=$p_pom+$tablica_punktow['klucz_do_implantow']*$tablica_zlecenia['liczba_klucz_do_implantow'];
-    }
-    elseif($tablica_zlecenia[$klucz]=='³±cznik hybrydowy'){
-        $p_pom=$p_pom+$tablica_punktow['lacznik_hybrydowy']*$tablica_zlecenia['liczba_lacznik_hybrydowy'];
+    } elseif ($klucz=='klucz_do_implantow' || $klucz=='lacznik_hybrydowy') {
+        $ile=$tablica_zlecenia['liczba_'.$klucz];
+        if (!$ile) {
+            $ile = 1;
+        }
+        $p_pom=$p_pom+$tablica_punktow[$klucz]*$ile;
     }
 
-  //echo $p_pom.'-p_pom<br>';
+
+      //echo $p_pom.'-p_pom<br>';
   }
       //$p_pom=$p_pom+$tablica_zlecenia['zakupione_cena'];
       //$p_pom=$p_pom*$this->ilosc_zebow($tablica_zlecenia);
