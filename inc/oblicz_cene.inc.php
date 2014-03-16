@@ -281,7 +281,7 @@ function c_implanty($tablica_cen,$tablica_zlecenia) {
         if (!$ile) {
             $ile = 1;
         }
-        $c_pom=$c_pom+$tablica_cen[$tablica_zlecenia[$klucz]]*$ile;
+        $c_pom=$c_pom+$tablica_cen[$klucz]*$ile;
     }
 
 //  echo $c_pom.'-c_pom<br>';

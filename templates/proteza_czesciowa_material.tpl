@@ -4,9 +4,9 @@
 <div>
 <table cellspacing="0" cellpadding="0" border="0" >
   <tr id="zab">           <!-- style="background:;" -->
-  <td><input type="radio" name="plynproszek" value="Futura Gen" {if $plynproszek == "Futura Gen"}checked{/if} /></td>
-  <td> - Futura Gen (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br> - Futura Gen (proszek)</td>
+  <td><input type="radio" name="plynproszek" value="Triplex Hot" {if $plynproszek == "Triplex Hot"}checked{/if} /></td>
+  <td> - Triplex Hot (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br> - Triplex Hot (proszek)</td>
   <td><input type="radio" name="plynproszek" value="Castavaria" {if $plynproszek == "Castavaria"}checked{/if} /></td>
   <td> - Castavaria (p³yn) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <br> - Castavaria (proszek)</td>

@@ -23,7 +23,7 @@ function material_etykiety($material, $kategoria, $idzlecenianr, $idzleceniapoz,
 	  	$etykieta_materialu = '';
 	}
 	
-	if (empty($material)) {	    
+	if (empty($material) || strlen($material)<2) {
 		$_SESSION['etykieta_materialu'] = $etykieta_materialu;
 		$_SESSION['etykieta'] = $e;
 		
@@ -167,7 +167,7 @@ function material_dentyna ($rodzaj_dentyna, $kategoria, $idzlecenianr, $idzlecen
   elseif($rodzaj_dentyna=='dentyna_na_zloto'){
     $dent='';
     foreach($dentyna as $klucz => $wartosc){
-		material_etykiety('Porcelana Na Z³oto Dentyna '.$wartosc, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
+		material_etykiety('Porcelana Na Zï¿½oto Dentyna '.$wartosc, $kategoria, $idzlecenianr, $idzleceniapoz, $datawpisania);
     }
   }
   elseif($rodzaj_dentyna=='dentyna_na_cerkon'){
