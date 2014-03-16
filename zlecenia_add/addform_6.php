@@ -124,7 +124,7 @@ if($_SESSION['form_tab']['zakladka']=="porcelana_1"){
  $sql="INSERT INTO porcelana_wkladykk ( kategoria,idzlecenianr,idzleceniapoz,datawpisania,wpisujacy,
                                         material,rodzajwkladu,liczba_wkladow,wzornik,liczba_wzornik,poprawka,lyzka_indywidualna,liczba_lyzka_indywidualna,zeby)
 	    VALUES ('".$kategoria."','".$idzlecenianr."','".$idzleceniapoz."','".$datawpisania."','".$idusera."',
-					'".$material."','".$rodzajwkladu."','".$liczba_wkladow."','".$wzornik."','".$liczba_wzornik."','".$poprawka."','".$lyzka_indywidualna."','".$liczba_lyzka_indywidualna."','"."','".$zeby."'
+					'".$material."','".$rodzajwkladu."','".$liczba_wkladow."','".$wzornik."','".$liczba_wzornik."','".$poprawka."','".$lyzka_indywidualna."','".$liczba_lyzka_indywidualna."','".$zeby."'
 					)";
  myquery($sql);
 }
