@@ -71,11 +71,29 @@ class HTMLParser {
      * Constructs an HTMLParser instance with
      * the HTML text given.
      */
-    function HTMLParser ($aHtmlText) {
+///// Correction for php 7
+  public function __construct($aHtmlText){
+         $this->iHtmlText = $aHtmlText;
+        $this->iHtmlTextLength = strlen($aHtmlText);
+        $this->iNodeAttributes = array();
+        $this->setTextIndex (0);
+
+        $this->BOE_ARRAY = array (" ", "\t", "\r", "\n", "=" );
+        $this->B_ARRAY = array (" ", "\t", "\r", "\n" );
+        $this->BOS_ARRAY = array (" ", "\t", "\r", "\n", "/" );
+    }
+   
+   public function HtmlParser ($aHtmlText) {
         $this->iHtmlText = $aHtmlText;
         $this->iHtmlTextLength = strlen($aHtmlText);
+        $this->iNodeAttributes = array();
         $this->setTextIndex (0);
+
+        $this->BOE_ARRAY = array (" ", "\t", "\r", "\n", "=" );
+        $this->B_ARRAY = array (" ", "\t", "\r", "\n" );
+        $this->BOS_ARRAY = array (" ", "\t", "\r", "\n", "/" );
     }
+///// end of correction
 
     /**
      * Method parse.
